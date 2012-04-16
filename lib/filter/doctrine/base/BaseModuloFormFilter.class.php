@@ -15,15 +15,15 @@ abstract class BaseModuloFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'nombre'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'descripcion'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'activo'          => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
-      'tienePublicidad' => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
+      'activo'          => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'tienepublicidad' => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
       'nombre'          => new sfValidatorPass(array('required' => false)),
       'descripcion'     => new sfValidatorPass(array('required' => false)),
-      'activo'          => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
-      'tienePublicidad' => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
+      'activo'          => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'tienepublicidad' => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
     ));
 
     $this->widgetSchema->setNameFormat('modulo_filters[%s]');
@@ -46,8 +46,8 @@ abstract class BaseModuloFormFilter extends BaseFormFilterDoctrine
       'id'              => 'Number',
       'nombre'          => 'Text',
       'descripcion'     => 'Text',
-      'activo'          => 'Boolean',
-      'tienePublicidad' => 'Boolean',
+      'activo'          => 'Number',
+      'tienepublicidad' => 'Number',
     );
   }
 }

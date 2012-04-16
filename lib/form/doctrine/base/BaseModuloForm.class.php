@@ -17,17 +17,17 @@ abstract class BaseModuloForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'              => new sfWidgetFormInputHidden(),
       'nombre'          => new sfWidgetFormInputText(),
-      'descripcion'     => new sfWidgetFormInputText(),
-      'activo'          => new sfWidgetFormInputCheckbox(),
-      'tienePublicidad' => new sfWidgetFormInputCheckbox(),
+      'descripcion'     => new sfWidgetFormTextarea(),
+      'activo'          => new sfWidgetFormInputText(),
+      'tienepublicidad' => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
       'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'nombre'          => new sfValidatorString(array('max_length' => 100)),
-      'descripcion'     => new sfValidatorPass(),
-      'activo'          => new sfValidatorBoolean(array('required' => false)),
-      'tienePublicidad' => new sfValidatorBoolean(array('required' => false)),
+      'descripcion'     => new sfValidatorString(),
+      'activo'          => new sfValidatorInteger(array('required' => false)),
+      'tienepublicidad' => new sfValidatorInteger(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('modulo[%s]');

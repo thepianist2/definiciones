@@ -13,17 +13,17 @@ abstract class BaseFuncionalidadFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idModulo'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Modulo'), 'add_empty' => true)),
+      'idmodulo'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Modulo'), 'add_empty' => true)),
       'credencial'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'descripcion' => new sfWidgetFormFilterInput(array('with_empty' => false)),
-      'aplicacion'  => new sfWidgetFormChoice(array('choices' => array('' => '', 'administracion' => 'administracion', 'frontend' => 'frontend'))),
+      'aplicacion'  => new sfWidgetFormFilterInput(array('with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'idModulo'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Modulo'), 'column' => 'id')),
+      'idmodulo'    => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Modulo'), 'column' => 'id')),
       'credencial'  => new sfValidatorPass(array('required' => false)),
       'descripcion' => new sfValidatorPass(array('required' => false)),
-      'aplicacion'  => new sfValidatorChoice(array('required' => false, 'choices' => array('administracion' => 'administracion', 'frontend' => 'frontend'))),
+      'aplicacion'  => new sfValidatorPass(array('required' => false)),
     ));
 
     $this->widgetSchema->setNameFormat('funcionalidad_filters[%s]');
@@ -44,10 +44,10 @@ abstract class BaseFuncionalidadFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'          => 'Number',
-      'idModulo'    => 'ForeignKey',
+      'idmodulo'    => 'ForeignKey',
       'credencial'  => 'Text',
       'descripcion' => 'Text',
-      'aplicacion'  => 'Enum',
+      'aplicacion'  => 'Text',
     );
   }
 }

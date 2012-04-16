@@ -16,7 +16,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'         => new sfWidgetFormInputHidden(),
-      'idPerfil'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'), 'add_empty' => false)),
+      'idperfil'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'), 'add_empty' => false)),
       'login'      => new sfWidgetFormInputText(),
       'password'   => new sfWidgetFormInputText(),
       'email'      => new sfWidgetFormInputText(),
@@ -24,9 +24,9 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
       'apellidos'  => new sfWidgetFormInputText(),
       'facebook'   => new sfWidgetFormInputText(),
       'twitter'    => new sfWidgetFormInputText(),
-      'activo'     => new sfWidgetFormInputCheckbox(),
-      'validado'   => new sfWidgetFormInputCheckbox(),
-      'borrado'    => new sfWidgetFormInputCheckbox(),
+      'activo'     => new sfWidgetFormInputText(),
+      'validado'   => new sfWidgetFormInputText(),
+      'borrado'    => new sfWidgetFormInputText(),
       'lang'       => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
@@ -34,7 +34,7 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'idPerfil'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'))),
+      'idperfil'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'))),
       'login'      => new sfValidatorString(array('max_length' => 150)),
       'password'   => new sfValidatorString(array('max_length' => 40)),
       'email'      => new sfValidatorString(array('max_length' => 150)),
@@ -42,20 +42,13 @@ abstract class BaseUsuarioForm extends BaseFormDoctrine
       'apellidos'  => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'facebook'   => new sfValidatorString(array('max_length' => 150, 'required' => false)),
       'twitter'    => new sfValidatorString(array('max_length' => 150, 'required' => false)),
-      'activo'     => new sfValidatorBoolean(array('required' => false)),
-      'validado'   => new sfValidatorBoolean(array('required' => false)),
-      'borrado'    => new sfValidatorBoolean(array('required' => false)),
+      'activo'     => new sfValidatorInteger(array('required' => false)),
+      'validado'   => new sfValidatorInteger(array('required' => false)),
+      'borrado'    => new sfValidatorInteger(array('required' => false)),
       'lang'       => new sfValidatorString(array('max_length' => 4, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),
     ));
-
-    $this->validatorSchema->setPostValidator(
-      new sfValidatorAnd(array(
-        new sfValidatorDoctrineUnique(array('model' => 'Usuario', 'column' => array('login'))),
-        new sfValidatorDoctrineUnique(array('model' => 'Usuario', 'column' => array('email'))),
-      ))
-    );
 
     $this->widgetSchema->setNameFormat('usuario[%s]');
 

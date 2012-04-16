@@ -39,8 +39,8 @@ abstract class BasePermisoFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'idPerfil'        => 'Number',
-      'idFuncionalidad' => 'Number',
+      'idperfil'        => 'Number',
+      'idfuncionalidad' => 'Number',
       'created_at'      => 'Date',
       'updated_at'      => 'Date',
     );

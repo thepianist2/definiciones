@@ -15,21 +15,23 @@ abstract class BasePalabraForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'id'         => new sfWidgetFormInputHidden(),
-      'idUsuario'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
-      'texto'      => new sfWidgetFormInputText(),
-      'imagen'     => new sfWidgetFormInputText(),
-      'created_at' => new sfWidgetFormDateTime(),
-      'updated_at' => new sfWidgetFormDateTime(),
+      'id'              => new sfWidgetFormInputHidden(),
+      'idUsuario'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
+      'textoPalabra'    => new sfWidgetFormInputText(),
+      'textoDefinicion' => new sfWidgetFormInputText(),
+      'imagen'          => new sfWidgetFormInputText(),
+      'created_at'      => new sfWidgetFormDateTime(),
+      'updated_at'      => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'idUsuario'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
-      'texto'      => new sfValidatorPass(),
-      'imagen'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'created_at' => new sfValidatorDateTime(),
-      'updated_at' => new sfValidatorDateTime(),
+      'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idUsuario'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
+      'textoPalabra'    => new sfValidatorPass(),
+      'textoDefinicion' => new sfValidatorPass(),
+      'imagen'          => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'created_at'      => new sfValidatorDateTime(),
+      'updated_at'      => new sfValidatorDateTime(),
     ));
 
     $this->widgetSchema->setNameFormat('palabra[%s]');

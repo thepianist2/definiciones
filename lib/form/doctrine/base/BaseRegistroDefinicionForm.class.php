@@ -15,17 +15,17 @@ abstract class BaseRegistroDefinicionForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idDefinicion'   => new sfWidgetFormInputHidden(),
-      'textoAnterior'  => new sfWidgetFormInputText(),
-      'textoPosterior' => new sfWidgetFormInputText(),
+      'iddefinicion'   => new sfWidgetFormInputHidden(),
+      'textoanterior'  => new sfWidgetFormTextarea(),
+      'textoposterior' => new sfWidgetFormTextarea(),
       'created_at'     => new sfWidgetFormDateTime(),
       'updated_at'     => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'idDefinicion'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idDefinicion')), 'empty_value' => $this->getObject()->get('idDefinicion'), 'required' => false)),
-      'textoAnterior'  => new sfValidatorPass(),
-      'textoPosterior' => new sfValidatorPass(),
+      'iddefinicion'   => new sfValidatorChoice(array('choices' => array($this->getObject()->get('iddefinicion')), 'empty_value' => $this->getObject()->get('iddefinicion'), 'required' => false)),
+      'textoanterior'  => new sfValidatorString(),
+      'textoposterior' => new sfValidatorString(),
       'created_at'     => new sfValidatorDateTime(),
       'updated_at'     => new sfValidatorDateTime(),
     ));

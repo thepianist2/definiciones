@@ -15,15 +15,15 @@ abstract class BasePermisoForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idPerfil'        => new sfWidgetFormInputHidden(),
-      'idFuncionalidad' => new sfWidgetFormInputHidden(),
+      'idperfil'        => new sfWidgetFormInputHidden(),
+      'idfuncionalidad' => new sfWidgetFormInputHidden(),
       'created_at'      => new sfWidgetFormDateTime(),
       'updated_at'      => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'idPerfil'        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idPerfil')), 'empty_value' => $this->getObject()->get('idPerfil'), 'required' => false)),
-      'idFuncionalidad' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idFuncionalidad')), 'empty_value' => $this->getObject()->get('idFuncionalidad'), 'required' => false)),
+      'idperfil'        => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idperfil')), 'empty_value' => $this->getObject()->get('idperfil'), 'required' => false)),
+      'idfuncionalidad' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idfuncionalidad')), 'empty_value' => $this->getObject()->get('idfuncionalidad'), 'required' => false)),
       'created_at'      => new sfValidatorDateTime(),
       'updated_at'      => new sfValidatorDateTime(),
     ));

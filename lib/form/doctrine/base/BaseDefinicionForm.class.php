@@ -15,16 +15,16 @@ abstract class BaseDefinicionForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idPalabra'  => new sfWidgetFormInputHidden(),
-      'texto'      => new sfWidgetFormInputText(),
+      'idpalabra'  => new sfWidgetFormInputHidden(),
+      'texto'      => new sfWidgetFormTextarea(),
       'imagen'     => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
       'updated_at' => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'idPalabra'  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idPalabra')), 'empty_value' => $this->getObject()->get('idPalabra'), 'required' => false)),
-      'texto'      => new sfValidatorPass(),
+      'idpalabra'  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idpalabra')), 'empty_value' => $this->getObject()->get('idpalabra'), 'required' => false)),
+      'texto'      => new sfValidatorString(),
       'imagen'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),
       'updated_at' => new sfValidatorDateTime(),

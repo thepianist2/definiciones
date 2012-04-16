@@ -11,7 +11,7 @@ execution: ~
 
 
 remember_me:
-  
-    class: sfGuardRememberMeFilter
-    security: ~
+  class: sfGuardRememberMeFilter
+    
+security: ~
 

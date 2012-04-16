@@ -17,10 +17,10 @@ abstract class BasePerfilForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
       'nombre'      => new sfWidgetFormInputText(),
-      'descripcion' => new sfWidgetFormInputText(),
-      'activo'      => new sfWidgetFormInputCheckbox(),
-      'editable'    => new sfWidgetFormInputCheckbox(),
-      'borrado'     => new sfWidgetFormInputCheckbox(),
+      'descripcion' => new sfWidgetFormTextarea(),
+      'activo'      => new sfWidgetFormInputText(),
+      'editable'    => new sfWidgetFormInputText(),
+      'borrado'     => new sfWidgetFormInputText(),
       'created_at'  => new sfWidgetFormDateTime(),
       'updated_at'  => new sfWidgetFormDateTime(),
     ));
@@ -28,10 +28,10 @@ abstract class BasePerfilForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'nombre'      => new sfValidatorString(array('max_length' => 50)),
-      'descripcion' => new sfValidatorPass(),
-      'activo'      => new sfValidatorBoolean(array('required' => false)),
-      'editable'    => new sfValidatorBoolean(array('required' => false)),
-      'borrado'     => new sfValidatorBoolean(array('required' => false)),
+      'descripcion' => new sfValidatorString(),
+      'activo'      => new sfValidatorInteger(array('required' => false)),
+      'editable'    => new sfValidatorInteger(array('required' => false)),
+      'borrado'     => new sfValidatorInteger(array('required' => false)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
     ));
