@@ -12,7 +12,14 @@ Palabra:
       primary: false
       notnull: true
       autoincrement: false
-    texto:
+    textoPalabra:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    textoDefinicion:
       type: text()
       fixed: false
       unsigned: false
@@ -31,10 +38,6 @@ Palabra:
       local: idUsuario
       foreign: id
       type: one
-    Definicion:
-      local: id
-      foreign: idPalabra
-      type: one  
     RegistroPalabra:
       local: id
       foreign: idPalabra
@@ -44,43 +47,6 @@ Palabra:
       foreign: idPalabra
       type: one  
       
-Definicion:
-  connection: doctrine
-  tableName: definicion
-  actAs:
-    Timestampable:
-  columns:
-    idPalabra:
-      type: integer(8)
-      fixed: false
-      unsigned: false
-      primary: true
-      notnull: true
-      autoincrement: false
-    texto:
-      type: text()
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
-    imagen:
-      type: string(255)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: false
-      autoincrement: false  
-  relations:
-    Palabra:
-      local: idPalabra
-      foreign: id
-      type: one            
-    RegistroDefinicion:
-      local: id
-      foreign: idDefinicion
-      type: many 
-
       
 Categoria:
   connection: doctrine
@@ -168,14 +134,28 @@ RegistroPalabra:
       primary: true
       notnull: true
       autoincrement: false
-    textoAnterior:
+    textoPalabraAnterior:
       type: text()
       fixed: false
       unsigned: false
       primary: false
       notnull: true
       autoincrement: false
-    textoPosterior:
+    textoPalabraPosterior:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+    textoDefinicionAnterior:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+    textoDefinicionPosterior:
       type: text()
       fixed: false
       unsigned: false
@@ -186,42 +166,4 @@ RegistroPalabra:
     Palabra:
       local: idPalabra
       foreign: id
-      type: one      
-
-
-RegistroDefinicion:
-  connection: doctrine
-  tableName: registroDefinicion
-  actAs:
-    Timestampable:
-  columns:
-    idDefinicion:
-      type: integer(8)
-      fixed: false
-      unsigned: false
-      primary: true
-      notnull: true
-      autoincrement: false
-    textoAnterior:
-      type: text()
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
-    textoPosterior:
-      type: text()
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false  
-  relations:
-    Definicion:
-      local: idDefinicion
-      foreign: id
-      type: one      
-      
-      
-      
-      
+      type: one          

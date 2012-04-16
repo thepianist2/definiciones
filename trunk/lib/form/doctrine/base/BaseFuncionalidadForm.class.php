@@ -16,18 +16,18 @@ abstract class BaseFuncionalidadForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'          => new sfWidgetFormInputHidden(),
-      'idModulo'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Modulo'), 'add_empty' => false)),
+      'idmodulo'    => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Modulo'), 'add_empty' => false)),
       'credencial'  => new sfWidgetFormInputText(),
-      'descripcion' => new sfWidgetFormInputText(),
-      'aplicacion'  => new sfWidgetFormChoice(array('choices' => array('administracion' => 'administracion', 'frontend' => 'frontend'))),
+      'descripcion' => new sfWidgetFormTextarea(),
+      'aplicacion'  => new sfWidgetFormInputText(),
     ));
 
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'idModulo'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Modulo'))),
+      'idmodulo'    => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Modulo'))),
       'credencial'  => new sfValidatorString(array('max_length' => 50)),
-      'descripcion' => new sfValidatorPass(),
-      'aplicacion'  => new sfValidatorChoice(array('choices' => array(0 => 'administracion', 1 => 'frontend'))),
+      'descripcion' => new sfValidatorString(),
+      'aplicacion'  => new sfValidatorString(array('max_length' => 255)),
     ));
 
     $this->widgetSchema->setNameFormat('funcionalidad[%s]');

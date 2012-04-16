@@ -13,7 +13,7 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idPerfil'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'), 'add_empty' => true)),
+      'idperfil'   => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Perfil'), 'add_empty' => true)),
       'login'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'password'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'email'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
@@ -21,16 +21,16 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
       'apellidos'  => new sfWidgetFormFilterInput(),
       'facebook'   => new sfWidgetFormFilterInput(),
       'twitter'    => new sfWidgetFormFilterInput(),
-      'activo'     => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
-      'validado'   => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
-      'borrado'    => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
+      'activo'     => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'validado'   => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'borrado'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'lang'       => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at' => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
     ));
 
     $this->setValidators(array(
-      'idPerfil'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Perfil'), 'column' => 'id')),
+      'idperfil'   => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Perfil'), 'column' => 'id')),
       'login'      => new sfValidatorPass(array('required' => false)),
       'password'   => new sfValidatorPass(array('required' => false)),
       'email'      => new sfValidatorPass(array('required' => false)),
@@ -38,9 +38,9 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
       'apellidos'  => new sfValidatorPass(array('required' => false)),
       'facebook'   => new sfValidatorPass(array('required' => false)),
       'twitter'    => new sfValidatorPass(array('required' => false)),
-      'activo'     => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
-      'validado'   => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
-      'borrado'    => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
+      'activo'     => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'validado'   => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
+      'borrado'    => new sfValidatorSchemaFilter('text', new sfValidatorInteger(array('required' => false))),
       'lang'       => new sfValidatorPass(array('required' => false)),
       'created_at' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
       'updated_at' => new sfValidatorDateRange(array('required' => false, 'from_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 00:00:00')), 'to_date' => new sfValidatorDateTime(array('required' => false, 'datetime_output' => 'Y-m-d 23:59:59')))),
@@ -64,7 +64,7 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
   {
     return array(
       'id'         => 'Number',
-      'idPerfil'   => 'ForeignKey',
+      'idperfil'   => 'ForeignKey',
       'login'      => 'Text',
       'password'   => 'Text',
       'email'      => 'Text',
@@ -72,9 +72,9 @@ abstract class BaseUsuarioFormFilter extends BaseFormFilterDoctrine
       'apellidos'  => 'Text',
       'facebook'   => 'Text',
       'twitter'    => 'Text',
-      'activo'     => 'Boolean',
-      'validado'   => 'Boolean',
-      'borrado'    => 'Boolean',
+      'activo'     => 'Number',
+      'validado'   => 'Number',
+      'borrado'    => 'Number',
       'lang'       => 'Text',
       'created_at' => 'Date',
       'updated_at' => 'Date',
