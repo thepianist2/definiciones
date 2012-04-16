@@ -1,0 +1,227 @@
+     
+Palabra:
+  connection: doctrine
+  tableName: palabra
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one
+    Definicion:
+      local: id
+      foreign: idPalabra
+      type: one  
+    RegistroPalabra:
+      local: id
+      foreign: idPalabra
+      type: many 
+    Categoria:
+      local: id
+      foreign: idPalabra
+      type: one  
+      
+Definicion:
+  connection: doctrine
+  tableName: definicion
+  actAs:
+    Timestampable:
+  columns:
+    idPalabra:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      notnull: true
+      autoincrement: false
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
+  relations:
+    Palabra:
+      local: idPalabra
+      foreign: id
+      type: one            
+    RegistroDefinicion:
+      local: id
+      foreign: idDefinicion
+      type: many 
+
+      
+Categoria:
+  connection: doctrine
+  tableName: categoria
+  actAs:
+    Timestampable:
+  columns:
+    idPalabra:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      notnull: true
+      autoincrement: false
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
+  relations:
+    Palabra:
+      local: id
+      foreign: idPalabra
+      type: many
+    SubCategoria:
+      local: id
+      foreign: idCategoria
+      type: many   
+
+
+SubCategoria:
+  connection: doctrine
+  tableName: subCategoria
+  actAs:
+    Timestampable:
+  columns:
+    idCategoria:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      notnull: true
+      autoincrement: false
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
+  relations:
+    Categoria:
+      local: idCategoria
+      foreign: id
+      type: one
+      
+#registros      
+      
+RegistroPalabra:
+  connection: doctrine
+  tableName: registroPalabra
+  actAs:
+    Timestampable:
+  columns:
+    idPalabra:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      notnull: true
+      autoincrement: false
+    textoAnterior:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    textoPosterior:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    Palabra:
+      local: idPalabra
+      foreign: id
+      type: one      
+
+
+RegistroDefinicion:
+  connection: doctrine
+  tableName: registroDefinicion
+  actAs:
+    Timestampable:
+  columns:
+    idDefinicion:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      notnull: true
+      autoincrement: false
+    textoAnterior:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    textoPosterior:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    Definicion:
+      local: idDefinicion
+      foreign: id
+      type: one      
+      
+      
+      
+      
