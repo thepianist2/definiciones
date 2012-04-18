@@ -15,5 +15,16 @@ class sfGuardFormSignin extends BasesfGuardFormSignin
    */
   public function configure()
   {
+      
+      
+    $this->widgetSchema['username']->setLabel('Usuario o E-Mail');
+    $this->widgetSchema['password']->setLabel('Contraseña');
+    $this->widgetSchema['remember']->setLabel('Recordar');
+    
+    
+                  //mensajes de error
+    $this->validatorSchema['username']->setMessages(array('required' => 'Falta el usuario.'));
+    $this->validatorSchema['password']->setMessages(array('required' => 'Falta la contraseña.'));
+  
   }
 }

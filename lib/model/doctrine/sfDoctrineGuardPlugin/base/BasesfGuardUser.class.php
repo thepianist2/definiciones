@@ -22,6 +22,7 @@
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
  * @property Doctrine_Collection $Palabra
+ * @property Doctrine_Collection $Contenido
  * 
  * @method string                getFirstName()             Returns the current record's "first_name" value
  * @method string                getLastName()              Returns the current record's "last_name" value
@@ -40,6 +41,7 @@
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
  * @method Doctrine_Collection   getPalabra()               Returns the current record's "Palabra" collection
+ * @method Doctrine_Collection   getContenido()             Returns the current record's "Contenido" collection
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
@@ -57,6 +59,7 @@
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
  * @method sfGuardUser           setPalabra()               Sets the current record's "Palabra" collection
+ * @method sfGuardUser           setContenido()             Sets the current record's "Contenido" collection
  * 
  * @package    definiciones
  * @subpackage model
@@ -100,6 +103,7 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              ));
         $this->hasColumn('password', 'string', 128, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 128,
              ));
         $this->hasColumn('is_active', 'boolean', null, array(
@@ -153,6 +157,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'foreign' => 'user_id'));
 
         $this->hasMany('Palabra', array(
+             'local' => 'id',
+             'foreign' => 'idUsuario'));
+
+        $this->hasMany('Contenido', array(
              'local' => 'id',
              'foreign' => 'idUsuario'));
 

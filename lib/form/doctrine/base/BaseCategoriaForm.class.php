@@ -15,7 +15,7 @@ abstract class BaseCategoriaForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idPalabra'  => new sfWidgetFormInputHidden(),
+      'id'         => new sfWidgetFormInputHidden(),
       'texto'      => new sfWidgetFormInputText(),
       'imagen'     => new sfWidgetFormInputText(),
       'created_at' => new sfWidgetFormDateTime(),
@@ -23,7 +23,7 @@ abstract class BaseCategoriaForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'idPalabra'  => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idPalabra')), 'empty_value' => $this->getObject()->get('idPalabra'), 'required' => false)),
+      'id'         => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'texto'      => new sfValidatorPass(),
       'imagen'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at' => new sfValidatorDateTime(),

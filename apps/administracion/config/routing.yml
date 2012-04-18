@@ -26,3 +26,11 @@ sf_guard_signout:
 sf_guard_password:
           url:   /request_password
           param: { module: sfGuardAuth, action: password }
+
+
+############### Usuarios #####################
+
+usuarios_index:
+  url: /:sf_culture/usuario/listado
+  param: { module: usuario, action: index }
+  

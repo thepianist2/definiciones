@@ -1,6 +1,11 @@
 body
 {
-  background: none;
+    font-size: 11px;
+    font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+    color: #333;
+    line-height: 1.28;
+    text-align: left;
+    direction: ltr;
 }
 
 #container
@@ -88,4 +93,119 @@ th
 #header h1
 {
   width: auto;
+}
+
+
+/* Menu principal */
+#menu-principal ul li a {
+	background-color: #e6e6e6;
+	border: 1px solid #fff;
+	color: #464646;
+}
+
+#menu-principal ul li a:hover {
+	color: #fff;
+	border: 1px solid #1a5f7e;
+	background-color: #1a5f7e;
+	box-shadow: 2px 2px 6px #666;
+	-moz-box-shadow: 2px 2px 6px #666;
+	-webkit-box-shadow: 2px 2px 6px #666;
+}
+
+/******************* Menu principal ***********************/
+#menu-principal ul li {
+	font-size: 16px;
+	float: left;
+	margin: 2px;
+	list-style: none;
+}
+
+#menu-principal ul li a {
+	display: block;
+	padding: 5px 20px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	font-weight: bold;
+}
+
+#menu-principal ul li a:link,#menu-principal ul li a:visited,#menu-principal ul li a:hover,#menu-principal ul li a:active
+	{
+	text-decoration: none;
+}
+
+.jd_menu {
+	display: none;
+	position: absolute;
+
+	width: 150px;
+
+	list-style-type: none;
+
+	margin: 0px;
+	padding: 0px;
+
+	border-width: 1px;
+	border-style: solid;
+	border-color: #6699CC #003366 #003366 #6699CC;
+	border-top: none;
+	border-bottom: none;
+
+	background-color: #336699;
+
+	color: #FFFFFF;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 11px;
+	text-align: left;
+	text-decoration: none;
+
+	cursor: pointer;
+}
+
+.jd_menu li {
+	border-top: 1px solid #6699CC;
+	border-bottom: 1px solid #003366;
+	padding: 0px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 6px;
+}
+
+.jd_menu li img {
+	margin-left: -2px;
+	margin-bottom: -4px;
+	margin-right: 2px;
+}
+
+.jd_menu_active {
+	display: block;
+}
+
+li.jd_menu_title {
+	font-weight: bold;
+}
+
+.jd_menu .jd_menu_hover {
+	border-top: 1px solid #99CCFF;
+	background-color: #6699CC;
+}
+
+.jd_menu_inline {
+	list-style-type: none;
+	width: 99%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.jd_menu_inline li {
+	border: 0px;
+	font-weight: normal;
+}
+
+.jd_menu_inline_hover {
+	text-decoration: underline;
+}
+
+.clear {
+	clear: both; /* float:none;  */
 }
