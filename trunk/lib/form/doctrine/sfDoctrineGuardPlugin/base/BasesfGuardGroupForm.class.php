@@ -26,8 +26,8 @@ abstract class BasesfGuardGroupForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
-      'name'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
-      'description'      => new sfValidatorString(array('max_length' => 1000, 'required' => false)),
+      'name'             => new sfValidatorString(array('max_length' => 255)),
+      'description'      => new sfValidatorString(array('max_length' => 1000)),
       'created_at'       => new sfValidatorDateTime(),
       'updated_at'       => new sfValidatorDateTime(),
       'users_list'       => new sfValidatorDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser', 'required' => false)),

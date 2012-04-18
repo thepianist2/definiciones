@@ -12,5 +12,18 @@ class sfGuardPermissionForm extends PluginsfGuardPermissionForm
 {
   public function configure()
   {
+            $this->widgetSchema->setLabels(array(
+  'name'=> 'Nombre *',
+  'description'=> 'Descripción ',       
+  'groups_list' => 'Grupos',      
+  'users_list' => 'Usuarios',        
+));
+            
+                  //mensajes
+      
+    $this->validatorSchema['name']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+      
+      
+      
   }
 }

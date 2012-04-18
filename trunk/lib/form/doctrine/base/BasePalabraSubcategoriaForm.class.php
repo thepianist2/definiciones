@@ -15,16 +15,16 @@ abstract class BasePalabraSubcategoriaForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idPalabraCategoria' => new sfWidgetFormInputHidden(),
-      'texto'              => new sfWidgetFormInputText(),
+      'idpalabracategoria' => new sfWidgetFormInputHidden(),
+      'texto'              => new sfWidgetFormTextarea(),
       'imagen'             => new sfWidgetFormInputText(),
       'created_at'         => new sfWidgetFormDateTime(),
       'updated_at'         => new sfWidgetFormDateTime(),
     ));
 
     $this->setValidators(array(
-      'idPalabraCategoria' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idPalabraCategoria')), 'empty_value' => $this->getObject()->get('idPalabraCategoria'), 'required' => false)),
-      'texto'              => new sfValidatorPass(),
+      'idpalabracategoria' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idpalabracategoria')), 'empty_value' => $this->getObject()->get('idpalabracategoria'), 'required' => false)),
+      'texto'              => new sfValidatorString(),
       'imagen'             => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'         => new sfValidatorDateTime(),
       'updated_at'         => new sfValidatorDateTime(),

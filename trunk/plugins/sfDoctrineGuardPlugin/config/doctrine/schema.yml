@@ -4,7 +4,10 @@ sfGuardGroup:
     name:
       type: string(255)
       unique: true
-    description: string(1000)
+      notnull: true
+    description:
+      type: string(1000)
+      notnull: true
   relations:
     Users:
       class: sfGuardUser
@@ -25,6 +28,7 @@ sfGuardPermission:
     name:
       type: string(255)
       unique: true
+      notnull: true
     description: string(1000)
 
 sfGuardGroupPermission:
@@ -68,7 +72,9 @@ sfGuardUser:
       default: sha1
       notnull: true
     salt: string(128)
-    password: string(128)
+    password:
+      type: string(128)
+      notnull: true
     is_active:
       type: boolean
       default: 1

@@ -12,5 +12,18 @@ class sfGuardGroupForm extends PluginsfGuardGroupForm
 {
   public function configure()
   {
-  }
+      
+            $this->widgetSchema->setLabels(array(
+  'name'    => 'Nombre *',
+  'description'   => 'Descripción *',
+  'users' => 'Usuarios ',
+  'permissions' => 'Permisos ',      
+));
+            
+                  //mensajes
+      
+    $this->validatorSchema['name']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+    $this->validatorSchema['description']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+
+    }
 }

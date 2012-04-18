@@ -13,22 +13,15 @@
       <div id="header">
         <h1>
           <a href="<?php echo url_for('homepage') ?>">
-            <img src="/images/logo.jpg" alt="Jobeet Job Board" />
-          </a>
+              <img src="/images/logo.jpg" alt="Definiciones" title="Definiciones" />
+          </a>  
         </h1>
+          <?php if ($sf_user->isAuthenticated()){ ?>
+          <div style="float: right;"><?php echo link_to('Logout', 'sf_guard_signout') ?></div>
+          <div style="text-align: center;"><?php include_component('bloque', 'menuPrincipal'); ?></div>
+          <?php } ?>
       </div>
  
-      <div id="menu">
-        <ul>
-          <li>
-           
-          </li>
-          <li>
-            
-          </li>
-            <li><?php echo link_to('Logout', 'sf_guard_signout') ?></li>
-        </ul>
-      </div>
  
       <div id="content">
         <?php echo $sf_content ?>

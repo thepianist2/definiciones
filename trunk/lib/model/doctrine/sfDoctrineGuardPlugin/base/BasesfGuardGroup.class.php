@@ -38,10 +38,12 @@ abstract class BasesfGuardGroup extends sfDoctrineRecord
         $this->hasColumn('name', 'string', 255, array(
              'type' => 'string',
              'unique' => true,
+             'notnull' => true,
              'length' => 255,
              ));
         $this->hasColumn('description', 'string', 1000, array(
              'type' => 'string',
+             'notnull' => true,
              'length' => 1000,
              ));
     }

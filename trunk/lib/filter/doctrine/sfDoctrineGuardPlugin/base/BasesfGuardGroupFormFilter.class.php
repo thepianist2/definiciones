@@ -13,8 +13,8 @@ abstract class BasesfGuardGroupFormFilter extends BaseFormFilterDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'name'             => new sfWidgetFormFilterInput(),
-      'description'      => new sfWidgetFormFilterInput(),
+      'name'             => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'description'      => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'created_at'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'updated_at'       => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
       'users_list'       => new sfWidgetFormDoctrineChoice(array('multiple' => true, 'model' => 'sfGuardUser')),

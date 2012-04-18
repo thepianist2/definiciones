@@ -43,7 +43,7 @@ abstract class BaseCategoriaFormFilter extends BaseFormFilterDoctrine
   public function getFields()
   {
     return array(
-      'idPalabra'  => 'Number',
+      'id'         => 'Number',
       'texto'      => 'Text',
       'imagen'     => 'Text',
       'created_at' => 'Date',

@@ -12,6 +12,13 @@ Palabra:
       primary: false
       notnull: true
       autoincrement: false
+    idCategoria:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
     textoPalabra:
       type: text()
       fixed: false
@@ -25,6 +32,22 @@ Palabra:
       unsigned: false
       primary: false
       notnull: true
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
       autoincrement: false
     imagen:
       type: string(255)
@@ -43,10 +66,99 @@ Palabra:
       foreign: idPalabra
       type: many 
     Categoria:
-      local: id
-      foreign: idPalabra
+      local: idCategoria
+      foreign: id
+      type: one  
+
+     
+Contenido:
+  connection: doctrine
+  tableName: contenido
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    idCategoriaContenido:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    titulo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    contenido:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+    activo:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false 
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one
+    CategoriaContenido:
+      local: idCategoriaContenido
+      foreign: id
       type: one  
       
+CategoriaContenido:
+  connection: doctrine
+  tableName: categoriaContenido
+  actAs:
+    Timestampable:
+  columns:
+    texto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
+  relations:
+    Contenido:
+      local: id
+      foreign: idCategoriaContenido
+      type: many
+
+
+
       
 Categoria:
   connection: doctrine
@@ -54,13 +166,6 @@ Categoria:
   actAs:
     Timestampable:
   columns:
-    idPalabra:
-      type: integer(8)
-      fixed: false
-      unsigned: false
-      primary: true
-      notnull: true
-      autoincrement: false
     texto:
       type: text()
       fixed: false
@@ -78,7 +183,7 @@ Categoria:
   relations:
     Palabra:
       local: id
-      foreign: idPalabra
+      foreign: idCategoria
       type: many
     SubCategoria:
       local: id
