@@ -11,9 +11,9 @@
         <td colspan="2">
           &nbsp;<a href="<?php echo url_for('contenido/index') ?>">Back to list</a>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'contenido/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+            &nbsp;<?php echo link_to('Borrar', 'contenido/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?')) ?>
           <?php endif; ?>
-          <input type="submit" value="Save" />
+          <input type="submit" value="Guardar" />
         </td>
       </tr>
     </tfoot>

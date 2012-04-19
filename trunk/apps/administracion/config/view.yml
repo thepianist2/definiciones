@@ -12,9 +12,9 @@ default:
     #language:     en
     #robots:       index, follow
 
-  stylesheets:    [admin.css, main.css]
+  stylesheets:    [admin.css, main.css, jquery-ui-1.8.17.custom.css]
 
-  javascripts:    [jquery-1.7.1.min.js, jd_Menu.js]
+  javascripts:    [jquery-1.7.1.min.js, jquery-ui-1.8.17.custom.min.js, tiny_mce/tiny_mce, jquery.quicksand.js, jd_Menu.js]
 
   has_layout:     true
   layout:         layout

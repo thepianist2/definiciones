@@ -15,8 +15,8 @@ abstract class BaseContenidoFormFilter extends BaseFormFilterDoctrine
     $this->setWidgets(array(
       'idUsuario'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
       'idCategoriaContenido' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('CategoriaContenido'), 'add_empty' => true)),
-      'titulo'               => new sfWidgetFormFilterInput(),
-      'contenido'            => new sfWidgetFormFilterInput(),
+      'titulo'               => new sfWidgetFormFilterInput(array('with_empty' => false)),
+      'contenido'            => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'borrado'              => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'activo'               => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
       'created_at'           => new sfWidgetFormFilterDate(array('from_date' => new sfWidgetFormDate(), 'to_date' => new sfWidgetFormDate(), 'with_empty' => false)),
