@@ -1,15 +1,11 @@
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $contenido->getId() ?></td>
+      <th>Creado por</th>
+      <td><?php echo $contenido->getSfGuardUser()->getUserName() ?></td>
     </tr>
     <tr>
-      <th>Id usuario:</th>
-      <td><?php echo $contenido->getIdUsuario() ?></td>
-    </tr>
-    <tr>
-      <th>Id categoria contenido:</th>
+      <th>Categoría contenido:</th>
       <td><?php echo $contenido->getIdCategoriaContenido() ?></td>
     </tr>
     <tr>
@@ -22,18 +18,18 @@
     </tr>
     <tr>
       <th>Borrado:</th>
-      <td><?php echo $contenido->getBorrado() ?></td>
+      <td><?php echo $contenido->getBorrado()? "Si" : "No" ?></td>
     </tr>
     <tr>
       <th>Activo:</th>
-      <td><?php echo $contenido->getActivo() ?></td>
+      <td><?php echo $contenido->getActivo()? "Si" : "No" ?></td>
     </tr>
     <tr>
-      <th>Created at:</th>
+      <th>Creado en:</th>
       <td><?php echo $contenido->getCreatedAt() ?></td>
     </tr>
     <tr>
-      <th>Updated at:</th>
+      <th>Actualizado en:</th>
       <td><?php echo $contenido->getUpdatedAt() ?></td>
     </tr>
   </tbody>

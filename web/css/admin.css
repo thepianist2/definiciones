@@ -209,3 +209,25 @@ li.jd_menu_title {
 .clear {
 	clear: both; /* float:none;  */
 }
+
+table{
+    width: 90%;
+margin: 10px 5%;
+border-spacing: 0;
+text-align: left;
+}
+
+table thead{
+    background-color: #e6e6e6;
+    display: table-header-group;
+vertical-align: middle;
+border-color: inherit;
+border-spacing: 0;
+text-align: left;
+}
+
+tr, th, td{
+    padding: 5px;
+    border-right: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}

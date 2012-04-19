@@ -17,7 +17,7 @@
           </a>  
         </h1>
           <?php if ($sf_user->isAuthenticated()){ ?>
-          <div style="float: right;"><?php echo link_to('Logout', 'sf_guard_signout') ?></div>
+          <div style="float: right;"><?php echo link_to('Desconectarse', 'sf_guard_signout') ?></div>
           <div style="text-align: center;"><?php include_component('bloque', 'menuPrincipal'); ?></div>
           <?php } ?>
       </div>
@@ -28,9 +28,6 @@
       </div>
  
       <div id="footer">
-        <img src="/images/jobeet-mini.png" />
-        powered by <a href="http://www.allel.es/">
-        <img src="/images/symfony.gif" alt="symfony framework" /></a>
       </div>
     </div>
   </body>

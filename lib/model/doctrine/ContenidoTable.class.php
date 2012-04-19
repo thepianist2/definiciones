@@ -16,4 +16,20 @@ class ContenidoTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Contenido');
     }
+    
+         public function verificarExiste($titulo){
+        $q = Doctrine_Query::create()
+	            ->select('u.*')
+	            ->from('Contenido u')
+                     ->where('u.titulo = ? ',$titulo);
+
+	   $u=$q->fetchOne();
+	     if ($u) {
+                 //si ya esta en la base de datos
+	 		return true;
+	     }else{
+                 //si no esta en la base de datos
+	 		return false;
+             }
+         }
 }

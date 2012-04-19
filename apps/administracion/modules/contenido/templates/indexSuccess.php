@@ -1,32 +1,29 @@
-<h1>Contenidos List</h1>
+<h1>Lista de contenidos</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Id</th>
-      <th>Id usuario</th>
-      <th>Id categoria contenido</th>
+      <th>Usuario</th>
+      <th>Categoria</th>
       <th>Titulo</th>
-      <th>Contenido</th>
       <th>Borrado</th>
       <th>Activo</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>Creado en</th>
+      <th>Actualizado en</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($contenidos as $contenido): ?>
+  
     <tr>
-      <td><a href="<?php echo url_for('contenido/show?id='.$contenido->getId()) ?>"><?php echo $contenido->getId() ?></a></td>
-      <td><?php echo $contenido->getIdUsuario() ?></td>
-      <td><?php echo $contenido->getIdCategoriaContenido() ?></td>
-      <td><?php echo $contenido->getTitulo() ?></td>
-      <td><?php echo $contenido->getContenido() ?></td>
-      <td><?php echo $contenido->getBorrado() ?></td>
-      <td><?php echo $contenido->getActivo() ?></td>
+      <td><?php echo $contenido->getSfGuardUser()->getUserName() ?></td>
+      <td><?php echo $contenido->getCategoriaContenido()->getTexto() ?></td>
+      <td><a href="<?php echo url_for('contenido/show?id='.$contenido->getId()) ?>"><?php echo $contenido->getTitulo() ?></a></td>
+      <td><?php echo $contenido->getBorrado()? "Si" : "No" ?></td>
+      <td><?php echo $contenido->getActivo()? "Si" : "No" ?></td>
       <td><?php echo $contenido->getCreatedAt() ?></td>
       <td><?php echo $contenido->getUpdatedAt() ?></td>
-    </tr>
+    </tr></a>
     <?php endforeach; ?>
   </tbody>
 </table>

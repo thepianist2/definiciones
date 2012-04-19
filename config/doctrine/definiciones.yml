@@ -96,14 +96,14 @@ Contenido:
       fixed: false
       unsigned: false
       primary: false
-      notnull: false
+      notnull: true
       autoincrement: false
     contenido:
       type: text()
       fixed: false
       unsigned: false
       primary: false
-      notnull: false
+      notnull: true
       autoincrement: false
     borrado:
       type: boolean()
@@ -159,7 +159,7 @@ CategoriaContenido:
 
 
 
-      
+
 Categoria:
   connection: doctrine
   tableName: categoria
