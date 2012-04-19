@@ -87,6 +87,14 @@ sfGuardUser:
     is_active_idx:
       fields: [is_active]
   relations:
+    Contenido:
+      local: id
+      foreign: idUsuario
+      type: one
+    Palabra:
+      local: id
+      foreign: idUsuario
+      type: one
     Groups:
       class: sfGuardGroup
       local: user_id
