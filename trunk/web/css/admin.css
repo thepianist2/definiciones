@@ -1,3 +1,12 @@
+
+root {display: block;
+}
+
+
+* {
+margin: 0 auto;
+}
+
 body
 {
     font-size: 11px;
@@ -12,12 +21,15 @@ body
 {
   width: 100%;
   background: none;
+  width: 800px;
+  min-height: 800px;
+  border: 1px groove #003366;
 }
 
 #content
 {
   padding: 25px;
-  padding-top: 0;
+  padding-top: 40px;
 }
 
 #menu
@@ -230,4 +242,10 @@ tr, th, td{
     padding: 5px;
     border-right: 1px solid #FFFFFF;
     border-bottom: 1px solid #FFFFFF;
+}
+
+.cerrar-sesion{
+    width: 25px;
+    height: 25px;
+    margin-left: -50px;
 }

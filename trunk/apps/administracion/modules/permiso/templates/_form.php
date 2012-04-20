@@ -8,10 +8,11 @@
   <table>
     <tfoot>
       <tr>
-        <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('permiso/index') ?>">Volver a la lista</a>
+        <td colspan="2" style="text-align: center; margin-top: 200px;">
+            <br></br><br></br>
+          &nbsp;<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'permiso/index', array('title' => 'Volver a la lista')) ?>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'permiso/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?')) ?>
+            &nbsp;<?php echo link_to(image_tag('iconos/borrar.png').'Borrar', 'permiso/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?>
           <?php endif; ?>
           <input type="submit" value="Guardar" />
         </td>

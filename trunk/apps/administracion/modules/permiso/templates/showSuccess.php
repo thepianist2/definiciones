@@ -21,6 +21,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('permiso/edit?id='.$sf_guard_permission->getId()) ?>">Editar</a>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'permiso/edit?id='.$sf_guard_permission->getId(), array('title' => 'Editar')) ?>
 &nbsp;
-<a href="<?php echo url_for('permiso/index') ?>">Volver a la lista</a>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'permiso/index', array('title' => 'Volver a la lista')) ?>

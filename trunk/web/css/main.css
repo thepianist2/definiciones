@@ -24,7 +24,7 @@ a
 
 body
 {
-  font: 14px "Lucida Grande", Lucida, Verdana, sans-serif;
+  font: 10px "Lucida Grande", Lucida, Verdana, sans-serif;
 
 }
 
@@ -301,7 +301,8 @@ em
 {
   margin: 3px 0;
   padding: 7px;
-  background-color: #cfc;
+  color: white;
+  background-color: darkgreen;
 }
 
 .flash_error

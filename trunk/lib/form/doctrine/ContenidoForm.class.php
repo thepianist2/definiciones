@@ -32,7 +32,7 @@ class ContenidoForm extends BaseContenidoForm
     
                      //campo nivel Conocimiento
         $tipo = Doctrine::getTable('CategoriaContenido')->getLista();
-        $tipo[0]='';
+        $tipo[0]='--Seleccione una categoria--';
         asort($tipo);
         $this->setWidget('idCategoriaContenido', new sfWidgetFormSelect(array('choices' => $tipo)));
     

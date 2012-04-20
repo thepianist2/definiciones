@@ -62,7 +62,7 @@ class usuarioActions extends sfActions
 
     $this->forward404Unless($sf_guard_user = Doctrine_Core::getTable('sfGuardUser')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_user does not exist (%s).', $request->getParameter('id')));
     $sf_guard_user->delete();
-
+    $this->getUser()->setFlash('mensajeTerminado','Usuario eliminado.');
     $this->redirect('usuario/index');
   }
 
@@ -72,8 +72,8 @@ class usuarioActions extends sfActions
     if ($form->isValid())
     {
       $sf_guard_user = $form->save();
-
-      $this->redirect('usuario/edit?id='.$sf_guard_user->getId());
+      $this->getUser()->setFlash('mensajeTerminado','Usuario guardado.');
+      $this->redirect('usuario/index');
     }
   }
 }

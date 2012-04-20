@@ -62,7 +62,7 @@ class permisoActions extends sfActions
 
     $this->forward404Unless($sf_guard_permission = Doctrine_Core::getTable('sfGuardPermission')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_permission does not exist (%s).', $request->getParameter('id')));
     $sf_guard_permission->delete();
-
+    $this->getUser()->setFlash('mensajeTerminado','Permiso eliminado.');
     $this->redirect('permiso/index');
   }
 
@@ -72,8 +72,8 @@ class permisoActions extends sfActions
     if ($form->isValid())
     {
       $sf_guard_permission = $form->save();
-
-      $this->redirect('permiso/edit?id='.$sf_guard_permission->getId());
+      $this->getUser()->setFlash('mensajeTerminado','Permiso guardado.');
+      $this->redirect('permiso/index');
     }
   }
 }

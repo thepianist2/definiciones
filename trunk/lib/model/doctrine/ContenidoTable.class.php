@@ -17,11 +17,12 @@ class ContenidoTable extends Doctrine_Table
         return Doctrine_Core::getTable('Contenido');
     }
     
-         public function verificarExiste($titulo){
+         public function verificarExiste($titulo, $idCategoriaContenido){
         $q = Doctrine_Query::create()
 	            ->select('u.*')
 	            ->from('Contenido u')
-                     ->where('u.titulo = ? ',$titulo);
+                     ->where('u.titulo = ?',$titulo)
+                     ->andWhere('u.idCategoriaContenido = ?',$idCategoriaContenido);
 
 	   $u=$q->fetchOne();
 	     if ($u) {

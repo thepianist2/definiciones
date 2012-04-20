@@ -21,6 +21,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('perfil/edit?id='.$sf_guard_group->getId()) ?>">Editar</a>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'perfil/edit?id='.$sf_guard_group->getId(), array('title' => 'Editar')) ?>
 &nbsp;
-<a href="<?php echo url_for('perfil/index') ?>">Volver a la lista</a>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'perfil/index', array('title' => 'Volver a la lista')) ?>
