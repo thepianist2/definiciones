@@ -7,6 +7,19 @@
     <?php use_stylesheet('admin.css') ?>
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
+    <script type="text/javascript">
+$(document).ready(function() {
+    $('.cerrar-sesion').mouseover(function() {
+    $('#header').next().fadeToggle(1000);
+  });
+  
+    $('.cerrar-sesion').mouseout(function() {
+        $('#header').next().fadeIn('slow');
+  });
+});
+    </script>
+    
+    
   </head>
   <body>
     <div id="container">
@@ -17,7 +30,8 @@
           </a>  
         </h1>
           <?php if ($sf_user->isAuthenticated()){ ?>
-          <div style="float: right;"><?php echo link_to('Desconectarse', 'sf_guard_signout') ?></div>
+          
+          <div style="float: right;"><?php echo link_to(image_tag('iconos/desconectar.png', array('class' => 'cerrar-sesion', 'title' => 'Cerrar sesión')), 'sf_guard_signout', array()) ?></div>
           <div style="text-align: center;"><?php include_component('bloque', 'menuPrincipal'); ?></div>
           <?php } ?>
       </div>

@@ -37,6 +37,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('contenido/edit?id='.$contenido->getId()) ?>">Edit</a>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'contenido/edit?id='.$contenido->getId(), array('title' => 'Editar')) ?>
 &nbsp;
-<a href="<?php echo url_for('contenido/index') ?>">List</a>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'contenido/index', array('title' => 'Volver a la lista')) ?>

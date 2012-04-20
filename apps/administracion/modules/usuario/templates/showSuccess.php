@@ -45,6 +45,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('usuario/edit?id='.$sf_guard_user->getId()) ?>">Editar</a>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'usuario/edit?id='.$sf_guard_user->getId(), array('title' => 'Editar')) ?>
 &nbsp;
-<a href="<?php echo url_for('usuario/index') ?>">Volver a la lista</a>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'usuario/index', array('title' => 'Volver a la lista')) ?>

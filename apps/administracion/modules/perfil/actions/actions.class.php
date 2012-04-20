@@ -62,7 +62,7 @@ class perfilActions extends sfActions
 
     $this->forward404Unless($sf_guard_group = Doctrine_Core::getTable('sfGuardGroup')->find(array($request->getParameter('id'))), sprintf('Object sf_guard_group does not exist (%s).', $request->getParameter('id')));
     $sf_guard_group->delete();
-
+    $this->getUser()->setFlash('mensajeTerminado','Grupo eliminado.');
     $this->redirect('perfil/index');
   }
 
@@ -72,8 +72,8 @@ class perfilActions extends sfActions
     if ($form->isValid())
     {
       $sf_guard_group = $form->save();
-
-      $this->redirect('perfil/edit?id='.$sf_guard_group->getId());
+      $this->getUser()->setFlash('mensajeTerminado','Grupo guardado.');
+      $this->redirect('perfil/index');
     }
   }
 }

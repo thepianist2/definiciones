@@ -2,8 +2,8 @@
 	$(document).ready(
 		function() {
 			jd_Menu_init();
-                        			// Attach an event for testing purposes
-			$('.jd_menu > li').click(
+                       // Attach an event for testing purposes
+                            $('.jd_menu > li').mouseover(
 				function() {
                                     var id = $(this).attr('id');
 					if ($('> ul', this).size() < 1) {
@@ -21,11 +21,18 @@
                        });
                    });
             }
+              
+   setTimeout("$('.flash_notice').slideUp(1000);", 2000);
+   setTimeout("$('.flash_error').slideUp(1000);", 2000);
+
 </script>
 
 <div id="menu-principal">
-<h2>Menú Principal</h2>
-<a title="Click para mostrar" id="menuTarget" onclick="jd_Menu_show('#exampleMenu', true);">Mostrar Menú</a>
+<!--<h2>Menú Principal</h2>-->
+<a style="color: #FFF;
+text-decoration: none;
+background: #000;
+font: small-caps normal 20px Verdana, Arial, Helvetica, sans-serif;" title="Click para mostrar" id="menuTarget" onclick="jd_Menu_show('#exampleMenu', true);">Mostrar Menú</a>
 <ul id="exampleMenu" class="jd_menu" attachto="menuTarget" menuposition="relative bottom left" style="margin-top: 4px;">
 	<!-- menuposition may be (relative|absolute) (mb mt ml mr) (bottom left top right) -->
         <li id="<?php echo url_for('usuario/index'); ?>">Usuarios</li>
@@ -36,4 +43,10 @@
         <li id="<?php echo url_for('categoria/index'); ?>">Categorias y subCategorias Palabras</li>
 	<li id="<?php echo url_for('default/index'); ?>">Palabras y definiciones</li>
 </ul>
+        <?php if ($sf_user->hasFlash('mensajeTerminado')): ?>
+            <div class="flash_notice"><?php echo $sf_user->getFlash('mensajeTerminado') ?></div>
+        <?php endif; ?>
+        <?php if ($sf_user->hasFlash('mensajeError')): ?>
+            <div class="flash_error"><?php echo $sf_user->getFlash('mensajeError') ?></div>
+        <?php endif; ?>        
 </div>
