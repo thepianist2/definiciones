@@ -26,6 +26,9 @@ class contenidoActions extends sfActions
   public function executeNew(sfWebRequest $request)
   {
     $this->form = new contenidoForm();
+    if ($this->getUser()->isAuthenticated()) {
+        $this->form->setDefault('idUsuario', $this->getUser()->getAttribute('id'));
+    }
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -33,7 +36,9 @@ class contenidoActions extends sfActions
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new contenidoForm();
-
+    if ($this->getUser()->isAuthenticated()) {
+        $this->form->setDefault('idUsuario', $this->getUser()->getAttribute('id'));
+    }
     $this->processForm($request, $this->form);
 
     $this->setTemplate('new');

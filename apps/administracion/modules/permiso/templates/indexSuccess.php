@@ -25,4 +25,6 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('permiso/new') ?>">Nuevo</a>
+<div style="text-align: center;" >
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'permiso/new', array('title' => 'Nuevo')) ?>
+</div>

@@ -29,7 +29,7 @@
 
 <div id="menu-principal">
 <!--<h2>Menú Principal</h2>-->
-<a style="color: #FFF;
+<a style="color: #FFF;margin-left: 350px;
 text-decoration: none;
 background: #000;
 font: small-caps normal 20px Verdana, Arial, Helvetica, sans-serif;" title="Click para mostrar" id="menuTarget" onclick="jd_Menu_show('#exampleMenu', true);">Mostrar Menú</a>
@@ -40,13 +40,9 @@ font: small-caps normal 20px Verdana, Arial, Helvetica, sans-serif;" title="Clic
         <li id="<?php echo url_for('permiso/index'); ?>">Permisos</li>
         <li id="<?php echo url_for('contenido/index'); ?>">Contenido</li>
 	<li id="<?php echo url_for('categoriaContenido/index'); ?>">Categorias de contenido</li>
-        <li id="<?php echo url_for('categoria/index'); ?>">Categorias y subCategorias Palabras</li>
+        <li id="<?php echo url_for('categoria/index'); ?>">Categorias Palabras</li>
+        <li id="<?php echo url_for('subCategoria/index'); ?>">Subcategorias Palabras</li>
 	<li id="<?php echo url_for('default/index'); ?>">Palabras y definiciones</li>
-</ul>
-        <?php if ($sf_user->hasFlash('mensajeTerminado')): ?>
-            <div class="flash_notice"><?php echo $sf_user->getFlash('mensajeTerminado') ?></div>
-        <?php endif; ?>
-        <?php if ($sf_user->hasFlash('mensajeError')): ?>
-            <div class="flash_error"><?php echo $sf_user->getFlash('mensajeError') ?></div>
-        <?php endif; ?>        
-</div>
+</ul></div>
+    
+

@@ -31,4 +31,6 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('contenido/new') ?>">New</a>
+<div style="text-align: center;" >
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'contenido/new', array('title' => 'Nuevo')) ?>
+</div>

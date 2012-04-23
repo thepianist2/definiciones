@@ -1,3 +1,3 @@
-<h1>New Categoria</h1>
+<h1>Nueva Categoría</h1>
 
 <?php include_partial('form', array('form' => $form)) ?>

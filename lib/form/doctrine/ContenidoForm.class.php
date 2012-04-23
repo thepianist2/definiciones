@@ -16,6 +16,10 @@ class ContenidoForm extends BaseContenidoForm
       unset($this['created_at'], $this['updated_at']);
       
       
+                  //ocultar campo de usuario id
+//     $this->setWidget('idUsuario', new sfWidgetFormInputHidden());   
+//      $this->setValidator('idUsuario', new sfValidatorInteger());
+      
     //campo contenido
     $this->setWidget('contenido', new sfWidgetFormTextareaTinyMCE(array(
                           'width'  => 550,
@@ -43,11 +47,12 @@ $this->widgetSchema->setLabels(array(
   'idUsuario'    => 'Usuario',
   'idCategoriaContenido'   => 'Categoria',    
 ));
- 
+
        //mensajes
       
     $this->validatorSchema['titulo']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
     $this->validatorSchema['contenido']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
     $this->validatorSchema['idCategoriaContenido']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+    $this->validatorSchema['idUsuario']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
   }
 }
