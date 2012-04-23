@@ -30,14 +30,15 @@ $(document).ready(function() {
           </a>  
         </h1>
           <?php if ($sf_user->isAuthenticated()){ ?>
-          
-          <div style="float: right;"><?php echo link_to(image_tag('iconos/desconectar.png', array('class' => 'cerrar-sesion', 'title' => 'Cerrar sesión')), 'sf_guard_signout', array()) ?></div>
-          <div style="text-align: center;"><?php include_component('bloque', 'menuPrincipal'); ?></div>
+          <div style="float: left; color: #cd0a0a;"><?php echo "Bienvenido ".$sf_user->getUserName() ?></div>
+          <div style="float: right;"><?php echo link_to(image_tag('iconos/desconectar.png', array('class' => 'cerrar-sesion', 'title' => 'Cerrar sesión')), 'sf_guard_signout', array()) ?></div><br></br>
+          <div><?php include_component('bloque', 'menuPrincipal'); ?></div>
           <?php } ?>
       </div>
  
  
       <div id="content">
+          <?php include_partial('bloque/bloqueMensaje'); ?>
         <?php echo $sf_content ?>
       </div>
  

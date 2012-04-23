@@ -10,14 +10,14 @@
     </tr>
     <tr>
       <th>Imagen:</th>
-      <td><?php echo $categoria_contenido->getImagen() ?></td>
+      <td><img id="imagenIndex" src="<?php echo '/uploads/'.$categoria_contenido->getImagen() ?>"></td>
     </tr>
     <tr>
-      <th>Created at:</th>
+      <th>Creado en:</th>
       <td><?php echo $categoria_contenido->getCreatedAt() ?></td>
     </tr>
     <tr>
-      <th>Updated at:</th>
+      <th>Actualizado en:</th>
       <td><?php echo $categoria_contenido->getUpdatedAt() ?></td>
     </tr>
   </tbody>
@@ -25,6 +25,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('categoriaContenido/edit?id='.$categoria_contenido->getId()) ?>">Edit</a>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'categoriaContenido/edit?id='.$categoria_contenido->getId(), array('title' => 'Editar')) ?>
 &nbsp;
-<a href="<?php echo url_for('categoriaContenido/index') ?>">List</a>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'categoriaContenido/index', array('title' => 'Volver a la lista')) ?>

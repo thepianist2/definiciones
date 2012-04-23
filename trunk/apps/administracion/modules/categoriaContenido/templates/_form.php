@@ -8,10 +8,11 @@
   <table>
     <tfoot>
       <tr>
-        <td colspan="2">
-          &nbsp;<a href="<?php echo url_for('categoriaContenido/index') ?>">Back to list</a>
+        <td colspan="2" style="text-align: center; margin-top: 200px;">
+             <br></br><br></br>
+          &nbsp;<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'categoriaContenido/index', array('title' => 'Volver a la lista')) ?>
           <?php if (!$form->getObject()->isNew()): ?>
-            &nbsp;<?php echo link_to('Delete', 'categoriaContenido/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Are you sure?')) ?>
+            &nbsp;<?php echo link_to(image_tag('iconos/borrar.png').'Borrar', 'categoriaContenido/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?>
           <?php endif; ?>
           <input type="submit" value="Save" />
         </td>

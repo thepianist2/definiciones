@@ -16,4 +16,21 @@ class CategoriaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Categoria');
     }
+    
+    
+         public function verificarExiste($nombre){
+        $q = Doctrine_Query::create()
+	            ->select('u.*')
+	            ->from('Categoria u')
+                     ->where('u.texto = ? ',$nombre);
+
+	   $u=$q->fetchOne();
+	     if ($u) {
+                 //si ya esta en la base de datos
+	 		return true;
+	     }else{
+                 //si no esta en la base de datos
+	 		return false;
+             }
+         }
 }

@@ -1,23 +1,19 @@
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $categoria->getId() ?></td>
-    </tr>
-    <tr>
       <th>Texto:</th>
       <td><?php echo $categoria->getTexto() ?></td>
     </tr>
     <tr>
       <th>Imagen:</th>
-      <td><?php echo $categoria->getImagen() ?></td>
+      <td><img id="imagenIndex" src="<?php echo '/uploads/'.$categoria->getImagen() ?>"></td>
     </tr>
     <tr>
-      <th>Created at:</th>
+      <th>Creado en:</th>
       <td><?php echo $categoria->getCreatedAt() ?></td>
     </tr>
     <tr>
-      <th>Updated at:</th>
+      <th>Actualizado en:</th>
       <td><?php echo $categoria->getUpdatedAt() ?></td>
     </tr>
   </tbody>
@@ -25,6 +21,6 @@
 
 <hr />
 
-<a href="<?php echo url_for('categoria/edit?id='.$categoria->getId()) ?>">Edit</a>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'categoria/edit?id='.$categoria->getId(), array('title' => 'Editar')) ?>
 &nbsp;
-<a href="<?php echo url_for('categoria/index') ?>">List</a>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'categoria/index', array('title' => 'Volver a la lista')) ?>

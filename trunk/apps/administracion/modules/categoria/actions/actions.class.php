@@ -62,18 +62,35 @@ class categoriaActions extends sfActions
 
     $this->forward404Unless($categoria = Doctrine_Core::getTable('categoria')->find(array($request->getParameter('id'))), sprintf('Object categoria does not exist (%s).', $request->getParameter('id')));
     $categoria->delete();
-
+    $this->getUser()->setFlash('mensajeTerminado','Categoía eliminada.');
     $this->redirect('categoria/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
+   $errorCategoria=false;
+   $valores = $request->getParameter($form->getName());
+   $nombreCategoria = $valores['texto'];
+   
+        if($form->getObject()->isNew() or $form->getObject()->texto != $valores['texto'])
+        {
+            if(Doctrine_Core::getTable('Categoria')->verificarExiste($nombreCategoria))
+            {
+                 $errorCategoria=true;}
+                
+        }
+    if ($form->isValid() & $errorCategoria==false)
     {
       $categoria = $form->save();
-
-      $this->redirect('categoria/edit?id='.$categoria->getId());
+      $this->getUser()->setFlash('mensajeTerminado','Categoría guardada.');
+      $this->redirect('categoria/index');
+    }else{
+        if($errorCategoria){
+            $this->getUser()->setFlash('mensajeError','Esta categoría ya existe, cambie el nombre');
+        }else{
+            $this->getUser()->setFlash('mensajeError','Porfavor, revise los campos marcados.');
+        }
     }
   }
 }

@@ -1,21 +1,23 @@
-<h1>Categoria contenidos List</h1>
+<h1>Lista de Categorias de Contenido</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Id</th>
+      <th colspan="3">Acciones</th>
       <th>Texto</th>
       <th>Imagen</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>Creado en</th>
+      <th>Actualizado en</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($categoria_contenidos as $categoria_contenido): ?>
     <tr>
-      <td><a href="<?php echo url_for('categoriaContenido/show?id='.$categoria_contenido->getId()) ?>"><?php echo $categoria_contenido->getId() ?></a></td>
+      <td><?php echo link_to(image_tag('iconos/vistaPrevia.png'), 'categoriaContenido/show?id='.$categoria_contenido->getId(), array('title' => 'Ver')) ?></td>
+      <td><?php echo link_to(image_tag('iconos/editar.png'), 'categoriaContenido/edit?id='.$categoria_contenido->getId(), array('title' => 'Editar')) ?></td>
+      <td><?php echo link_to(image_tag('iconos/borrar.png'), 'categoriaContenido/delete?id='.$categoria_contenido->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>
       <td><?php echo $categoria_contenido->getTexto() ?></td>
-      <td><?php echo $categoria_contenido->getImagen() ?></td>
+      <td><img id="imagenIndex" src="<?php echo '/uploads/'.$categoria_contenido->getImagen() ?>"></td>
       <td><?php echo $categoria_contenido->getCreatedAt() ?></td>
       <td><?php echo $categoria_contenido->getUpdatedAt() ?></td>
     </tr>
@@ -23,4 +25,6 @@
   </tbody>
 </table>
 
-  <a href="<?php echo url_for('categoriaContenido/new') ?>">New</a>
+<div style="text-align: center;" >
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'categoriaContenido/new', array('title' => 'Nuevo')) ?>
+</div>
