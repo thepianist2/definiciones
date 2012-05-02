@@ -9,16 +9,13 @@ Doctrine_Manager::getInstance()->bindComponent('Categoria', 'doctrine');
  * 
  * @property text $texto
  * @property string $imagen
- * @property Doctrine_Collection $Palabra
  * @property Doctrine_Collection $SubCategoria
  * 
  * @method text                getTexto()        Returns the current record's "texto" value
  * @method string              getImagen()       Returns the current record's "imagen" value
- * @method Doctrine_Collection getPalabra()      Returns the current record's "Palabra" collection
  * @method Doctrine_Collection getSubCategoria() Returns the current record's "SubCategoria" collection
  * @method Categoria           setTexto()        Sets the current record's "texto" value
  * @method Categoria           setImagen()       Sets the current record's "imagen" value
- * @method Categoria           setPalabra()      Sets the current record's "Palabra" collection
  * @method Categoria           setSubCategoria() Sets the current record's "SubCategoria" collection
  * 
  * @package    definiciones
@@ -54,10 +51,6 @@ abstract class BaseCategoria extends sfDoctrineRecord
     public function setUp()
     {
         parent::setUp();
-        $this->hasMany('Palabra', array(
-             'local' => 'id',
-             'foreign' => 'idCategoria'));
-
         $this->hasMany('SubCategoria', array(
              'local' => 'id',
              'foreign' => 'idCategoria'));

@@ -22,7 +22,7 @@ class CategoriaTable extends Doctrine_Table
         $q = Doctrine_Query::create()
 	            ->select('u.*')
 	            ->from('Categoria u')
-                     ->where('u.texto = ? ',$nombre);
+                     ->where('u.texto LIKE ? ',$nombre);
 
 	   $u=$q->fetchOne();
 	     if ($u) {
@@ -33,4 +33,28 @@ class CategoriaTable extends Doctrine_Table
 	 		return false;
              }
          }
+         
+         
+           public function getLista() {	     
+          
+    $q = Doctrine_Query::create()
+    ->select('t.id, t.texto')
+    ->from('Categoria t')
+    ->orderBy('t.id DESC');
+       $q->fetchArray();
+       
+  $resultados=$q->fetchArray();
+	     if (!$resultados) {
+	     	return false;
+	     }
+	     else {
+	     	foreach ($resultados as $resultado) {
+	     		$retorno[$resultado['id']]=$resultado['texto'];
+	     	}
+	     	
+	     	return $retorno;
+	     }
+	     	
+  
+}
 }

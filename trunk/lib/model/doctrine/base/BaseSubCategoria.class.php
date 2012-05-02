@@ -11,15 +11,18 @@ Doctrine_Manager::getInstance()->bindComponent('SubCategoria', 'doctrine');
  * @property text $texto
  * @property string $imagen
  * @property Categoria $Categoria
+ * @property Doctrine_Collection $Palabra
  * 
- * @method integer      getIdCategoria() Returns the current record's "idCategoria" value
- * @method text         getTexto()       Returns the current record's "texto" value
- * @method string       getImagen()      Returns the current record's "imagen" value
- * @method Categoria    getCategoria()   Returns the current record's "Categoria" value
- * @method SubCategoria setIdCategoria() Sets the current record's "idCategoria" value
- * @method SubCategoria setTexto()       Sets the current record's "texto" value
- * @method SubCategoria setImagen()      Sets the current record's "imagen" value
- * @method SubCategoria setCategoria()   Sets the current record's "Categoria" value
+ * @method integer             getIdCategoria() Returns the current record's "idCategoria" value
+ * @method text                getTexto()       Returns the current record's "texto" value
+ * @method string              getImagen()      Returns the current record's "imagen" value
+ * @method Categoria           getCategoria()   Returns the current record's "Categoria" value
+ * @method Doctrine_Collection getPalabra()     Returns the current record's "Palabra" collection
+ * @method SubCategoria        setIdCategoria() Sets the current record's "idCategoria" value
+ * @method SubCategoria        setTexto()       Sets the current record's "texto" value
+ * @method SubCategoria        setImagen()      Sets the current record's "imagen" value
+ * @method SubCategoria        setCategoria()   Sets the current record's "Categoria" value
+ * @method SubCategoria        setPalabra()     Sets the current record's "Palabra" collection
  * 
  * @package    definiciones
  * @subpackage model
@@ -35,7 +38,8 @@ abstract class BaseSubCategoria extends sfDoctrineRecord
              'type' => 'integer',
              'fixed' => 0,
              'unsigned' => false,
-             'primary' => true,
+             'primary' => false,
+             'notnull' => true,
              'autoincrement' => false,
              'length' => 8,
              ));
@@ -65,6 +69,10 @@ abstract class BaseSubCategoria extends sfDoctrineRecord
         $this->hasOne('Categoria', array(
              'local' => 'idCategoria',
              'foreign' => 'id'));
+
+        $this->hasMany('Palabra', array(
+             'local' => 'id',
+             'foreign' => 'idSubCategoria'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

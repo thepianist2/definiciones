@@ -15,7 +15,8 @@ abstract class BaseSubCategoriaForm extends BaseFormDoctrine
   public function setup()
   {
     $this->setWidgets(array(
-      'idCategoria' => new sfWidgetFormInputHidden(),
+      'id'          => new sfWidgetFormInputHidden(),
+      'idCategoria' => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Categoria'), 'add_empty' => false)),
       'texto'       => new sfWidgetFormInputText(),
       'imagen'      => new sfWidgetFormInputText(),
       'created_at'  => new sfWidgetFormDateTime(),
@@ -23,7 +24,8 @@ abstract class BaseSubCategoriaForm extends BaseFormDoctrine
     ));
 
     $this->setValidators(array(
-      'idCategoria' => new sfValidatorChoice(array('choices' => array($this->getObject()->get('idCategoria')), 'empty_value' => $this->getObject()->get('idCategoria'), 'required' => false)),
+      'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'idCategoria' => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Categoria'))),
       'texto'       => new sfValidatorPass(),
       'imagen'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'created_at'  => new sfValidatorDateTime(),

@@ -45,7 +45,7 @@ class CategoriaContenidoTable extends Doctrine_Table
         $q = Doctrine_Query::create()
 	            ->select('u.*')
 	            ->from('CategoriaContenido u')
-                     ->where('u.texto = ? ',$nombre);
+                     ->where('u.texto LIKE ? ',$nombre);
 
 	   $u=$q->fetchOne();
 	     if ($u) {

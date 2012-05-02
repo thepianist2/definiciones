@@ -12,5 +12,49 @@ class PalabraForm extends BasePalabraForm
 {
   public function configure()
   {
+                                          //quitar campos que no usaremos
+      unset($this['created_at'], $this['updated_at'], $this['borrado']);
+      
+      
+
+      
+      
+      
+      
+      $this->setWidget('textoDefinicion', new sfWidgetFormTextarea());
+      $this->setValidator('textoPalabra',new sfValidatorString(array('required' => true)));
+      $this->setValidator('textoDefinicion',new sfValidatorString(array('required' => true)));
+                  $imagenPicFileSrc = '/uploads/'.$this->getObject()->imagen;
+            $this->widgetSchema['imagen'] = new sfWidgetFormInputFileEditable(array('file_src'  => $imagenPicFileSrc, 
+   			            'is_image' => true,
+			            'edit_mode' => !$this->isNew(),
+				    'delete_label' => 'Eliminar'),
+                                    array('id' => 'imagenFormu'));   
+ 
+$this->validatorSchema['imagen'] = new sfValidatorFile(array(
+                      'mime_types' => 'web_images',
+    		      'path' => sfConfig::get('sf_upload_dir'),
+		      'required' => false));
+      
+$this->validatorSchema['imagen_delete'] = new sfValidatorBoolean(); 
+
+
+          $this->widgetSchema->setLabels(array(
+  'idUsuario'    => 'Usuario *',
+  'idCategoria'   => 'Categoría *',
+  'textoPalabra' => 'Palabra *',
+  'textoDefinicion' => 'Definición *'     
+));  
+          
+          
+                                   //campo nivel Conocimiento
+        $tipo = Doctrine::getTable('Categoria')->getLista();
+        $tipo[0]='--Seleccione una categoria--';
+        asort($tipo);
+        $this->setWidget('idCategoria', new sfWidgetFormSelect(array('choices' => $tipo)));   
+
+
+$this->validatorSchema['textoPalabra']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+      
   }
 }

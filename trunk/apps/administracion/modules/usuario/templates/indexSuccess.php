@@ -1,4 +1,9 @@
 <?php use_helper('Date') ?>
+
+<?php echo link_to(image_tag('iconos/grupo.png').'Grupos', 'perfil/index', array('title' => 'Grupos')) ?>
+<?php echo link_to(image_tag('iconos/permisos.png').'Permisos', 'permiso/index', array('title' => 'Permisos')) ?>
+
+
 <h1>Lista de usuarios</h1>
 
 <table>

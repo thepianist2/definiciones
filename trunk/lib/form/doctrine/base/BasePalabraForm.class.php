@@ -17,7 +17,7 @@ abstract class BasePalabraForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'              => new sfWidgetFormInputHidden(),
       'idUsuario'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => false)),
-      'idCategoria'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Categoria'), 'add_empty' => false)),
+      'idSubCategoria'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('SubCategoria'), 'add_empty' => false)),
       'textoPalabra'    => new sfWidgetFormInputText(),
       'textoDefinicion' => new sfWidgetFormInputText(),
       'borrado'         => new sfWidgetFormInputCheckbox(),
@@ -30,7 +30,7 @@ abstract class BasePalabraForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'              => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'idUsuario'       => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
-      'idCategoria'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Categoria'))),
+      'idSubCategoria'  => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('SubCategoria'))),
       'textoPalabra'    => new sfValidatorPass(),
       'textoDefinicion' => new sfValidatorPass(),
       'borrado'         => new sfValidatorBoolean(array('required' => false)),
