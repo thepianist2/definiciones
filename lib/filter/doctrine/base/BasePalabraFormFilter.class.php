@@ -14,7 +14,7 @@ abstract class BasePalabraFormFilter extends BaseFormFilterDoctrine
   {
     $this->setWidgets(array(
       'idUsuario'       => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'), 'add_empty' => true)),
-      'idCategoria'     => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Categoria'), 'add_empty' => true)),
+      'idSubCategoria'  => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('SubCategoria'), 'add_empty' => true)),
       'textoPalabra'    => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'textoDefinicion' => new sfWidgetFormFilterInput(array('with_empty' => false)),
       'borrado'         => new sfWidgetFormChoice(array('choices' => array('' => 'yes or no', 1 => 'yes', 0 => 'no'))),
@@ -26,7 +26,7 @@ abstract class BasePalabraFormFilter extends BaseFormFilterDoctrine
 
     $this->setValidators(array(
       'idUsuario'       => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('sfGuardUser'), 'column' => 'id')),
-      'idCategoria'     => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('Categoria'), 'column' => 'id')),
+      'idSubCategoria'  => new sfValidatorDoctrineChoice(array('required' => false, 'model' => $this->getRelatedModelName('SubCategoria'), 'column' => 'id')),
       'textoPalabra'    => new sfValidatorPass(array('required' => false)),
       'textoDefinicion' => new sfValidatorPass(array('required' => false)),
       'borrado'         => new sfValidatorChoice(array('required' => false, 'choices' => array('', 1, 0))),
@@ -55,7 +55,7 @@ abstract class BasePalabraFormFilter extends BaseFormFilterDoctrine
     return array(
       'id'              => 'Number',
       'idUsuario'       => 'ForeignKey',
-      'idCategoria'     => 'ForeignKey',
+      'idSubCategoria'  => 'ForeignKey',
       'textoPalabra'    => 'Text',
       'textoDefinicion' => 'Text',
       'borrado'         => 'Boolean',

@@ -16,4 +16,20 @@ class SubCategoriaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('SubCategoria');
     }
+    
+             public function verificarExiste($nombre, $idCategoria){
+        $q = Doctrine_Query::create()
+	            ->select('u.*')
+	            ->from('SubCategoria u')
+                     ->where('u.texto LIKE ? ',$nombre)
+                    ->andwhere('u.idCategoria = ?',$idCategoria);
+	   $u=$q->fetchOne();
+	     if ($u) {
+                 //si ya esta en la base de datos
+	 		return true;
+	     }else{
+                 //si no esta en la base de datos
+	 		return false;
+             }
+         }
 }

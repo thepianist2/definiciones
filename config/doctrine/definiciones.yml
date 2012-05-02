@@ -12,7 +12,7 @@ Palabra:
       primary: false
       notnull: true
       autoincrement: false
-    idCategoria:
+    idSubCategoria:
       type: integer(8)
       fixed: false
       unsigned: false
@@ -65,8 +65,8 @@ Palabra:
       local: id
       foreign: idPalabra
       type: many 
-    Categoria:
-      local: idCategoria
+    SubCategoria:
+      local: idSubCategoria
       foreign: id
       type: one  
 
@@ -181,10 +181,6 @@ Categoria:
       notnull: false
       autoincrement: false  
   relations:
-    Palabra:
-      local: id
-      foreign: idCategoria
-      type: many
     SubCategoria:
       local: id
       foreign: idCategoria
@@ -201,7 +197,7 @@ SubCategoria:
       type: integer(8)
       fixed: false
       unsigned: false
-      primary: true
+      primary: false
       notnull: true
       autoincrement: false
     texto:
@@ -223,6 +219,10 @@ SubCategoria:
       local: idCategoria
       foreign: id
       type: one
+    Palabra:
+      local: id
+      foreign: idSubCategoria
+      type: many
       
 #registros      
       

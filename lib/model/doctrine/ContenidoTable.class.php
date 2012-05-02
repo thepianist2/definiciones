@@ -21,7 +21,7 @@ class ContenidoTable extends Doctrine_Table
         $q = Doctrine_Query::create()
 	            ->select('u.*')
 	            ->from('Contenido u')
-                     ->where('u.titulo = ?',$titulo)
+                     ->where('u.titulo LIKE ?',$titulo)
                      ->andWhere('u.idCategoriaContenido = ?',$idCategoriaContenido);
 
 	   $u=$q->fetchOne();

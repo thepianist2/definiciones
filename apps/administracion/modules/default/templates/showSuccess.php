@@ -9,12 +9,24 @@
       <td><?php echo $palabra->getIdUsuario() ?></td>
     </tr>
     <tr>
+      <th>Id sub categoria:</th>
+      <td><?php echo $palabra->getIdSubCategoria() ?></td>
+    </tr>
+    <tr>
       <th>Texto palabra:</th>
       <td><?php echo $palabra->getTextoPalabra() ?></td>
     </tr>
     <tr>
       <th>Texto definicion:</th>
       <td><?php echo $palabra->getTextoDefinicion() ?></td>
+    </tr>
+    <tr>
+      <th>Borrado:</th>
+      <td><?php echo $palabra->getBorrado() ?></td>
+    </tr>
+    <tr>
+      <th>Activo:</th>
+      <td><?php echo $palabra->getActivo() ?></td>
     </tr>
     <tr>
       <th>Imagen:</th>

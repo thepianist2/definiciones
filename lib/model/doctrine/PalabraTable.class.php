@@ -16,4 +16,21 @@ class PalabraTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('Palabra');
     }
+   
+    
+             public function verificarExiste($nombre){
+        $q = Doctrine_Query::create()
+	            ->select('u.*')
+	            ->from('Palabra u')
+                     ->where('u.textoPalabra LIKE ? ',$nombre);
+
+	   $u=$q->fetchOne();
+	     if ($u) {
+                 //si ya esta en la base de datos
+	 		return true;
+	     }else{
+                 //si no esta en la base de datos
+	 		return false;
+             }
+         }
 }

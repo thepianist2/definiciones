@@ -6,8 +6,8 @@
       <th colspan="3">Acciones</th>
       <th>Texto</th>
       <th>Imagen</th>
-      <th>Created at</th>
-      <th>Updated at</th>
+      <th>Creado en</th>
+      <th>Actualizado en</th>
     </tr>
   </thead>
   <tbody>

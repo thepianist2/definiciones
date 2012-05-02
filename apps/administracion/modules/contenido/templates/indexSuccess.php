@@ -1,3 +1,4 @@
+<?php echo link_to(image_tag('iconos/respuesta.png').'Categorias de Contenido', 'categoriaContenido/index', array('title' => 'Categorias de Contenido')) ?>
 <h1>Lista de contenidos</h1>
 
 <table>
