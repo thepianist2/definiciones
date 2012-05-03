@@ -1,3 +1,3 @@
-<h1>Edit Palabra</h1>
+<h1>Editar Palabra</h1>
 
-<?php include_partial('form', array('form' => $form)) ?>
+<?php include_partial('form', array('form' => $form, 'categorias' => $categorias)) ?>

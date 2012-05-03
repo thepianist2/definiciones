@@ -32,4 +32,15 @@ class SubCategoriaTable extends Doctrine_Table
 	 		return false;
              }
          }
+         
+         
+         
+      public static function getDisponiblesPorCategoria($idCategoria, $execute = true) {
+        $query = SubCategoriaTable::getInstance()->createQuery('p')->where('p.idCategoria = ?', $idCategoria);
+
+        if ($execute)
+            return $query->execute();
+        else
+            return $query;
+    }
 }

@@ -25,7 +25,9 @@ class defaultActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+      
     $this->form = new palabraForm();
+    $this->categorias = CategoriaTable::getDisponibles();
   }
 
   public function executeCreate(sfWebRequest $request)
@@ -33,6 +35,7 @@ class defaultActions extends sfActions
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
     $this->form = new palabraForm();
+    $this->categorias = CategoriaTable::getDisponibles();
 
     $this->processForm($request, $this->form);
 
@@ -43,6 +46,7 @@ class defaultActions extends sfActions
   {
     $this->forward404Unless($palabra = Doctrine_Core::getTable('palabra')->find(array($request->getParameter('id'))), sprintf('Object palabra does not exist (%s).', $request->getParameter('id')));
     $this->form = new palabraForm($palabra);
+    $this->categorias = CategoriaTable::getDisponibles();
   }
 
   public function executeUpdate(sfWebRequest $request)
@@ -50,6 +54,7 @@ class defaultActions extends sfActions
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($palabra = Doctrine_Core::getTable('palabra')->find(array($request->getParameter('id'))), sprintf('Object palabra does not exist (%s).', $request->getParameter('id')));
     $this->form = new palabraForm($palabra);
+    $this->categorias = CategoriaTable::getDisponibles();
 
     $this->processForm($request, $this->form);
 
@@ -76,4 +81,15 @@ class defaultActions extends sfActions
       $this->redirect('default/edit?id='.$palabra->getId());
     }
   }
+  
+  
+    
+      public function executeGetSubCategoriasOptions(sfWebRequest $request) {
+        if ($request->hasParameter('id')) {
+            $idCategoria = $request->getParameter('id');
+            $this->subCategorias = SubCategoriaTable::getDisponiblesPorCategoria($idCategoria);
+        } else {
+            $this->subCategorias = false;
+        }
+    }
 }

@@ -16,8 +16,16 @@ class PalabraForm extends BasePalabraForm
       unset($this['created_at'], $this['updated_at'], $this['borrado']);
       
       
-
       
+
+        if (!$this->isNew()) {
+            $idCategoria = $this->getObject()->getSubCategoria()->getIdCategoria();
+            $this->setWidget('idSubCategoria', new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('SubCategoria'), 'add_empty' => false, 'table_method' => array('method' => 'getDisponiblesPorCategoria', 'parameters' => array($idCategoria)), 'method' => 'getTexto')));
+        } else if ($this->isNew() && $this->getObject()->getIdUsuario()) {
+            $idCategoria = $this->getObject()->getUsuario()->getPalabra()->getSubCategoria()->getIdCategoria();
+            $this->setWidget('idSubCategoria', new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('SubCategoria'), 'add_empty' => false, 'table_method' => array('method' => 'getDisponiblesPorCategoria', 'parameters' => array($idCategoria)), 'method' => 'getTexto')));
+        }
+        
       
       
       
@@ -26,7 +34,7 @@ class PalabraForm extends BasePalabraForm
       $this->setValidator('textoDefinicion',new sfValidatorString(array('required' => true)));
                   $imagenPicFileSrc = '/uploads/'.$this->getObject()->imagen;
             $this->widgetSchema['imagen'] = new sfWidgetFormInputFileEditable(array('file_src'  => $imagenPicFileSrc, 
-   			            'is_image' => true,
+                                       'is_image' => true,
 			            'edit_mode' => !$this->isNew(),
 				    'delete_label' => 'Eliminar'),
                                     array('id' => 'imagenFormu'));   
@@ -47,14 +55,9 @@ $this->validatorSchema['imagen_delete'] = new sfValidatorBoolean();
 ));  
           
           
-                                   //campo nivel Conocimiento
-        $tipo = Doctrine::getTable('Categoria')->getLista();
-        $tipo[0]='--Seleccione una categoria--';
-        asort($tipo);
-        $this->setWidget('idCategoria', new sfWidgetFormSelect(array('choices' => $tipo)));   
-
 
 $this->validatorSchema['textoPalabra']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+$this->validatorSchema['idSubCategoria']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
       
   }
 }

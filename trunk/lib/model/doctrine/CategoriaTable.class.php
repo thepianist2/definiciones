@@ -53,8 +53,20 @@ class CategoriaTable extends Doctrine_Table
 	     	}
 	     	
 	     	return $retorno;
-	     }
-	     	
+	     } 	
   
 }
+
+
+        public static function getDisponibles($execute = true) {
+        $query = CategoriaTable::getInstance()->createQuery('p')->orderBy('p.texto ASC');
+
+        if ($execute)
+            return $query->execute();
+        else
+            return $query;
+    }
+
+
+
 }
