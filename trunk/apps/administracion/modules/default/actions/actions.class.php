@@ -67,19 +67,43 @@ class defaultActions extends sfActions
 
     $this->forward404Unless($palabra = Doctrine_Core::getTable('palabra')->find(array($request->getParameter('id'))), sprintf('Object palabra does not exist (%s).', $request->getParameter('id')));
     $palabra->delete();
-
+    $this->getUser()->setFlash('mensajeTerminado','Palabra eliminada.');
     $this->redirect('default/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
+    $errorCategoria=false;
+   $valores = $request->getParameter($form->getName());
+   $palabra = $valores['textoPalabra'];
+   $idSubCategoria = $valores['idSubCategoria'];
+   $idUsuario = $valores['idUsuario'];
+   $errorPalabra=false;
+   
+   
+            if($form->getObject()->isNew() or $form->getObject()->textoPalabra != $valores['textoPalabra'] or $form->getObject()->idSubCategoria != $valores['idSubCategoria'] or $form->getObject()->idUsuario != $valores['idUsuario'])
+        {
+            if(Doctrine_Core::getTable('Palabra')->verificarExiste($idSubCategoria,$idUsuario,$palabra))
+            {
+                 $errorPalabra=true;}
+                
+        }
+    
+    if ($form->isValid() & $errorPalabra==false)
     {
       $palabra = $form->save();
-
-      $this->redirect('default/edit?id='.$palabra->getId());
+      $this->getUser()->setFlash('mensajeTerminado','Palabra guardada.');
+      $this->redirect('default/index');
+    }else
+    {
+       if($errorPalabra){
+            $this->getUser()->setFlash('mensajeError','Esta palabra ya existe');
+        }else{
+            $this->getUser()->setFlash('mensajeError','Porfavor, revise los campos marcados.');
+        }
     }
+    
   }
   
   

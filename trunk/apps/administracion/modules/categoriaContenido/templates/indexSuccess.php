@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <h1>Lista de Categorias de Contenido</h1>
 
 <table>
@@ -18,8 +19,8 @@
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'categoriaContenido/delete?id='.$categoria_contenido->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>
       <td><?php echo $categoria_contenido->getTexto() ?></td>
       <td><img id="imagenIndex" src="<?php echo '/uploads/'.$categoria_contenido->getImagen() ?>"></td>
-      <td><?php echo $categoria_contenido->getCreatedAt() ?></td>
-      <td><?php echo $categoria_contenido->getUpdatedAt() ?></td>
+      <td><?php echo format_date($categoria_contenido->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($categoria_contenido->getUpdatedAt(), 'p') ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

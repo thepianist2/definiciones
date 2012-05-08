@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <h1>Lista de permisos</h1>
 
 <table>
@@ -18,8 +19,8 @@
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'permiso/delete?id='.$sf_guard_permission->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>  
       <td><?php echo $sf_guard_permission->getName() ?></td>
       <td><?php echo $sf_guard_permission->getDescription() ?></td>
-      <td><?php echo $sf_guard_permission->getCreatedAt() ?></td>
-      <td><?php echo $sf_guard_permission->getUpdatedAt() ?></td>
+      <td><?php echo format_date($sf_guard_permission->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($sf_guard_permission->getUpdatedAt(), 'p') ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

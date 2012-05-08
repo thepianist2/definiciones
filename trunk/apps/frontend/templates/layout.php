@@ -3,28 +3,31 @@
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
-    <title>Jobeet - Your best job board</title>
+    <title>Estudia con seria</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
   </head>
   <body>
     <div id="container">
-      <div id="header">
-        <div class="content">
-          <h1><a href="<?php echo url_for('default/index') ?>">
-            <img src="/images/logo.jpg" alt="Jobeet Job Board" />
-          </a></h1>
- 
+      <div id="header" >
+
+          
+<!--          <h1>-->
+          <a href="<?php echo url_for('default/index') ?>"><br></br>
+              <img style="margin-top: -30px;" src="/images/logo.png" alt="Estudia con seria" title="Home" />
+          </a>
+<!--          </h1>-->
+<!-- 
           <div id="sub_header">
             <div class="post">
               <h2>Ask for people</h2>
               <div>
                 <a href="<?php echo url_for('default/index') ?>">Post a Job</a>
               </div>
-            </div>
+            </div>-->
  
-            <div class="search">
+<!--            <div class="search">
               <h2>Ask for a job</h2>
               <form action="" method="get">
                 <input type="text" name="keywords"
@@ -34,21 +37,21 @@
                   Enter some keywords (city, country, position, ...)
                 </div>
               </form>
-            </div>
-          </div>
+            </div>-->
+
         </div>
       </div>
  
       <div id="content">
-        <?php if ($sf_user->hasFlash('notice')): ?>
+        <?php if ($sf_user->hasFlash('mensajeTerminado')): ?>
           <div class="flash_notice">
-            <?php echo $sf_user->getFlash('notice') ?>
+            <?php echo $sf_user->getFlash('mensajeTerminado') ?>
           </div>
         <?php endif; ?>
  
-        <?php if ($sf_user->hasFlash('error')): ?>
+        <?php if ($sf_user->hasFlash('mensajeError')): ?>
           <div class="flash_error">
-            <?php echo $sf_user->getFlash('error') ?>
+            <?php echo $sf_user->getFlash('mensajeError') ?>
           </div>
         <?php endif; ?>
  
@@ -59,20 +62,11 @@
  
       <div id="footer">
         <div class="content">
-          <span class="symfony">
-            <img src="/images/jobeet-mini.png" />
-            powered by <a href="http://www.symfony-project.org/">
-            <img src="/images/symfony.gif" alt="symfony framework" />
-            </a>
-          </span>
-          <ul>
-            <li><a href="">About Jobeet</a></li>
-            <li class="feed"><a href="">Full feed</a></li>
-            <li><a href="">Jobeet API</a></li>
-            <li class="last"><a href="">Affiliates</a></li>
-          </ul>
+            <?php $ano=date('Y') ?> 
+            Copyright © <?php echo $ano ?> <a style="color: green;" target="_blank" href="http://www.allel.es" title="Allel Software Free">Allel Software Free</a> - Desarrollo de programas grátis.    
+            
         </div>
       </div>
-    </div>
+
   </body>
 </html>

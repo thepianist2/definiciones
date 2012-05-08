@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <h1>Listado de grupos</h1>
 
 <table>
@@ -18,8 +19,8 @@
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'perfil/delete?id='.$sf_guard_group->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>
       <td><?php echo $sf_guard_group->getName() ?></td>
       <td><?php echo $sf_guard_group->getDescription() ?></td>
-      <td><?php echo $sf_guard_group->getCreatedAt() ?></td>
-      <td><?php echo $sf_guard_group->getUpdatedAt() ?></td>
+      <td><?php echo format_date($sf_guard_group->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($sf_guard_group->getUpdatedAt(), 'p') ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

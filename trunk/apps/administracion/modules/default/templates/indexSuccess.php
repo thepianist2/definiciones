@@ -10,7 +10,7 @@
     <tr>
       <th colspan="3">Acciones</th>
       <th>Texto palabra</th>
-      <th>Texto definicion</th>
+      <th>Sub categoria</th>
       <th>Borrado</th>
       <th>Activo</th>
       <th>Imagen</th>
@@ -25,12 +25,12 @@
       <td><?php echo link_to(image_tag('iconos/editar.png'), 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?></td>
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'default/delete?id='.$palabra->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>
       <td><?php echo $palabra->getTextoPalabra() ?></td>
-      <td><?php echo $palabra->getTextoDefinicion() ?></td>
-      <td><?php echo $palabra->getBorrado() ?></td>
-      <td><?php echo $palabra->getActivo() ?></td>
+      <td><?php echo $palabra->getSubCategoria()->getTexto() ?></td>
+      <td><?php echo $palabra->getBorrado()? "Si": "No" ?></td>
+      <td><?php echo $palabra->getActivo()? "Si": "No" ?></td>
       <td><img id="imagenIndex" src="<?php echo '/uploads/'.$palabra->getImagen() ?>"></td>
-      <td><?php echo $palabra->getCreatedAt() ?></td>
-      <td><?php echo $palabra->getUpdatedAt() ?></td>
+      <td><?php echo format_date($palabra->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($palabra->getUpdatedAt(), 'p') ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

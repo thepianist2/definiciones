@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <table>
   <tbody>
     <tr>
@@ -10,11 +11,11 @@
     </tr>
     <tr>
       <th>Creado en: </th>
-      <td><?php echo $sf_guard_permission->getCreatedAt() ?></td>
+      <td><?php echo format_date($sf_guard_permission->getCreatedAt(), 'p') ?></td>
     </tr>
     <tr>
       <th>Actualizado en: </th>
-      <td><?php echo $sf_guard_permission->getUpdatedAt() ?></td>
+      <td><?php echo format_date($sf_guard_permission->getUpdatedAt(), 'p') ?></td>
     </tr>
   </tbody>
 </table>
