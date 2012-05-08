@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <table>
   <tbody>
     <tr>
@@ -26,11 +27,11 @@
     </tr>
     <tr>
       <th>Creado en:</th>
-      <td><?php echo $contenido->getCreatedAt() ?></td>
+      <td><?php echo format_date($contenido->getCreatedAt(), 'p') ?></td>
     </tr>
     <tr>
       <th>Actualizado en:</th>
-      <td><?php echo $contenido->getUpdatedAt() ?></td>
+      <td><?php echo format_date($contenido->getUpdatedAt(), 'p') ?></td>
     </tr>
   </tbody>
 </table>

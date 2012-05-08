@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <?php echo link_to(image_tag('iconos/respuesta.png').'Categorias de Contenido', 'categoriaContenido/index', array('title' => 'Categorias de Contenido')) ?>
 <h1>Lista de contenidos</h1>
 
@@ -25,8 +26,8 @@
       <td><?php echo $contenido->getCategoriaContenido()->getTexto() ?></td>
       <td><?php echo $contenido->getBorrado()? "Si" : "No" ?></td>
       <td><?php echo $contenido->getActivo()? "Si" : "No" ?></td>
-      <td><?php echo $contenido->getCreatedAt() ?></td>
-      <td><?php echo $contenido->getUpdatedAt() ?></td>
+      <td><?php echo format_date($contenido->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($contenido->getUpdatedAt(), 'p') ?></td>
     </tr></a>
     <?php endforeach; ?>
   </tbody>

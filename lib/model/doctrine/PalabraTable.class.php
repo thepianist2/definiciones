@@ -18,11 +18,13 @@ class PalabraTable extends Doctrine_Table
     }
    
     
-             public function verificarExiste($nombre){
+             public function verificarExiste($idSubCategoria, $idUsuario, $nombre){
         $q = Doctrine_Query::create()
 	            ->select('u.*')
 	            ->from('Palabra u')
-                     ->where('u.textoPalabra LIKE ? ',$nombre);
+                     ->where('u.textoPalabra LIKE ? ',$nombre)
+                     ->andWhere('u.idSubCategoria =? ',$idSubCategoria)
+                     ->andWhere('u.idUsuario =?',$idUsuario);
 
 	   $u=$q->fetchOne();
 	     if ($u) {

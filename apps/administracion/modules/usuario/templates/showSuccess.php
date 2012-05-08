@@ -1,3 +1,5 @@
+<?php use_helper('Date') ?>
+
 <table>
   <tbody>
     <tr>
@@ -34,11 +36,11 @@
     </tr>
     <tr>
       <th>Creade en:</th>
-      <td><?php echo $sf_guard_user->getCreatedAt() ?></td>
+      <td><?php echo format_date($sf_guard_user->getCreatedAt(), 'p') ?></td>
     </tr>
     <tr>
       <th>Actualizado en:</th>
-      <td><?php echo $sf_guard_user->getUpdatedAt() ?></td>
+      <td><?php echo format_date($sf_guard_user->getUpdatedAt(), 'p')?></td>
     </tr>
   </tbody>
 </table>

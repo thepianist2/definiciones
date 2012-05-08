@@ -1,4 +1,4 @@
-<h1>Palabras List</h1>
+<h1>Tus palabras y definiciones</h1>
 
 <table>
   <thead>

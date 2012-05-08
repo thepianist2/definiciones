@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <table>
   <tbody>
     <tr>
@@ -12,12 +13,12 @@
       <th>Imagen:</th>
       <td><img id="imagenIndex" src="<?php echo '/uploads/'.$sub_categoria->getImagen() ?>"></td>    </tr>
     <tr>
-      <th>Created at:</th>
-      <td><?php echo $sub_categoria->getCreatedAt() ?></td>
+      <th>Creado en:</th>
+      <td><?php echo format_date($sub_categoria->getCreatedAt(), 'p') ?></td>
     </tr>
     <tr>
-      <th>Updated at:</th>
-      <td><?php echo $sub_categoria->getUpdatedAt() ?></td>
+      <th>Actualizado en:</th>
+      <td><?php echo format_date($sub_categoria->getUpdatedAt(), 'p') ?></td>
     </tr>
   </tbody>
 </table>

@@ -1,16 +1,9 @@
+<?php use_helper('Date') ?>
 <table>
   <tbody>
     <tr>
-      <th>Id:</th>
-      <td><?php echo $palabra->getId() ?></td>
-    </tr>
-    <tr>
-      <th>Id usuario:</th>
-      <td><?php echo $palabra->getIdUsuario() ?></td>
-    </tr>
-    <tr>
-      <th>Id sub categoria:</th>
-      <td><?php echo $palabra->getIdSubCategoria() ?></td>
+      <th>Sub categoria:</th>
+      <td><?php echo $palabra->getSubCategoria()->getTexto() ?></td>
     </tr>
     <tr>
       <th>Texto palabra:</th>
@@ -30,21 +23,21 @@
     </tr>
     <tr>
       <th>Imagen:</th>
-      <td><?php echo $palabra->getImagen() ?></td>
+      <td><img id="imagenIndex" src="<?php echo '/uploads/'.$palabra->getImagen() ?>"></td>
     </tr>
     <tr>
-      <th>Created at:</th>
-      <td><?php echo $palabra->getCreatedAt() ?></td>
+      <th>Creado en:</th>
+      <td><?php echo format_date($palabra->getCreatedAt(), 'p') ?></td>
     </tr>
     <tr>
-      <th>Updated at:</th>
-      <td><?php echo $palabra->getUpdatedAt() ?></td>
+      <th>Actualizado en:</th>
+      <td><?php echo format_date($palabra->getUpdatedAt(), 'p') ?></td>
     </tr>
   </tbody>
 </table>
 
 <hr />
 
-<a href="<?php echo url_for('default/edit?id='.$palabra->getId()) ?>">Edit</a>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?>
 &nbsp;
-<a href="<?php echo url_for('default/index') ?>">List</a>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'default/index', array('title' => 'Volver a la lista')) ?>

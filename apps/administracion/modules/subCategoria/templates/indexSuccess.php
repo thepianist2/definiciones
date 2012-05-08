@@ -1,3 +1,4 @@
+<?php use_helper('Date') ?>
 <h1>Listado de sub categorias de palabras</h1>
 
 <table>
@@ -18,8 +19,8 @@
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'subCategoria/delete?id='.$sub_categoria->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>        
       <td><?php echo $sub_categoria->getTexto() ?></td>
       <td><img id="imagenIndex" src="<?php echo '/uploads/'.$sub_categoria->getImagen() ?>"></td>
-      <td><?php echo $sub_categoria->getCreatedAt() ?></td>
-      <td><?php echo $sub_categoria->getUpdatedAt() ?></td>
+      <td><?php echo format_date($sub_categoria->getCreatedAt(), 'p') ?></td>
+      <td><?php echo format_date($sub_categoria->getUpdatedAt(), 'p') ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>
