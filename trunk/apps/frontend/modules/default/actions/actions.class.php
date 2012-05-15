@@ -12,10 +12,37 @@ class defaultActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
+      if ($this->getUser()->isAuthenticated()){
     $this->palabras = Doctrine_Core::getTable('palabra')
       ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+             ->orderBy('RANDOM()')
+            ->limit(6)
       ->execute();
+      }else{
+      $this->palabras=null;
+      }
   }
+  
+   public function executeListado(sfWebRequest $request)
+  {
+             if ($this->getUser()->isAuthenticated()){
+    $this->palabras = Doctrine_Core::getTable('palabra')
+      ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+             ->orderBy('RANDOM()')
+            ->limit(6)
+      ->execute();
+      }else{
+      $this->palabras=null;
+      }
+       
+   }
+  
 
   public function executeShow(sfWebRequest $request)
   {
@@ -25,15 +52,20 @@ class defaultActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
-    $this->form = new palabraForm();
+      $this->categorias = CategoriaTable::getDisponibles();
+    $this->form = new palabra2Form();
+    $this->form->setDefault('idUsuario', $this->getUser()->getGuardUser()->getId());
+    $this->form->setDefault('activo', true);
   }
 
   public function executeCreate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST));
 
-    $this->form = new palabraForm();
-
+    $this->form = new palabra2Form();
+    $this->form->setDefault('idUsuario', $this->getUser()->getGuardUser()->getId());
+    $this->form->setDefault('activo', true);
+    $this->categorias = CategoriaTable::getDisponibles();
     $this->processForm($request, $this->form);
 
     $this->setTemplate('new');
@@ -42,15 +74,16 @@ class defaultActions extends sfActions
   public function executeEdit(sfWebRequest $request)
   {
     $this->forward404Unless($palabra = Doctrine_Core::getTable('palabra')->find(array($request->getParameter('id'))), sprintf('Object palabra does not exist (%s).', $request->getParameter('id')));
-    $this->form = new palabraForm($palabra);
+    $this->form = new palabra2Form($palabra);
+    $this->categorias = CategoriaTable::getDisponibles();
   }
 
   public function executeUpdate(sfWebRequest $request)
   {
     $this->forward404Unless($request->isMethod(sfRequest::POST) || $request->isMethod(sfRequest::PUT));
     $this->forward404Unless($palabra = Doctrine_Core::getTable('palabra')->find(array($request->getParameter('id'))), sprintf('Object palabra does not exist (%s).', $request->getParameter('id')));
-    $this->form = new palabraForm($palabra);
-
+    $this->form = new palabra2Form($palabra);
+    $this->categorias = CategoriaTable::getDisponibles();
     $this->processForm($request, $this->form);
 
     $this->setTemplate('edit');
@@ -62,18 +95,53 @@ class defaultActions extends sfActions
 
     $this->forward404Unless($palabra = Doctrine_Core::getTable('palabra')->find(array($request->getParameter('id'))), sprintf('Object palabra does not exist (%s).', $request->getParameter('id')));
     $palabra->delete();
-
+    $this->getUser()->setFlash('mensajeTerminado','Palabra eliminada.');
     $this->redirect('default/index');
   }
 
   protected function processForm(sfWebRequest $request, sfForm $form)
   {
     $form->bind($request->getParameter($form->getName()), $request->getFiles($form->getName()));
-    if ($form->isValid())
+    $errorCategoria=false;
+   $valores = $request->getParameter($form->getName());
+   $palabra = $valores['textoPalabra'];
+   $idSubCategoria = $valores['idSubCategoria'];
+   $idUsuario = $valores['idUsuario'];
+   $errorPalabra=false;
+   
+   
+            if($form->getObject()->isNew() or $form->getObject()->textoPalabra != $valores['textoPalabra'] or $form->getObject()->idSubCategoria != $valores['idSubCategoria'] or $form->getObject()->idUsuario != $valores['idUsuario'])
+        {
+            if(Doctrine_Core::getTable('Palabra')->verificarExiste($idSubCategoria,$idUsuario,$palabra))
+            {
+                 $errorPalabra=true;}
+                
+        }
+    
+    if ($form->isValid() & $errorPalabra==false)
     {
       $palabra = $form->save();
-
-      $this->redirect('default/edit?id='.$palabra->getId());
+      $this->getUser()->setFlash('mensajeTerminado','Palabra guardada.');
+      $this->redirect('default/index');
+    }else
+    {
+       if($errorPalabra){
+            $this->getUser()->setFlash('mensajeError','Esta palabra ya existe');
+        }else{
+            $this->getUser()->setFlash('mensajeError','Porfavor, revise los campos marcados.');
+        }
     }
+    
   }
+  
+  
+      
+      public function executeGetSubCategoriasOptions(sfWebRequest $request) {
+        if ($request->hasParameter('id')) {
+            $idCategoria = $request->getParameter('id');
+            $this->subCategorias = SubCategoriaTable::getDisponiblesPorCategoria($idCategoria);
+        } else {
+            $this->subCategorias = false;
+        }
+    }
 }

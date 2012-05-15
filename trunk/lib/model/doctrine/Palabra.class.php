@@ -12,4 +12,24 @@
  */
 class Palabra extends BasePalabra
 {
+    
+    
+    public function obtenerTextoCorto(){
+    $definicion=$this->getTextoDefinicion();
+    
+    if(strlen($definicion)>150){
+        $final=substr($definicion, 0,149);
+       $final=$final.'...';
+        return $final;
+    }else{
+        return $definicion;
+    }
+    
+    
+        
+    }
+    
+    
 }
+    
+   

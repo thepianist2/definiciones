@@ -17,7 +17,8 @@
           <a href="<?php echo url_for('default/index') ?>"><br></br>
               <img style="margin-top: -30px;" src="/images/logo.png" alt="Estudia con seria" title="Home" />
           </a>
-<!--          </h1>-->
+
+          <!--          </h1>-->
 <!-- 
           <div id="sub_header">
             <div class="post">
@@ -41,22 +42,27 @@
 
         </div>
       </div>
- 
+
       <div id="content">
-        <?php if ($sf_user->hasFlash('mensajeTerminado')): ?>
-          <div class="flash_notice">
-            <?php echo $sf_user->getFlash('mensajeTerminado') ?>
-          </div>
-        <?php endif; ?>
- 
-        <?php if ($sf_user->hasFlash('mensajeError')): ?>
-          <div class="flash_error">
-            <?php echo $sf_user->getFlash('mensajeError') ?>
-          </div>
-        <?php endif; ?>
- 
-        <div class="content">
+
+               <?php include_partial('bloque/bloqueMensaje'); ?>
+        <div class="content">   
+            <?php if ($sf_user->isAuthenticated()){ ?>
+            <div style="float: right;"><?php echo link_to(image_tag('iconos/desconectar.png', array('class' => 'cerrar-sesion', 'title' => 'Cerrar sesión')), 'sf_guard_signout', array()) ?></div>
+           
+            <?php if($sf_request->getParameter('action') == 'index' or $sf_request->getParameter('action') == 'show' or $sf_request->getParameter('action') == 'listado'){ ?>
+            <div id="menuIzquierdo">
+                
+        <?php include_component('bloque', 'menuIzquierdo'); ?>
+            </div>
+            <?php  } ?>
+             <?php }else{ ?>
+            
+             <div style="float: right;"><?php echo link_to(image_tag('iconos/conectar.png', array('class' => 'cerrar-sesion', 'title' => 'Conectarme')), 'sf_guard_signin', array()) ?></div>
+
+            <?php } ?>
           <?php echo $sf_content ?>
+            
         </div>
       </div>
  
