@@ -7,7 +7,7 @@
 
         /* slider specific CSS */
         .sliderGallery {
-            background: url(http://static.jqueryfordesigners.com/demo/images/productbrowser_background_20070622.jpg) no-repeat;
+/*            background: url(http://static.jqueryfordesigners.com/demo/images/productbrowser_background_20070622.jpg) no-repeat;*/
             overflow: hidden;
             position: relative;
             padding: 10px;

@@ -34,8 +34,9 @@ $(document).ready(function() {
           <div style="float: right;"><?php echo link_to(image_tag('iconos/desconectar.png', array('class' => 'cerrar-sesion', 'title' => 'Cerrar sesión')), 'sf_guard_signout', array()) ?></div><br></br>
           <div><?php include_component('bloque', 'menuPrincipal'); ?></div>
           <?php } ?>
+          
       </div>
- 
+ <br></br><br></br><br></br><br></br>
  
       <div id="content">
           <?php include_partial('bloque/bloqueMensaje'); ?>

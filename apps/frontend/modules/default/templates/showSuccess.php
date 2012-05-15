@@ -1,38 +1,29 @@
-<table>
-  <tbody>
-    <tr>
-      <th>Id:</th>
-      <td><?php echo $palabra->getId() ?></td>
-    </tr>
-    <tr>
-      <th>Id usuario:</th>
-      <td><?php echo $palabra->getIdUsuario() ?></td>
-    </tr>
-    <tr>
-      <th>Texto palabra:</th>
-      <td><?php echo $palabra->getTextoPalabra() ?></td>
-    </tr>
-    <tr>
-      <th>Texto definicion:</th>
-      <td><?php echo $palabra->getTextoDefinicion() ?></td>
-    </tr>
-    <tr>
-      <th>Imagen:</th>
-      <td><?php echo $palabra->getImagen() ?></td>
-    </tr>
-    <tr>
-      <th>Created at:</th>
-      <td><?php echo $palabra->getCreatedAt() ?></td>
-    </tr>
-    <tr>
-      <th>Updated at:</th>
-      <td><?php echo $palabra->getUpdatedAt() ?></td>
-    </tr>
-  </tbody>
-</table>
+<h1 style="text-align: center;"><?php echo $palabra->getTextoPalabra() ?></h1>
+<div style=" font-family: Wingdings, 'Zapf Dingbats', sans-serif; font-size: 15px;">
+    
+    <label style="color: #003366;">Palabra: </label><?php echo $palabra->getTextoPalabra() ?> <br></br>
+    
+    <label style="color: #003366;">Categoría: </label><?php echo $palabra->getSubCategoria()->getCategoria()->getTexto(); ?> <br></br> 
+            
+   <label style="color: #003366;">Sub Categoría: </label><?php echo $palabra->getSubCategoria()->getTexto(); ?> <br></br> 
+ 
+            
+    
+    <label style="color: #003366;">Definición: </label><p><?php echo $palabra->getTextoDefinicion() ?></p><br></br>   
+    
+    
+    
+	<?php if($palabra->getImagen()){ ?>
+    <img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt="">
+<?php }else{ ?>
+<img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/images/estudiando.png' ?>" alt="">
 
-<hr />
+    <?php } ?>
 
-<a href="<?php echo url_for('default/edit?id='.$palabra->getId()) ?>">Edit</a>
+
+<br></br><br></br><br></br><br></br>
+<div style="text-align: center;" >
+    <a href="<?php echo url_for('default/index') ?>">Volver Atras</a>
 &nbsp;
-<a href="<?php echo url_for('default/index') ?>">List</a>
+<a href="<?php echo url_for('default/edit?id='.$palabra->getId()) ?>">Editar</a></div>
+</div>
