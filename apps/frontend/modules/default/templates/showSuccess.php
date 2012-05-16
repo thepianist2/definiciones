@@ -23,7 +23,7 @@
 
 <br></br><br></br><br></br><br></br>
 <div style="text-align: center;" >
-    <a href="<?php echo url_for('default/index') ?>">Volver Atras</a>
+         <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
 &nbsp;
-<a href="<?php echo url_for('default/edit?id='.$palabra->getId()) ?>">Editar</a></div>
+<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?>
 </div>

@@ -1,0 +1,21 @@
+/* 
+    Document   : listado
+    Created on : 16-may-2012, 16:43:54
+    Author     : fabian
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+
+td{border:1px solid #3399ff;}
+
+th{border:1px solid #3399ff;}
