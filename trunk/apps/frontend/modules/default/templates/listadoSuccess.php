@@ -1,14 +1,13 @@
 <?php use_helper('Date') ?>
-<h1>Listado de Palabras</h1>
-
+<link rel="stylesheet" type="text/css" media="screen" href="/css/listado.css">
+<h1 style="text-align: center;">Listado de Palabras</h1>
+<br></br>
 <table>
   <thead>
     <tr>
       <th colspan="3">Acciones</th>
       <th>Texto palabra</th>
       <th>Sub categoria</th>
-      <th>Borrado</th>
-      <th>Activo</th>
       <th>Imagen</th>
       <th>Creado en</th>
       <th>Actualizado en</th>
@@ -22,8 +21,6 @@
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'default/delete?id='.$palabra->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>
       <td><?php echo $palabra->getTextoPalabra() ?></td>
       <td><?php echo $palabra->getSubCategoria()->getTexto() ?></td>
-      <td><?php echo $palabra->getBorrado()? "Si": "No" ?></td>
-      <td><?php echo $palabra->getActivo()? "Si": "No" ?></td>
       
       <?php if($palabra->getImagen()){ ?>
       <td><img id="imagenIndex" src="<?php echo '/uploads/'.$palabra->getImagen() ?>"></td>
