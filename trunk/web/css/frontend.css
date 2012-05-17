@@ -15,3 +15,15 @@ root {
     display: block;
 }
 
+.imageMenuEstudiar{
+    height: 200px;
+    width: 200px;
+    border:1px solid #99CCFF;
+}
+
+
+label {display:block;font-weight:bold;} 
+legend {font-size:120%;} 
+fieldset {border:none;} 
+input, textarea {border:1px solid #000;} 
+input:focus, textarea:focus {background:#99CCFF;} 

@@ -2,9 +2,10 @@
 
 <?php if(count($palabras)>0){ ?>
 <h1 style="text-align: center;">Tus palabras y definiciones</h1>
+
 <div style="text-align: center;" >
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva palabra', 'default/new', array('title' => 'Nueva palabra')) ?>
-  <?php echo link_to(image_tag('iconos/datos.png').'Lista de palabras', 'default/listado', array('title' => 'Listar palabras')) ?>
+  <?php echo link_to(image_tag('iconos/datos.png').'Administrar palabras', 'default/listado', array('title' => 'Listar palabras')) ?>
 </div>
 <div id="mason-content" class="clearfix masonry" style="min-height: 800px; height: 100%; width: 100%; ">
 
@@ -13,7 +14,7 @@
 
 <div class="box rounded masonry-brick">
     <div title="Eliminar" style="color: #0A246A;" id="cruz"><?php echo link_to('X', 'default/delete?id='.$palabra->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro que deseas borrar la palabra '.$palabra->getTextoPalabra().'?')) ?></div>
-	<h1><?php echo $palabra->getTextoPalabra(); ?></h1> 
+	<h1><?php echo $palabra->obtenerTextoCortoPalabra() ?></h1> 
 
 	<?php if($palabra->getImagen()){ ?>
     <a href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>"><img class="postimg" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt=""></a>
@@ -22,7 +23,7 @@
 
     <?php } ?>
 <div class="title">
-	<h2><a href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>"><?php echo $palabra->getTextoPalabra(); ?></a></h2>
+	<h2><a href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>"><?php echo $palabra->obtenerTextoCortoPalabra(); ?></a></h2>
 </div>
 
 <div class="entry">

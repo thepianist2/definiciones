@@ -1,3 +1,7 @@
+
+<?php foreach ($palabras as $palabra): ?>
+
+
 <h1 style="text-align: center;"><?php echo $palabra->getTextoPalabra() ?></h1>
 <div style=" font-family: Wingdings, 'Zapf Dingbats', sans-serif; font-size: 15px;">
     
@@ -14,16 +18,11 @@
     
     
 	<?php if($palabra->getImagen()){ ?>
-    <a href="<?php echo '/uploads/'.$palabra->getImagen() ?>"> <img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt=""></a>
+    <img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt="">
 <?php }else{ ?>
-    <a href="/images/estudiando.png"><img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/images/estudiando.png' ?>" alt=""></a>
+<img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/images/estudiando.png' ?>" alt="">
 
     <?php } ?>
+<br></br>
+    <?php endforeach; ?>
 
-
-<br></br><br></br><br></br><br></br>
-<div style="text-align: center;" >
-         <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
-&nbsp;
-<?php echo link_to(image_tag('iconos/editar.png').'Editar', 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?>
-</div><br></br>
