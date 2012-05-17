@@ -30,6 +30,22 @@ class Palabra extends BasePalabra
     }
     
     
+        public function obtenerTextoCortoPalabra(){
+    $definicion=$this->getTextoPalabra();
+    
+    if(strlen($definicion)>14){
+        $final=substr($definicion, 0,14);
+       $final=$final.'...';
+        return $final;
+    }else{
+        return $definicion;
+    }
+    
+    
+        
+    }
+    
+    
 }
     
    

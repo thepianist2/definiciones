@@ -35,9 +35,10 @@
     <?php endforeach; ?>
   </tbody>
 </table>
-
+<br></br>
 <div style="text-align: center;" >
          <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
 
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva', 'default/new', array('title' => 'Nuevo')) ?>
 </div>
+<br></br>
