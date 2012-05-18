@@ -59,6 +59,10 @@ estudiar_prueba:
   url:   /examen
   param: { module: estudiar, action: prueba }      
   
+estudiar_responder:
+  url:   /respuesta
+  param: { module: estudiar, action: responder }       
+  
   
  #usuario 
   

@@ -19,7 +19,7 @@
     <a href="/images/estudiando.png"><img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/images/estudiando.png' ?>" alt=""></a>
 
     <?php } ?>
-
+</div>
 
 <br></br><br></br><br></br><br></br>
 <div style="text-align: center;" >
