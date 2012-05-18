@@ -66,9 +66,17 @@ class estudiarActions extends sfActions
             if($this->i<$numero-1){
               if($request->getParameter('palabraTexto')){
              $respuesta= $request->getParameter('palabraTexto');
-             $this->getUser()->setFlash('mensajeTerminado','Respuesta realizada.');
+             if(strtolower($respuesta)==strtolower($this->palabras[$this->i]->getTextoPalabra())){
+             $this->getUser()->setFlash('mensajeTerminado','Respuesta correcta.');
                            $this->i+=1;
                            $this->getUser()->setAttribute('i', $this->i);
+                           
+                           
+            }else{
+                $this->getUser()->setFlash('mensajeError','Respuesta Incorrecta.');
+                $this->i+=1;
+                $this->getUser()->setAttribute('i', $this->i);
+            }
               }else{
              $this->getUser()->setFlash('mensajeError','Porfavor, escriba una palabra.');
              $this->i=$this->getUser()->getAttribute('i');
