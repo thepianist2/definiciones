@@ -34,3 +34,14 @@ usuarios_index:
   url: /:sf_culture/usuario/listado
   param: { module: usuario, action: index }
   
+  
+default_index:
+  url: /default/
+  param: { module: default, action: index }          
+
+default_index_page:
+  url: /default/pagina/:page
+  param: { module: default, action: index }
+  requirements:
+  page: \d+  
+  
