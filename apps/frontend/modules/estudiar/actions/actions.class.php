@@ -41,4 +41,41 @@ class estudiarActions extends sfActions
       $this->palabras=null;
       }
   }
+  
+  
+      public function executePrueba(sfWebRequest $request){
+                        $this->i=0;
+        $this->palabras = Doctrine_Core::getTable('palabra')
+      ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->execute();
+        $this->getUser()->setAttribute('numeroPalabras', count($this->palabras));
+        $this->getUser()->setAttribute('palabras', $this->palabras);
+        $this->getUser()->setAttribute('i', $this->i);
+    }
+    
+    
+          public function executeResponder(sfWebRequest $request){
+              
+              
+            $this->i=$this->getUser()->getAttribute('i');
+            $this->palabras=$this->getUser()->getAttribute('palabras');
+            $numero=$this->getUser()->getAttribute('numeroPalabras');
+            if($this->i<$numero-1){
+              if($request->getParameter('palabraTexto')){
+             $respuesta= $request->getParameter('palabraTexto');
+             $this->getUser()->setFlash('mensajeTerminado','Respuesta realizada.');
+                           $this->i+=1;
+                           $this->getUser()->setAttribute('i', $this->i);
+              }else{
+             $this->getUser()->setFlash('mensajeError','Porfavor, escriba una palabra.');
+             $this->i=$this->getUser()->getAttribute('i');
+              }
+            }else{
+              $this->getUser()->setFlash('mensajeSuceso','Test Finalizado.');
+             $this->redirect('estudiar/index');
+            }
+    }
 }
