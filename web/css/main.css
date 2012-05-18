@@ -431,3 +431,67 @@ textarea{
     
 }
 
+
+/******** paginador ********/
+
+#pagination
+{
+    text-align: right;
+    height:22px;
+    line-height:21px;
+    padding-top:0px;
+    font-size:12px;
+    font-weight:normal;
+    margin-bottom:20px;
+    width: 500px;
+    margin-right:20px;
+}
+
+#pagination a:link, #pagination a:visited{
+    padding:7px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border:1px solid #EBEBEB;
+    margin-left:5px;
+    text-decoration:none;
+    background-color:#F5F5F5;
+    width:22px;
+    font-weight:normal;
+}
+
+#pagination a:hover {
+    background-color:#eeeeee;
+    border:1px solid #eeeeee;
+    color:#000;
+}
+
+#pagination .active_link {
+    padding:7px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border:1px solid #eeeeee;
+    margin-left:7px;
+    text-decoration:none;
+    background-color:#eeeeee;
+    color:#000;
+    cursor:default;
+}
+
+#pagination .disabled_pagination {
+    padding:7px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border:1px solid #EBEBEB;
+    margin-left:10px;
+    text-decoration:none;
+    background-color:#F5F5F5;
+    cursor:default;
+}
+
+/********** fin paginador **********/
+
+
+input{
+font-size: 16px;
+height: 25px;
+}

@@ -29,14 +29,22 @@ class defaultActions extends sfActions
    public function executeListado(sfWebRequest $request)
   {
              if ($this->getUser()->isAuthenticated()){
-    $this->palabras = Doctrine_Core::getTable('palabra')
-      ->createQuery('a')
+    $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
             ->where('a.borrado=?',0)
             ->andWhere('a.activo=?',1)
-            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
-             ->orderBy('RANDOM()')
-            ->limit(6)
-      ->execute();
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId());
+    
+        $this->palabras = new sfDoctrinePager('palabra', 5);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+        //route del paginado
+        $this->action = '@default_listado_page';
+    
+
+    
+    
       }else{
       $this->palabras=null;
       }

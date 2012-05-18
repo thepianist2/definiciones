@@ -14,7 +14,7 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($palabras as $palabra): ?>
+    <?php foreach ($palabras->getResults() as $palabra): ?>
     <tr>
       <td><?php echo link_to(image_tag('iconos/vistaPrevia.png'), 'default/show?id='.$palabra->getId(), array('title' => 'Ver')) ?></td>
       <td><?php echo link_to(image_tag('iconos/editar.png'), 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?></td>
@@ -35,6 +35,8 @@
     <?php endforeach; ?>
   </tbody>
 </table>
+        <br/>
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $palabras, 'action' => $action)) ?>
 <br></br>
 <div style="text-align: center;" >
          <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
@@ -42,3 +44,4 @@
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva', 'default/new', array('title' => 'Nuevo')) ?>
 </div>
 <br></br>
+

@@ -6,11 +6,12 @@ default:
     content-type: text/html
 
   metas:
-    #title:        symfony project
-    #description:  symfony project
-    #keywords:     symfony, project
-    #language:     en
-    #robots:       index, follow
+    name:         Seria
+    title:        Estudia con seria
+    description:  Portal para estudios académicos, herramientas de estudio, software de estudio, bases de datos de estudio, test personalizados, plataforma de estudios, plataforma para estudiar
+    keywords:     Estudiar, Web, Web Estudio, Estudiantes, Palabras, Definiciones, Test, Exámen automatico, Estudiar
+    language:     es    
+    robots:       index, follow
 
   stylesheets:    [main.css, frontend.css,/resources/css/jquery.toastmessage.css]
 

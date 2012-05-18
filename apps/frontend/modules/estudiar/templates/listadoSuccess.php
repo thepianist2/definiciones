@@ -1,5 +1,5 @@
 
-<?php foreach ($palabras as $palabra): ?>
+<?php foreach ($palabras->getResults() as $palabra): ?>
 
 
 <h1 style="text-align: center;"><?php echo $palabra->getTextoPalabra() ?></h1>
@@ -26,3 +26,4 @@
 <br></br>
     <?php endforeach; ?>
 
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $palabras, 'action' => $action)) ?>

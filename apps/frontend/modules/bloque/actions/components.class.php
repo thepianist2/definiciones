@@ -13,7 +13,7 @@ class bloqueComponents extends sfComponents {
 	}
         
         
-        	/**
+	/**
 	 * Bloque paginador
 	 */
 	public function executeBloquePaginador() {

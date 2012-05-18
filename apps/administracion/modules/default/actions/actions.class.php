@@ -12,9 +12,14 @@ class defaultActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->palabras = Doctrine_Core::getTable('palabra')
-      ->createQuery('a')
-      ->execute();
+    $q = Doctrine_Core::getTable('palabra')
+      ->createQuery('a');
+             $this->palabras = new sfDoctrinePager('Palabra', 5);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+        //route del paginado
+        $this->action = '@default_index_page';
   }
 
   public function executeShow(sfWebRequest $request)
