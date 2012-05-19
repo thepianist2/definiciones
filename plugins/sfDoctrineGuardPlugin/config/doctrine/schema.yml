@@ -94,7 +94,11 @@ sfGuardUser:
     Palabra:
       local: id
       foreign: idUsuario
-      type: one
+      type: many
+    Test:
+      local: id
+      foreign: idUsuario
+      type: many
     Groups:
       class: sfGuardGroup
       local: user_id

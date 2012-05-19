@@ -16,7 +16,8 @@
  * @property boolean $is_super_admin
  * @property timestamp $last_login
  * @property Contenido $Contenido
- * @property Palabra $Palabra
+ * @property Doctrine_Collection $Palabra
+ * @property Doctrine_Collection $Test
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
  * @property Doctrine_Collection $sfGuardUserPermission
@@ -35,7 +36,8 @@
  * @method boolean               getIsSuperAdmin()          Returns the current record's "is_super_admin" value
  * @method timestamp             getLastLogin()             Returns the current record's "last_login" value
  * @method Contenido             getContenido()             Returns the current record's "Contenido" value
- * @method Palabra               getPalabra()               Returns the current record's "Palabra" value
+ * @method Doctrine_Collection   getPalabra()               Returns the current record's "Palabra" collection
+ * @method Doctrine_Collection   getTest()                  Returns the current record's "Test" collection
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
  * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
  * @method Doctrine_Collection   getSfGuardUserPermission() Returns the current record's "sfGuardUserPermission" collection
@@ -53,7 +55,8 @@
  * @method sfGuardUser           setIsSuperAdmin()          Sets the current record's "is_super_admin" value
  * @method sfGuardUser           setLastLogin()             Sets the current record's "last_login" value
  * @method sfGuardUser           setContenido()             Sets the current record's "Contenido" value
- * @method sfGuardUser           setPalabra()               Sets the current record's "Palabra" value
+ * @method sfGuardUser           setPalabra()               Sets the current record's "Palabra" collection
+ * @method sfGuardUser           setTest()                  Sets the current record's "Test" collection
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
  * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
  * @method sfGuardUser           setSfGuardUserPermission() Sets the current record's "sfGuardUserPermission" collection
@@ -134,7 +137,11 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'idUsuario'));
 
-        $this->hasOne('Palabra', array(
+        $this->hasMany('Palabra', array(
+             'local' => 'id',
+             'foreign' => 'idUsuario'));
+
+        $this->hasMany('Test', array(
              'local' => 'id',
              'foreign' => 'idUsuario'));
 

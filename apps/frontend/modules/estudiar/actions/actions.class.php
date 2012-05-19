@@ -37,6 +37,13 @@ class estudiarActions extends sfActions
 	$this->palabras->init();
         //route del paginado
         $this->action = '@estudiar_listado_page';
+        
+                 if(count($this->palabras)<3){
+            $this->getUser()->setFlash('mensajeError','Debe tener al menos 3 definiciones almacenadas.');
+            $this->redirect('estudiar/index');
+         }
+        
+        
       }else{
       $this->palabras=null;
       }
@@ -44,6 +51,7 @@ class estudiarActions extends sfActions
   
   
       public function executePrueba(sfWebRequest $request){
+         
                         $this->i=0;
         $this->palabras = Doctrine_Core::getTable('palabra')
       ->createQuery('a')
@@ -54,6 +62,10 @@ class estudiarActions extends sfActions
         $this->getUser()->setAttribute('numeroPalabras', count($this->palabras));
         $this->getUser()->setAttribute('palabras', $this->palabras);
         $this->getUser()->setAttribute('i', $this->i);
+         if($this->getUser()->getAttribute('numeroPalabras')<3){
+            $this->getUser()->setFlash('mensajeError','Debe tener al menos 3 definiciones almacenadas.');
+            $this->redirect('estudiar/index');
+         }
     }
     
     

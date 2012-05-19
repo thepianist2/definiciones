@@ -17,6 +17,7 @@ Doctrine_Manager::getInstance()->bindComponent('Palabra', 'doctrine');
  * @property sfGuardUser $sfGuardUser
  * @property Doctrine_Collection $RegistroPalabra
  * @property SubCategoria $SubCategoria
+ * @property Doctrine_Collection $Test
  * 
  * @method integer             getIdUsuario()       Returns the current record's "idUsuario" value
  * @method integer             getIdSubCategoria()  Returns the current record's "idSubCategoria" value
@@ -28,6 +29,7 @@ Doctrine_Manager::getInstance()->bindComponent('Palabra', 'doctrine');
  * @method sfGuardUser         getSfGuardUser()     Returns the current record's "sfGuardUser" value
  * @method Doctrine_Collection getRegistroPalabra() Returns the current record's "RegistroPalabra" collection
  * @method SubCategoria        getSubCategoria()    Returns the current record's "SubCategoria" value
+ * @method Doctrine_Collection getTest()            Returns the current record's "Test" collection
  * @method Palabra             setIdUsuario()       Sets the current record's "idUsuario" value
  * @method Palabra             setIdSubCategoria()  Sets the current record's "idSubCategoria" value
  * @method Palabra             setTextoPalabra()    Sets the current record's "textoPalabra" value
@@ -38,6 +40,7 @@ Doctrine_Manager::getInstance()->bindComponent('Palabra', 'doctrine');
  * @method Palabra             setSfGuardUser()     Sets the current record's "sfGuardUser" value
  * @method Palabra             setRegistroPalabra() Sets the current record's "RegistroPalabra" collection
  * @method Palabra             setSubCategoria()    Sets the current record's "SubCategoria" value
+ * @method Palabra             setTest()            Sets the current record's "Test" collection
  * 
  * @package    definiciones
  * @subpackage model
@@ -130,6 +133,10 @@ abstract class BasePalabra extends sfDoctrineRecord
         $this->hasOne('SubCategoria', array(
              'local' => 'idSubCategoria',
              'foreign' => 'id'));
+
+        $this->hasMany('Test', array(
+             'local' => 'id',
+             'foreign' => 'idPalabra'));
 
         $timestampable0 = new Doctrine_Template_Timestampable();
         $this->actAs($timestampable0);

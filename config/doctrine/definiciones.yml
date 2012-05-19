@@ -271,4 +271,76 @@ RegistroPalabra:
     Palabra:
       local: idPalabra
       foreign: id
-      type: one          
+      type: one   
+      
+
+Test:
+  connection: doctrine
+  tableName: test
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    idPalabra:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one
+    Palabra:
+      local: idPalabra
+      foreign: id
+      type: one   
+    Respuesta:
+      local: id
+      foreign: idTest
+      type: many
+      
+      
+      
+Respuesta:
+  connection: doctrine
+  tableName: respuesta
+  actAs:
+    Timestampable:
+  columns:
+    idTest:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    textoRespuesta:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    respuestaCorrecta:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+  relations:
+    Test:
+      local: idTest
+      foreign: id
+      type: one         
+      
