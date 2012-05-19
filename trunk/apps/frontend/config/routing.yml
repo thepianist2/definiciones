@@ -71,7 +71,7 @@ usuario_editarUsuario:
   param: { module: usuario, action: editarUsuario }    
   
 usuario_update:
-  url:   /actualizar
+  url:   /actualizar-usuario
   param: { module: usuario, action: update }      
   
   
