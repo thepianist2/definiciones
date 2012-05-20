@@ -51,13 +51,17 @@ class estudiarActions extends sfActions
   
   
       public function executePrueba(sfWebRequest $request){
-         
+         $test= new Test();
+         $test->setIdUsuario($this->getUser()->getGuardUser()->getId());
+         $test->save();
+         $this->getUser()->setAttribute('idTest', $test->getId());
                         $this->i=0;
         $this->palabras = Doctrine_Core::getTable('palabra')
       ->createQuery('a')
             ->where('a.borrado=?',0)
             ->andWhere('a.activo=?',1)
             ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->orderBy('RANDOM()')
             ->execute();
         $this->getUser()->setAttribute('numeroPalabras', count($this->palabras));
         $this->getUser()->setAttribute('palabras', $this->palabras);
@@ -80,12 +84,29 @@ class estudiarActions extends sfActions
              $respuesta= $request->getParameter('palabraTexto');
              if(strtolower($respuesta)==strtolower($this->palabras[$this->i]->getTextoPalabra())){
              $this->getUser()->setFlash('mensajeTerminado','Respuesta correcta.');
+             
+             $respuesta= new Respuesta();
+             $respuesta->setIdTest($this->getUser()->getAttribute('idTest'));
+             $respuesta->setTextoRespuesta($request->getParameter('palabraTexto'));
+             $respuesta->setTextoPalabra(strtolower($this->palabras[$this->i]->getTextoPalabra()));
+             $respuesta->setRespuestaCorrecta(true);
+             $respuesta->save();
+             
+             
                            $this->i+=1;
                            $this->getUser()->setAttribute('i', $this->i);
                            
                            
             }else{
                 $this->getUser()->setFlash('mensajeError','Respuesta Incorrecta.');
+             $respuesta= new Respuesta();
+             $respuesta->setIdTest($this->getUser()->getAttribute('idTest'));
+             $respuesta->setTextoRespuesta($request->getParameter('palabraTexto'));
+             $respuesta->setTextoPalabra(strtolower($this->palabras[$this->i]->getTextoPalabra()));
+             $respuesta->setRespuestaCorrecta(false);
+             $respuesta->save();
+                
+                
                 $this->i+=1;
                 $this->getUser()->setAttribute('i', $this->i);
             }

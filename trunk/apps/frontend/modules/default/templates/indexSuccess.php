@@ -1,8 +1,7 @@
-
-
+   <?php if ($sf_user->isAuthenticated()){ ?>
+<h1 style="text-align: center;">Tus definiciones</h1>
+<?php } ?>
 <?php if(count($palabras)>0){ ?>
-<h1 style="text-align: center;">Tus palabras y definiciones</h1>
-
 <div style="text-align: center;" >
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva palabra', 'default/new', array('title' => 'Nueva palabra')) ?>
   <?php echo link_to(image_tag('iconos/datos.png').'Administrar palabras', 'default/listado', array('title' => 'Listar palabras')) ?>
@@ -39,8 +38,12 @@
 </div>
     <?php }else{   ?>
     <?php if ($sf_user->isAuthenticated()){ ?>
-    <div style="text-align: center;" >
-  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva palabra', 'default/new', array('title' => 'Nueva palabra')) ?>
+<div style="text-align: center;" ><br></br><br></br>
+        <?php echo link_to(image_tag('iconos/administrar.gif','class=imageMenuEstudiar').'<br>Añadir nueva definición', 'default/new', array('title' => 'Agregar nueva palabra definición')) ?>   <br></br> 
+
+        
+        
+        
 </div>
     
     <?php } } ?>

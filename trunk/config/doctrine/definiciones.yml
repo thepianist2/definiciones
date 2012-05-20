@@ -287,22 +287,11 @@ Test:
       primary: false
       notnull: true
       autoincrement: false
-    idPalabra:
-      type: integer(8)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false
   relations:
     sfGuardUser:
       local: idUsuario
       foreign: id
       type: one
-    Palabra:
-      local: idPalabra
-      foreign: id
-      type: one   
     Respuesta:
       local: id
       foreign: idTest
@@ -323,13 +312,20 @@ Respuesta:
       primary: false
       notnull: true
       autoincrement: false
-    textoRespuesta:
-      type: text()
+    textoPalabra:
+      type: string(255)
       fixed: false
       unsigned: false
       primary: false
-      notnull: true
-      autoincrement: false
+      notnull: false
+      autoincrement: false  
+    textoRespuesta:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
     respuestaCorrecta:
       type: boolean()
       fixed: false

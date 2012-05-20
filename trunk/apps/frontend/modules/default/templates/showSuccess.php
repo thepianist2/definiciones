@@ -1,3 +1,5 @@
+<script type="text/javascript" src="http://vozme.com/get_text.js"></script>
+
 <h1 style="text-align: center;"><?php echo $palabra->getTextoPalabra() ?></h1>
 <div style=" font-family: Wingdings, 'Zapf Dingbats', sans-serif; font-size: 15px;">
     
@@ -20,7 +22,13 @@
 
     <?php } ?>
 </div>
-
+<button style="background:#ddeeff 
+ url(http://vozme.com/img/paper_sound32x32.gif) 
+ no-repeat left center; 
+ min-height: 35px; 
+ font-size:100%; padding:4px 4px 4px 35px;" 
+ onclick="get_selection('es','ml');">
+Selecciona un texto y<br/>clica aquí para oírlo</button>
 <br></br><br></br><br></br><br></br>
 <div style="text-align: center;" >
          <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
