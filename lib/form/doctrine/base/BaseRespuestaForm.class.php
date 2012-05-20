@@ -17,6 +17,7 @@ abstract class BaseRespuestaForm extends BaseFormDoctrine
     $this->setWidgets(array(
       'id'                => new sfWidgetFormInputHidden(),
       'idTest'            => new sfWidgetFormDoctrineChoice(array('model' => $this->getRelatedModelName('Test'), 'add_empty' => false)),
+      'textoPalabra'      => new sfWidgetFormInputText(),
       'textoRespuesta'    => new sfWidgetFormInputText(),
       'respuestaCorrecta' => new sfWidgetFormInputCheckbox(),
       'created_at'        => new sfWidgetFormDateTime(),
@@ -26,7 +27,8 @@ abstract class BaseRespuestaForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'                => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'idTest'            => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Test'))),
-      'textoRespuesta'    => new sfValidatorPass(),
+      'textoPalabra'      => new sfValidatorString(array('max_length' => 255, 'required' => false)),
+      'textoRespuesta'    => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'respuestaCorrecta' => new sfValidatorBoolean(array('required' => false)),
       'created_at'        => new sfValidatorDateTime(),
       'updated_at'        => new sfValidatorDateTime(),

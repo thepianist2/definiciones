@@ -1,3 +1,4 @@
+<script type="text/javascript" src="http://vozme.com/get_text.js"></script>
 
 <?php foreach ($palabras->getResults() as $palabra): ?>
 
@@ -15,7 +16,7 @@
     
     <label style="color: #003366;">Definición: </label><p><?php echo $palabra->getTextoDefinicion() ?></p><br></br>   
     
-    
+
     
 	<?php if($palabra->getImagen()){ ?>
     <img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt="">
@@ -23,6 +24,14 @@
 <img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/images/estudiando.png' ?>" alt="">
 
     <?php } ?>
+<br></br>
+<button style="background:#ddeeff 
+ url(http://vozme.com/img/paper_sound32x32.gif) 
+ no-repeat left center; 
+ min-height: 35px; 
+ font-size:100%; padding:4px 4px 4px 35px;" 
+ onclick="get_selection('es','ml');">
+Selecciona un texto y<br/>clica aquí para oírlo</button>
 <br></br>
     <?php endforeach; ?>
 

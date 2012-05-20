@@ -46,8 +46,8 @@ body
 #menuIzquierdo{
 padding-right: 8px;
 float: left;
-margin-top: 23px;
-height: 700px;
+margin-top: 25px;
+height: 460px;
 }
 
 #header .post
@@ -383,7 +383,7 @@ em
 
 
 .box {
-min-height: 320px;
+min-height: 350px;
 width: 170px;
 margin: 8px;
 padding: 10px;
