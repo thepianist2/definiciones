@@ -10,7 +10,7 @@
       <tr>
           <td colspan="2" style="text-align: center; margin-top: 200px;">
               <br></br><br></br>
-          &nbsp;<?php echo link_to(image_tag('iconos/atras.png').'Volver a la Home', 'default/index', array('title' => 'Volver a la lista')) ?>
+          &nbsp;<?php echo link_to(image_tag('iconos/atras.png').'Volver', 'usuario/index', array('title' => 'Volver a la lista')) ?>
           <input type="submit" value="Guardar" />
         </td>
       </tr>

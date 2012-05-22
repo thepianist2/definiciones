@@ -16,9 +16,9 @@
     
     
 	<?php if($palabra->getImagen()){ ?>
-    <a href="<?php echo '/uploads/'.$palabra->getImagen() ?>"> <img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt=""></a>
+    <a target="_blank" href="<?php echo '/uploads/'.$palabra->getImagen() ?>"> <img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt=""></a>
 <?php }else{ ?>
-    <a href="/images/estudiando.png"><img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/images/estudiando.png' ?>" alt=""></a>
+    <a target="_blank" href="/images/estudiando.png"><img style="width: 200px; height: 200px; margin-left: 200px;" src="<?php echo '/images/estudiando.png' ?>" alt=""></a>
 
     <?php } ?>
 </div>

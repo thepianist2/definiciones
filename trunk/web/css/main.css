@@ -495,3 +495,14 @@ input{
 font-size: 16px;
 height: 25px;
 }
+
+.documento{
+    height: 718px;
+    width: 613px;
+}
+
+
+.mensaje{
+    height: 800px;
+    width: 613px;
+}

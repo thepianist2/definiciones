@@ -74,7 +74,9 @@ usuario_update:
   url:   /actualizar-usuario
   param: { module: usuario, action: update }      
   
-  
+usuario_index:
+  url:   /usuario
+  param: { module: usuario, action: index }       
   
 
 sf_guard_signin:
@@ -119,3 +121,73 @@ estudiar_listado_page:
   requirements:
   page: \d+  
        
+#documento
+documento_index:
+  url:   /mis-documentos
+  param: { module: documento, action: index }
+  
+
+documento_new:
+  url:   /nuevo-documento
+  param: { module: documento, action: new }
+  
+  
+documento_create:
+  url:   /crear-documento
+  param: { module: documento, action: create }  
+  
+documento_edit:
+  url:   /editar-documento
+  param: { module: documento, action: edit }
+  
+documento_update:
+  url:   /actualizar-documento
+  param: { module: documento, action: update }  
+  
+documento_delete:
+  url:   /eliminar-documento
+  param: { module: documento, action: delete }
+
+documento_show:
+  url:   /mostrar-documento
+  param: { module: documento, action: show }
+
+
+#mensaje
+mensaje_index:
+  url:   /mis-mensajes
+  param: { module: mensaje, action: index }
+  
+
+mensaje_new:
+  url:   /nuevo-mensaje
+  param: { module: mensaje, action: new }
+  
+  
+mensaje_create:
+  url:   /crear-mensaje
+  param: { module: mensaje, action: create }  
+  
+mensaje_edit:
+  url:   /editar-mensaje
+  param: { module: mensaje, action: edit }
+  
+mensaje_update:
+  url:   /actualizar-mensaje
+  param: { module: mensaje, action: update }  
+  
+mensaje_delete:
+  url:   /eliminar-mensaje
+  param: { module: mensaje, action: delete }
+
+mensaje_show:
+  url:   /mostrar-mensaje
+  param: { module: mensaje, action: show }
+
+mensaje_bandejaEntrada:
+  url:   /bandeja-entrada
+  param: { module: mensaje, action: bandejaEntrada }
+  
+mensaje_bandejaSalida:
+  url:   /bandeja-salida
+  param: { module: mensaje, action: bandejaSalida }  
