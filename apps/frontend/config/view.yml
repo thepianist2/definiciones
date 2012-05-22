@@ -13,9 +13,9 @@ default:
     language:     es    
     robots:       index, follow
 
-  stylesheets:    [main.css, frontend.css,/resources/css/jquery.toastmessage.css]
+  stylesheets:    [jquery-ui-1.8.17.custom.css, main.css, frontend.css,/resources/css/jquery.toastmessage.css]
 
-  javascripts:    [tiny_mce/tiny_mce, mootools-1.2.5-core.js, mootools-1.2.4.4-more.js, byslidemenu-2.1.3.js]
+  javascripts:    [query-1.7.1.min.js, jquery-ui-1.8.17.custom.min.js, tiny_mce/tiny_mce, mootools-1.2.5-core.js, mootools-1.2.4.4-more.js, byslidemenu-2.1.3.js]
 
   has_layout:     true
   layout:         layout

@@ -11,6 +11,16 @@
 class usuarioActions extends sfActions
 {
     
+    
+        
+    public function executeIndex(sfWebRequest $request){
+    
+    }
+
+    
+    
+    
+    
      public function executeEditarUsuario(sfWebRequest $request) {
         $this->forward404Unless($usuario = Doctrine_Core::getTable('sfGuardUser')->find(array($this->getUser()->getGuardUser()->getId())), sprintf('Object usuario does not exist (%s).', $this->getUser()->getAttribute('id')));
         $this->form = new UsuarioFrontendForm($usuario);

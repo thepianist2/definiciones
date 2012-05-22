@@ -95,6 +95,18 @@ sfGuardUser:
       local: id
       foreign: idUsuario
       type: many
+    Documento:
+      local: id
+      foreign: idUsuario
+      type: many  
+    Mensaje:
+      local: id
+      foreign: idUsuario
+      type: many 
+    Mensaje:
+      local: id
+      foreign: idUsuarioReceptor
+      type: many       
     Test:
       local: id
       foreign: idUsuario

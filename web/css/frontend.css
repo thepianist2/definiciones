@@ -29,3 +29,14 @@ input, textarea {border:1px solid #000;}
 input:focus, textarea:focus {background:#99CCFF;} 
 
 
+#textoDocumento h1{
+
+background: transparent;
+    color: #000;
+}
+
+#textoDocumento{
+    background: inherit;
+
+}
+
