@@ -18,7 +18,8 @@
  * @property Contenido $Contenido
  * @property Doctrine_Collection $Palabra
  * @property Doctrine_Collection $Documento
- * @property Doctrine_Collection $Mensaje
+ * @property Doctrine_Collection $BandejaEntrada
+ * @property Doctrine_Collection $BandejaSalida
  * @property Doctrine_Collection $Test
  * @property Doctrine_Collection $Groups
  * @property Doctrine_Collection $Permissions
@@ -40,7 +41,8 @@
  * @method Contenido             getContenido()             Returns the current record's "Contenido" value
  * @method Doctrine_Collection   getPalabra()               Returns the current record's "Palabra" collection
  * @method Doctrine_Collection   getDocumento()             Returns the current record's "Documento" collection
- * @method Doctrine_Collection   getMensaje()               Returns the current record's "Mensaje" collection
+ * @method Doctrine_Collection   getBandejaEntrada()        Returns the current record's "BandejaEntrada" collection
+ * @method Doctrine_Collection   getBandejaSalida()         Returns the current record's "BandejaSalida" collection
  * @method Doctrine_Collection   getTest()                  Returns the current record's "Test" collection
  * @method Doctrine_Collection   getGroups()                Returns the current record's "Groups" collection
  * @method Doctrine_Collection   getPermissions()           Returns the current record's "Permissions" collection
@@ -61,7 +63,8 @@
  * @method sfGuardUser           setContenido()             Sets the current record's "Contenido" value
  * @method sfGuardUser           setPalabra()               Sets the current record's "Palabra" collection
  * @method sfGuardUser           setDocumento()             Sets the current record's "Documento" collection
- * @method sfGuardUser           setMensaje()               Sets the current record's "Mensaje" collection
+ * @method sfGuardUser           setBandejaEntrada()        Sets the current record's "BandejaEntrada" collection
+ * @method sfGuardUser           setBandejaSalida()         Sets the current record's "BandejaSalida" collection
  * @method sfGuardUser           setTest()                  Sets the current record's "Test" collection
  * @method sfGuardUser           setGroups()                Sets the current record's "Groups" collection
  * @method sfGuardUser           setPermissions()           Sets the current record's "Permissions" collection
@@ -151,7 +154,11 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'idUsuario'));
 
-        $this->hasMany('Mensaje', array(
+        $this->hasMany('BandejaEntrada', array(
+             'local' => 'id',
+             'foreign' => 'idUsuarioReceptor'));
+
+        $this->hasMany('BandejaSalida', array(
              'local' => 'id',
              'foreign' => 'idUsuarioReceptor'));
 

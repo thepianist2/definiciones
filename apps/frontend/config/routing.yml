@@ -155,39 +155,69 @@ documento_show:
 
 #mensaje
 mensaje_index:
-  url:   /mis-mensajes
+  url:   /mensajes
   param: { module: mensaje, action: index }
   
 
-mensaje_new:
-  url:   /nuevo-mensaje
-  param: { module: mensaje, action: new }
-  
-  
-mensaje_create:
-  url:   /crear-mensaje
-  param: { module: mensaje, action: create }  
-  
-mensaje_edit:
-  url:   /editar-mensaje
-  param: { module: mensaje, action: edit }
-  
-mensaje_update:
-  url:   /actualizar-mensaje
-  param: { module: mensaje, action: update }  
-  
-mensaje_delete:
-  url:   /eliminar-mensaje
-  param: { module: mensaje, action: delete }
-
-mensaje_show:
-  url:   /mostrar-mensaje
-  param: { module: mensaje, action: show }
-
-mensaje_bandejaEntrada:
+#bandejaEntrada
+bandejaEntrada_index:
   url:   /bandeja-entrada
-  param: { module: mensaje, action: bandejaEntrada }
+  param: { module: bandejaEntrada, action: index }
   
-mensaje_bandejaSalida:
+
+bandejaEntrada_new:
+  url:   /nuevo-mensaje
+  param: { module: bandejaEntrada, action: new }
+  
+  
+bandejaEntrada_create:
+  url:   /crear-mensaje
+  param: { module: bandejaEntrada, action: create }  
+  
+bandejaEntrada_edit:
+  url:   /editar-mensaje
+  param: { module: bandejaEntrada, action: edit }
+  
+bandejaEntrada_update:
+  url:   /actualizar-mensaje
+  param: { module: bandejaEntrada, action: update }  
+  
+bandejaEntrada_delete:
+  url:   /eliminar-mensaje
+  param: { module: bandejaEntrada, action: delete }
+
+bandejaEntrada_show:
+  url:   /mostrar-mensaje
+  param: { module: bandejaEntrada, action: show }
+  
+  
+#bandejaSalida
+bandejaSalida_index:
   url:   /bandeja-salida
-  param: { module: mensaje, action: bandejaSalida }  
+  param: { module: bandejaSalida, action: index }
+  
+
+bandejaSalida_new:
+  url:   /nuevo-mensaje-salida
+  param: { module: bandejaSalida, action: new }
+  
+  
+bandejaSalida_create:
+  url:   /crear-mensaje-salida
+  param: { module: bandejaSalida, action: create }  
+  
+bandejaSalida_edit:
+  url:   /editar-mensaje-salida
+  param: { module: bandejaSalida, action: edit }
+  
+bandejaSalida_update:
+  url:   /actualizar-mensaje-salida
+  param: { module: bandejaSalida, action: update }  
+  
+bandejaSalida_delete:
+  url:   /eliminar-mensaje-salida
+  param: { module: bandejaSalida, action: delete }
+
+bandejaSalida_show:
+  url:   /mostrar-mensaje-salida
+  param: { module: bandejaSalida, action: show }  

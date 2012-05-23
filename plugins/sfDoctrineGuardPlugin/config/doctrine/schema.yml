@@ -99,11 +99,19 @@ sfGuardUser:
       local: id
       foreign: idUsuario
       type: many  
-    Mensaje:
+    BandejaEntrada:
       local: id
-      foreign: idUsuario
+      foreign: idUsuarioRemitente
       type: many 
-    Mensaje:
+    BandejaEntrada:
+      local: id
+      foreign: idUsuarioReceptor
+      type: many    
+    BandejaSalida:
+      local: id
+      foreign: idUsuarioRemitente
+      type: many 
+    BandejaSalida:
       local: id
       foreign: idUsuarioReceptor
       type: many       
