@@ -383,13 +383,13 @@ Documento:
       
       
       
-Mensaje:
+BandejaEntrada:
   connection: doctrine
-  tableName: mensaje
+  tableName: bandejaEntrada
   actAs:
     Timestampable:
   columns:
-    idUsuario:
+    idUsuarioRemitente:
       type: integer(8)
       fixed: false
       unsigned: false
@@ -412,13 +412,52 @@ Mensaje:
       autoincrement: false
   relations:
     sfGuardUser:
-      local: idUsuario
+      local: idUsuarioRemitente
       foreign: id
       type: one         
     sfGuardUser:
       local: idUsuarioReceptor
       foreign: id
       type: many  
+      
+      
+      
+BandejaSalida:
+  connection: doctrine
+  tableName: bandejaSalida
+  actAs:
+    Timestampable:
+  columns:
+    idUsuarioRemitente:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false   
+    idUsuarioReceptor:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false 
+    mensaje:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    sfGuardUser:
+      local: idUsuarioRemitente
+      foreign: id
+      type: one         
+    sfGuardUser:
+      local: idUsuarioReceptor
+      foreign: id
+      type: many        
       
       
       

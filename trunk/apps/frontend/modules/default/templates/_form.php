@@ -10,7 +10,7 @@
       <tr>
         <td colspan="2" style="text-align: center; margin-top: 200px;">
             <br></br><br></br>
-          &nbsp;<?php echo link_to(image_tag('iconos/atras.png').'Volver a la lista', 'default/index', array('title' => 'Volver a la lista')) ?>
+          &nbsp;<?php echo link_to(image_tag('iconos/atras.png').'Volver', 'default/index', array('title' => 'Volver a la lista')) ?>
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to(image_tag('iconos/borrar.png').'Borrar', 'default/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?>
           <?php endif; ?>

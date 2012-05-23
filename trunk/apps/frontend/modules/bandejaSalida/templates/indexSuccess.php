@@ -1,3 +1,4 @@
+
 <script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="/js/jquery-ui-1.8.17.custom.min.js"></script>
    <?php if ($sf_user->isAuthenticated()){ ?>
@@ -13,10 +14,10 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach ($mensajes as $mensaje): ?>
+    <?php foreach ($bandeja_salidas as $mensaje): ?>
     <tr>
       <td><a class="ver" href="javascript:void(0)" id="<?php echo $mensaje->id ?>"><img src="/images/iconos/vistaPrevia.png"></a></td>
-      <td><?php echo link_to(image_tag('iconos/borrar.png'), 'mensaje/delete?id='.$mensaje->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>   
+      <td><?php echo link_to(image_tag('iconos/borrar.png'), 'bandejaSalida/delete?id='.$mensaje->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>   
       <td><?php echo $mensaje->getIdUsuarioReceptor() ?></td>
       <td><?php echo $mensaje->getCreatedAt() ?></td>
     </tr>
@@ -26,8 +27,11 @@
 <br></br>
 <div id="ver" style="display: none;"></div>
  <div style="text-align: center;" >
-  <?php echo link_to(image_tag('iconos/nuevo.png').'Enviar nuevo mensaje', 'mensaje/new', array('title' => 'Nuevo')) ?>
-</div>
+  <?php echo link_to(image_tag('iconos/atras.png').'Volver', 'mensaje/index', array('title' => 'Volver atras')) ?>
+     
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Enviar nuevo mensaje', 'bandejaSalida/new', array('title' => 'Nuevo')) ?>
+
+ </div>
 <br></br>
 
 <script type="text/javascript">
@@ -37,7 +41,7 @@ jQuery.noConflict();
         var id = jQuery(this).attr('id');
         dialog = jQuery.ajax({
             type: 'GET',
-            url: '<?php echo url_for('mensaje/show?id=') ?>'+id,
+            url: '<?php echo url_for('bandejaSalida/show?id=') ?>'+id,
             async: false
         }).responseText;
         jQuery('#ver').html(dialog);
@@ -65,3 +69,4 @@ jQuery.noConflict();
 //            }
 
 </script>
+
