@@ -12,4 +12,12 @@
  */
 class BandejaEntrada extends BaseBandejaEntrada
 {
+    
+    
+    
+    static function obtenerUserNamePorId($id){
+      $usuario= Doctrine_Core::getTable('BandejaEntrada')->obtenerNombreById($id);
+      
+      return $usuario;
+    }
 }

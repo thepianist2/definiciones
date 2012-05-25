@@ -16,4 +16,20 @@ class BandejaSalidaTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('BandejaSalida');
     }
+    
+    
+                     public function obtenerNombreById($id){
+        $q = Doctrine_Query::create()
+	            ->select('u.username')
+	            ->from('sfGuardUser u')
+                     ->where('u.id= ? ',$id);
+
+
+	   $u=$q->fetchOne();
+	     if ($u) {
+                 return $u;
+	     }else{
+                 return "Este usuario ya no existe";
+             }
+         }
 }
