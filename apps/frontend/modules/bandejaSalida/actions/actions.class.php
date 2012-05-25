@@ -17,6 +17,14 @@ class bandejaSalidaActions extends sfActions
       ->Where('a.idUsuarioRemitente =?',$this->getUser()->getGuardUser()->getId())         
       ->execute();
   }
+  
+  public function executeSeleccionaUsuario(sfWebRequest $request){
+
+    $this->sf_guard_users = Doctrine_Core::getTable('sfGuardUser')
+      ->createQuery('a')
+      ->execute();
+  }
+  
 
   public function executeShow(sfWebRequest $request)
   {
@@ -26,9 +34,18 @@ class bandejaSalidaActions extends sfActions
 
   public function executeNew(sfWebRequest $request)
   {
+      
+      if($request->getParameter('idUsuario')){
+     $idUsuario = $request->getParameter('idUsuario');
     $this->form = new BandejaSalidaForm();
     $this->form->setDefault('idUsuarioRemitente', $this->getUser()->getGuardUser()->getId());
+    $this->form->setDefault('idUsuarioReceptor', $idUsuario);
     
+      }else{
+       $this->getUser()->setFlash('mensajeError','No has seleccionado usuario para enviar mensaje.');
+   
+      }
+
   }
   
   

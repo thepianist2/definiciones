@@ -30,7 +30,7 @@
  <div style="text-align: center;" >
   <?php echo link_to(image_tag('iconos/atras.png').'Volver', 'mensaje/index', array('title' => 'Volver atras')) ?>
      
-  <?php echo link_to(image_tag('iconos/nuevo.png').'Enviar nuevo mensaje', 'bandejaSalida/new', array('title' => 'Nuevo')) ?>
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Enviar nuevo mensaje', 'bandejaSalida/seleccionaUsuario', array('title' => 'Nuevo')) ?>
 
  </div>
 <br></br>
