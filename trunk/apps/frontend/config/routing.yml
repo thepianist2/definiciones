@@ -230,3 +230,7 @@ bandejaSalida_show:
 bandejaSalida_responder:
   url:   /salida-responder
   param: { module: bandejaSalida, action: responder }  
+  
+bandejaSalida_seleccionaUsuario:
+  url:   /selecciona-usuario
+  param: { module: bandejaSalida, action: seleccionaUsuario }    
