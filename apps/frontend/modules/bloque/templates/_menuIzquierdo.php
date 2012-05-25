@@ -122,7 +122,7 @@ fxOptions       | object   | { duration: 300,        | Duration of the animation
 <div id="byslidemenu_vertical">
     <a href="<?php echo url_for('default/index') ?>"><img id="imagenMenu" src="/images/Definicionesff.png" alt="" /></a>
     <a href="<?php echo url_for('estudiar/index') ?>"><img id="imagenMenu" src="/images/estudiarff.png" alt="" /></a>
+    <a href="<?php echo url_for('documento/index') ?>"><img id="imagenMenu" src="/images/documentoff.png" alt="" /></a>   
     <a href="<?php echo url_for('usuario/index') ?>"><img id="imagenMenu" src="/images/usuarioff.png" alt="" /></a>
-    <a href="<?php echo url_for('documento/index') ?>"><img id="imagenMenu" src="/images/usuarioff.png" alt="" /></a>
 
 </div>

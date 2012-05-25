@@ -2,7 +2,7 @@
 
 <form action="<?php echo url_for('estudiar/responder') ?>" method="post" enctype="multipart/form-data">
 <h1 style="text-align: center;">Exámen</h1>
-<div style=" font-family: Wingdings, 'Zapf Dingbats', sans-serif; font-size: 15px;">
+<div style="font-size: 15px;">
            <?php echo form_tag('estudiar/responder') ?>
     <label style="color: #003366;">Definición: </label><p id="definicion"><?php echo $palabras[$i]->getTextoDefinicion() ?></p><br></br>   
 

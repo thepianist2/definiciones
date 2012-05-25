@@ -30,6 +30,16 @@ class bandejaSalidaActions extends sfActions
     $this->form->setDefault('idUsuarioRemitente', $this->getUser()->getGuardUser()->getId());
     
   }
+  
+  
+    public function executeResponder(sfWebRequest $request)
+  {
+    $idUsuario = $request->getParameter('idUsuario');
+    $this->form = new BandejaSalidaForm();
+    $this->form->setDefault('idUsuarioRemitente', $this->getUser()->getGuardUser()->getId());
+    $this->form->setDefault('idUsuarioReceptor', $idUsuario);
+
+  }
 
   public function executeCreate(sfWebRequest $request)
   {

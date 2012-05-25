@@ -191,6 +191,11 @@ bandejaEntrada_show:
   param: { module: bandejaEntrada, action: show }
   
   
+bandejaEntrada_responder:
+  url:   /entrada-responder
+  param: { module: bandejaEntrada, action: responder }  
+  
+  
 #bandejaSalida
 bandejaSalida_index:
   url:   /bandeja-salida
@@ -221,3 +226,7 @@ bandejaSalida_delete:
 bandejaSalida_show:
   url:   /mostrar-mensaje-salida
   param: { module: bandejaSalida, action: show }  
+
+bandejaSalida_responder:
+  url:   /salida-responder
+  param: { module: bandejaSalida, action: responder }  
