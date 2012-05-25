@@ -12,4 +12,10 @@
  */
 class BandejaSalida extends BaseBandejaSalida
 {
+    
+        static function obtenerUserNamePorId($id){
+      $usuario= Doctrine_Core::getTable('BandejaSalida')->obtenerNombreById($id);
+      
+      return $usuario;
+    }
 }
