@@ -20,7 +20,8 @@
       <td><a class="ver" href="javascript:void(0)" id="<?php echo $mensaje->id ?>"><img src="/images/iconos/vistaPrevia.png"></a></td>
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'bandejaEntrada/delete?id='.$mensaje->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>   
       
-      <td></td>
+      <td><?php $usuario= $mensaje->obtenerUserNamePorId($mensaje->getIdUsuarioRemitente());
+      echo $usuario; ?></td>
       <td><?php echo $mensaje->getCreatedAt() ?></td>
     </tr>
     <?php endforeach; ?>

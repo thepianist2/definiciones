@@ -4,7 +4,7 @@
 
 
 <h1 style="text-align: center;"><?php echo $palabra->getTextoPalabra() ?></h1>
-<div style=" font-family: Wingdings, 'Zapf Dingbats', sans-serif; font-size: 15px;">
+<div style="font-size: 15px;">
     
     <label style="color: #003366;">Palabra: </label><?php echo $palabra->getTextoPalabra() ?> <br></br>
     

@@ -21,4 +21,6 @@
 
 <div style="text-align: center;" >
          <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'bandejaEntrada/index', array('title' => 'Volver')) ?>
+         <?php echo link_to(image_tag('iconos/pencil.png').'Responder', 'bandejaSalida/responder?idUsuario='.$bandeja_entrada->getIdUsuarioRemitente(), array('title' => 'Responder')) ?>
+
 </div><br></br>
