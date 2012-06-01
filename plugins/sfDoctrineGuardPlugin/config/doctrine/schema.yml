@@ -99,6 +99,10 @@ sfGuardUser:
       local: id
       foreign: idUsuario
       type: many  
+    Album:
+      local: id
+      foreign: idUsuario
+      type: many        
     BandejaEntrada:
       local: id
       foreign: idUsuarioRemitente

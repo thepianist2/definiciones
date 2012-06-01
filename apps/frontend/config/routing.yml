@@ -63,6 +63,9 @@ estudiar_responder:
   url:   /respuesta
   param: { module: estudiar, action: responder }       
   
+estudiar_configurarTest:
+  url:   /configurar-test
+  param: { module: estudiar, action: configurarTest }     
   
  #usuario 
   
@@ -234,3 +237,78 @@ bandejaSalida_responder:
 bandejaSalida_seleccionaUsuario:
   url:   /selecciona-usuario
   param: { module: bandejaSalida, action: seleccionaUsuario }    
+  
+  
+#test 
+
+
+test_index:
+  url:   /test
+  param: { module: test, action: index }
+  
+test_show:
+  url:   /detalles-test
+  param: { module: test, action: show }  
+  
+  
+#album 
+
+
+album_index:
+  url:   /album
+  param: { module: album, action: index }
+  
+album_show:
+  url:   /mostrar-album
+  param: { module: album, action: show }   
+  
+album_new:
+  url:   /nuevo-album
+  param: { module: album, action: new }     
+
+album_create:
+  url:   /crear-album
+  param: { module: album, action: create }      
+  
+album_edit:
+  url:   /editar-album
+  param: { module: album, action: edit }      
+  
+album_update:
+  url:   /actualizar-album
+  param: { module: album, action: update }   
+  
+album_delete:
+  url:   /borrar-album
+  param: { module: album, action: delete }     
+  
+  
+#imagen
+
+imagen_index:
+  url:   /imagen
+  param: { module: imagen, action: index }     
+
+imagen_new:
+  url:   /nueva-imagen
+  param: { module: imagen, action: new }      
+  
+imagen_create:
+  url:   /crear-imagen
+  param: { module: imagen, action: create }     
+  
+imagen_edit:
+  url:   /editar-imagen
+  param: { module: imagen, action: edit }  
+  
+imagen_update:
+  url:   /actualizar-imagen
+  param: { module: imagen, action: update }    
+  
+imagen_delete:
+  url:   /borrar-imagen
+  param: { module: imagen, action: delete }      
+  
+imagen_show:
+  url:   /ver-imagen
+  param: { module: imagen, action: show }        

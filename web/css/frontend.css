@@ -21,6 +21,13 @@ root {
     border:1px solid #99CCFF;
 }
 
+.imageMenuEstudiar2{
+    height: 200px;
+    width: 200px;
+    border:1px solid #99CCFF;
+    margin-left: 155px;
+}
+
 
 label {display:block;font-weight:bold;} 
 legend {font-size:120%;} 
@@ -39,4 +46,15 @@ background: transparent;
     background: inherit;
 
 }
+
+#albumes{
+background:#fff;border:1px solid #ccc;display:inline-block;outline:none;padding:4px;position:relative;vertical-align:bottom;
+
+}
+
+#fotos{
+ background:#fff;border:1px solid #ccc;display:inline-block;outline:none;padding:4px;position:relative;vertical-align:bottom;
+   
+}
+
 
