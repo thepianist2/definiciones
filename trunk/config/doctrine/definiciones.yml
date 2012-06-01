@@ -1,4 +1,4 @@
-     
+    
 Palabra:
   connection: doctrine
   tableName: palabra
@@ -459,5 +459,107 @@ BandejaSalida:
       foreign: id
       type: many        
       
+      
+ImagenPerfil:
+  connection: doctrine
+  tableName: imagenPerfil
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false    
+    descripcion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one        
+     
+      
+      
+      
+Album:
+  connection: doctrine
+  tableName: album
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false    
+    descripcion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one         
+    Imagen:
+      local: id
+      foreign: idAlbum
+      type: many        
+      
+      
+         
+      
+Imagen:
+  connection: doctrine
+  tableName: imagen
+  actAs:
+    Timestampable:
+  columns:
+    idAlbum:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false    
+    descripcion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    Album:
+      local: idAlbum
+      foreign: id
+      type: one        
       
       

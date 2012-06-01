@@ -12,9 +12,30 @@ class estudiarActions extends sfActions
 {
     
     
-    
+    /**
+     *
+     * @param sfWebRequest $request 
+     */
     public function executeIndex(sfWebRequest $request){
     
+    }
+    
+    
+        /**
+         *
+         * @param sfWebRequest $request 
+         */
+    public function executeConfigurarTest(sfWebRequest $request){
+          if ($this->getUser()->isAuthenticated()){
+    $this->palabras = Doctrine_Core::getTable('palabra')
+      ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+      ->execute();
+      }else{
+      $this->palabras=null;
+      }
     }
 
     /**

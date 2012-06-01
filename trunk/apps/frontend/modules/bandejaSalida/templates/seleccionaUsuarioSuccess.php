@@ -23,4 +23,7 @@
     <?php endforeach; ?>
 
 </div>
-    <?php }
+    <?php } ?>
+
+<br></br><br></br>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver', 'bandejaSalida/index', array('title' => 'Volver')) ?>

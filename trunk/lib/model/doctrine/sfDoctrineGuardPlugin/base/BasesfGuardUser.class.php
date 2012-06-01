@@ -18,6 +18,7 @@
  * @property Contenido $Contenido
  * @property Doctrine_Collection $Palabra
  * @property Doctrine_Collection $Documento
+ * @property Doctrine_Collection $Album
  * @property Doctrine_Collection $BandejaEntrada
  * @property Doctrine_Collection $BandejaSalida
  * @property Doctrine_Collection $Test
@@ -27,6 +28,7 @@
  * @property Doctrine_Collection $sfGuardUserGroup
  * @property sfGuardRememberKey $RememberKeys
  * @property sfGuardForgotPassword $ForgotPassword
+ * @property Doctrine_Collection $ImagenPerfil
  * 
  * @method string                getFirstName()             Returns the current record's "first_name" value
  * @method string                getLastName()              Returns the current record's "last_name" value
@@ -41,6 +43,7 @@
  * @method Contenido             getContenido()             Returns the current record's "Contenido" value
  * @method Doctrine_Collection   getPalabra()               Returns the current record's "Palabra" collection
  * @method Doctrine_Collection   getDocumento()             Returns the current record's "Documento" collection
+ * @method Doctrine_Collection   getAlbum()                 Returns the current record's "Album" collection
  * @method Doctrine_Collection   getBandejaEntrada()        Returns the current record's "BandejaEntrada" collection
  * @method Doctrine_Collection   getBandejaSalida()         Returns the current record's "BandejaSalida" collection
  * @method Doctrine_Collection   getTest()                  Returns the current record's "Test" collection
@@ -50,6 +53,7 @@
  * @method Doctrine_Collection   getSfGuardUserGroup()      Returns the current record's "sfGuardUserGroup" collection
  * @method sfGuardRememberKey    getRememberKeys()          Returns the current record's "RememberKeys" value
  * @method sfGuardForgotPassword getForgotPassword()        Returns the current record's "ForgotPassword" value
+ * @method Doctrine_Collection   getImagenPerfil()          Returns the current record's "ImagenPerfil" collection
  * @method sfGuardUser           setFirstName()             Sets the current record's "first_name" value
  * @method sfGuardUser           setLastName()              Sets the current record's "last_name" value
  * @method sfGuardUser           setEmailAddress()          Sets the current record's "email_address" value
@@ -63,6 +67,7 @@
  * @method sfGuardUser           setContenido()             Sets the current record's "Contenido" value
  * @method sfGuardUser           setPalabra()               Sets the current record's "Palabra" collection
  * @method sfGuardUser           setDocumento()             Sets the current record's "Documento" collection
+ * @method sfGuardUser           setAlbum()                 Sets the current record's "Album" collection
  * @method sfGuardUser           setBandejaEntrada()        Sets the current record's "BandejaEntrada" collection
  * @method sfGuardUser           setBandejaSalida()         Sets the current record's "BandejaSalida" collection
  * @method sfGuardUser           setTest()                  Sets the current record's "Test" collection
@@ -72,6 +77,7 @@
  * @method sfGuardUser           setSfGuardUserGroup()      Sets the current record's "sfGuardUserGroup" collection
  * @method sfGuardUser           setRememberKeys()          Sets the current record's "RememberKeys" value
  * @method sfGuardUser           setForgotPassword()        Sets the current record's "ForgotPassword" value
+ * @method sfGuardUser           setImagenPerfil()          Sets the current record's "ImagenPerfil" collection
  * 
  * @package    definiciones
  * @subpackage model
@@ -154,6 +160,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
              'local' => 'id',
              'foreign' => 'idUsuario'));
 
+        $this->hasMany('Album', array(
+             'local' => 'id',
+             'foreign' => 'idUsuario'));
+
         $this->hasMany('BandejaEntrada', array(
              'local' => 'id',
              'foreign' => 'idUsuarioReceptor'));
@@ -191,6 +201,10 @@ abstract class BasesfGuardUser extends sfDoctrineRecord
         $this->hasOne('sfGuardForgotPassword as ForgotPassword', array(
              'local' => 'id',
              'foreign' => 'user_id'));
+
+        $this->hasMany('ImagenPerfil', array(
+             'local' => 'id',
+             'foreign' => 'idUsuario'));
 
         $timestampable0 = new Doctrine_Template_Timestampable(array(
              ));
