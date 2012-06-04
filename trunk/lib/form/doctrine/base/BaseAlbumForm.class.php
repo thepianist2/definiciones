@@ -25,7 +25,7 @@ abstract class BaseAlbumForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'idUsuario'   => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('sfGuardUser'))),
-      'descripcion' => new sfValidatorPass(),
+      'descripcion' => new sfValidatorString(array('max_length' => 255)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),
     ));

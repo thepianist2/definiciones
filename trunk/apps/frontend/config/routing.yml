@@ -67,6 +67,9 @@ estudiar_configurarTest:
   url:   /configurar-test
   param: { module: estudiar, action: configurarTest }     
   
+estudiar_accionSeleccionados:
+  url:   /configurar-test2
+  param: { module: estudiar, action: accionSeleccionados }     
  #usuario 
   
 usuario_editarUsuario:
@@ -154,6 +157,16 @@ documento_delete:
 documento_show:
   url:   /mostrar-documento
   param: { module: documento, action: show }
+  
+documento_exportarPdf:
+  url: /exportar-a-PDF/:id
+  class:   sfDoctrineRoute
+  options: { model: Documento, type: object}
+  param: { module: documento, action: exportarPdf }
+  requirements:
+    id: \d+
+    sf_method: [get]   
+  
 
 
 #mensaje

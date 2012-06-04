@@ -26,7 +26,7 @@ abstract class BaseImagenForm extends BaseFormDoctrine
     $this->setValidators(array(
       'id'          => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
       'idAlbum'     => new sfValidatorDoctrineChoice(array('model' => $this->getRelatedModelName('Album'))),
-      'descripcion' => new sfValidatorPass(),
+      'descripcion' => new sfValidatorString(array('max_length' => 255)),
       'imagen'      => new sfValidatorString(array('max_length' => 255)),
       'created_at'  => new sfValidatorDateTime(),
       'updated_at'  => new sfValidatorDateTime(),

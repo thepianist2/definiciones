@@ -8,7 +8,6 @@
   <thead>
     <tr>
       <th>Ver detalle</th>     
-      <th>Id test</th>
       <th>Fecha y hora</th>
     </tr>
   </thead>
@@ -16,7 +15,6 @@
     <?php foreach ($tests as $test): ?>
     <tr>
         <td style="text-align: center;"><a href="javascript:void(0)" onclick="ver('<?php echo url_for('test/show?id='.$test->id) ?>')"><img src="/images/iconos/vistaPrevia.png"></a></td>  
-       <td><?php echo $test->id ?></td>
       <td><?php echo $test->getUpdatedAt() ?></td>
     </tr>
     <?php endforeach; ?>
