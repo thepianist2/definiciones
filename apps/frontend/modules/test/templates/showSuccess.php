@@ -1,7 +1,9 @@
 <a href="javascript:void(0)"><div title="Cerrar" style="color: #000;" onclick="cerrar()" id="cruz">X</div></a>
 
 
-<?php $respuestas=$test->getRespuesta(); ?>
+<?php $respuestas=$test->getRespuesta();
+
+$i=1; ?>
 
 
 <?php if(count($respuestas)>0){ ?>
@@ -12,7 +14,8 @@
     
  ?>
     <tr>
-      <th>Palabra:</th>
+ 
+      <th><?php echo $i.") "; ?>Palabra:</th>
       <td><?php echo $respuesta->getTextoPalabra() ?></td>
     </tr>
     <tr>
@@ -25,9 +28,15 @@
     </tr>
     <tr>
       <th>Fecha hora respuesta:</th>
-      <td><?php echo $respuesta->getUpdatedAt() ?></td>
+      <td><?php echo $respuesta->getUpdatedAt() ?>   </td>
     </tr>
-      <?php } ?>
+    
+        <tr>
+      <th><hr></th>
+      <td><hr></td>
+    </tr>
+
+      <?php $i+=1;  }  ?>
   </tbody>
 
 

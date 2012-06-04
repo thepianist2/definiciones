@@ -110,4 +110,73 @@ class documentoActions extends sfActions
         }
     }
   }
+  
+  
+  
+  /**
+	 * Executes exportar a PDF action
+	 *
+	 * @param sfRequest $request A request object
+	 */
+	public function executeExportarPdf(sfWebRequest $request)
+	{
+            
+            $documento = $this->getRoute()->getObject();
+
+		$config = sfTCPDFPluginConfigHandler::loadConfig();
+
+                
+                                //obtenemos los datos del currículum
+                $contenido=html_entity_decode(ucfirst(strtolower($documento->getTexto())), ENT_COMPAT , 'UTF-8');
+
+		// pdf object
+		$pdf = new sfTCPDF();
+                // set document information
+                $pdf->SetCreator(PDF_CREATOR);
+                $pdf->SetAuthor('Seria');
+                $pdf->SetSubject('Documento');
+
+		
+		$titulo_cabecera = ucfirst($documento->getTitulo());
+
+
+
+		// settings
+		$pdf->SetFont("FreeSerif", "", 12);
+		$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+		$pdf->setHeaderFont(array(PDF_FONT_NAME_MAIN, '', PDF_FONT_SIZE_MAIN));
+		$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH,$titulo_cabecera,"Fuente: Seria Allel");
+		$pdf->setFooterFont(array(PDF_FONT_NAME_DATA, '', PDF_FONT_SIZE_DATA));
+		$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
+		$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
+
+		// init pdf doc
+		$pdf->AliasNbPages();
+		$pdf->AddPage();
+		$letra_normal = array('FreeSerif','',11);
+		$letra_negrita = array('FreeSerif','B',11);
+		$letra_titulo = array('FreeSerif','UB',11);
+
+		$pdf->SetFont($letra_normal[0], $letra_normal[1], $letra_normal[2]);
+
+		$sin_bordes = 0;
+		$borde_inferior = 'B';
+		$ancho_linea = 180;
+		$alto_linea = 5;
+
+		// Empezamos a escribir
+		$pdf->Ln($alto_linea);
+		$pdf->writeHTML($contenido);
+
+
+
+		$pdf->Ln($alto_linea);
+		
+	// output
+		$pdf->Output('documento.pdf');
+
+		// Stop symfony process
+		throw new sfStopException();
+	}
+    
 }
