@@ -1,7 +1,5 @@
 <?php use_helper('Date') ?>
-<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery-ui-1.8.17.custom.min.js"></script>
-<!--<link rel="stylesheet" type="text/css" media="screen" href="/css/listado.css">-->
+
 
    <?php if ($sf_user->isAuthenticated()){ ?>
 <h1 style="text-align: center;">Documentos</h1>

@@ -12,12 +12,9 @@
     <div id="container">
       <div id="header" >
 
-          
-
           <a href="<?php echo url_for('default/index') ?>"><br></br>
               <img style="margin-top: -30px;" src="/images/logo.png" alt="Estudia con seria" title="Home" />
           </a>
-
 
         </div>
       </div>
@@ -38,7 +35,7 @@
              <?php }else{ ?>
             
              <div style="float: right;"><?php echo link_to(image_tag('iconos/conectar.png', array('class' => 'cerrar-sesion', 'title' => 'Conectarme')), 'sf_guard_signin', array()) ?></div>
-
+             <?php include_component('bloque', 'bloqueCarrusel'); ?>
             <?php } ?>
           <?php echo $sf_content ?>
             

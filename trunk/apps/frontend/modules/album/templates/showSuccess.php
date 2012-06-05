@@ -1,5 +1,4 @@
-<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery-ui-1.8.17.custom.min.js"></script>
+
 <h1 style="text-align: center;"><?php echo $album->getDescripcion()." ".$album->getCreatedAt(); ?></h1>
 
 
@@ -11,7 +10,7 @@
 <?php foreach ($imagenes as $imagen) { ?>
     <div id="fotos">
         <h1><?php  echo $imagen->getDescripcion();?></h1>
-        <a class="ver" href="javascript:void(0)" id="<?php echo $imagen->id ?>" href=""><img src="<?php echo '/uploads/'.$imagen->getImagen(); ?>" alt="<?php echo $album->getDescripcion(); ?>" title="<?php echo $album->getDescripcion(); ?>" style="width: 150px; height: 150px;"></img></a>    
+        <a class="ver" href="javascript:void(0)" id="<?php echo $imagen->id ?>"><img src="<?php echo '/uploads/'.$imagen->getImagen(); ?>" alt="<?php echo $album->getDescripcion(); ?>" title="<?php echo $album->getDescripcion(); ?>" style="width: 150px; height: 150px;"></img></a>    
     <br>
 <?php echo link_to(image_tag('iconos/editar.png').'Editar', 'imagen/edit?id='.$imagen->getId(), array('title' => 'Editar')) ?>
 

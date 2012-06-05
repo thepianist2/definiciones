@@ -13,6 +13,11 @@ class bloqueComponents extends sfComponents {
 	}
         
         
+        	public function executeBloqueCarrusel()
+	{
+		
+	}
+        
 	/**
 	 * Bloque paginador
 	 */
