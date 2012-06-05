@@ -16,13 +16,13 @@
 	<h1><?php echo $palabra->obtenerTextoCortoPalabra() ?></h1> 
 
 	<?php if($palabra->getImagen()){ ?>
-    <a href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>"><img class="postimg" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt=""></a>
+    <a class="ver" href="javascript:void(0)" id="<?php echo $palabra->id ?>"><img class="postimg" src="<?php echo '/uploads/'.$palabra->getImagen() ?>" alt=""></a>
 <?php }else{ ?>
-        <a href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>"><img class="postimg" src="<?php echo '/images/estudiando.png' ?>" alt=""></a>
+        <a class="ver" href="javascript:void(0)" id="<?php echo $palabra->id ?>"><img class="postimg" src="<?php echo '/images/estudiando.png' ?>" alt=""></a>
 
     <?php } ?>
 <div class="title">
-	<h2><a href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>"><?php echo $palabra->obtenerTextoCortoPalabra(); ?></a></h2>
+	<h2><a class="ver" href="javascript:void(0)" id="<?php echo $palabra->id ?>"><?php echo $palabra->obtenerTextoCortoPalabra(); ?></a></h2>
 </div>
 
 <div class="entry">
@@ -47,3 +47,27 @@
 </div>
     
     <?php } } ?>
+<div id="ver" style="display: none;"></div>
+
+<script type="text/javascript">
+    //se agrega jQuery.noConflict(); porque está prottools y el simbolo $ se reelmplaza por jQuery para evitar confictos 
+jQuery.noConflict();
+          jQuery('.ver').click(function() {
+        var id = jQuery(this).attr('id');
+        dialog = jQuery.ajax({
+            type: 'GET',
+            url: '<?php echo url_for('default/show?id=') ?>'+id,
+            async: false
+        }).responseText;
+        jQuery('#ver').html(dialog);
+        jQuery("#ver").dialog({
+            resizable: true,
+            width: 900,
+            modal: true,
+            show: { effect: 'drop', direction: "up" },
+            title: "<?php echo 'Ver definición'; ?>"
+        });
+    }); 
+    
+</script>
+

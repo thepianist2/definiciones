@@ -1,6 +1,4 @@
 
-<script type="text/javascript" src="/js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="/js/jquery-ui-1.8.17.custom.min.js"></script>
    <?php if ($sf_user->isAuthenticated()){ ?>
 <h1 style="text-align: center;">Bandeja de salida</h1>
 <?php } ?>
