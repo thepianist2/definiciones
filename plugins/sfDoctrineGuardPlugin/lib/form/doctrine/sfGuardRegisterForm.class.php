@@ -15,5 +15,22 @@ class sfGuardRegisterForm extends BasesfGuardRegisterForm
    */
   public function configure()
   {
+      
+      
+            $this->widgetSchema->setLabels(array(
+  'first_name'    => 'Nombre',
+  'last_name'   => 'Apellidos',
+  'email_address' => 'Email *',
+  'username' => 'Login *',
+  'password' => 'Contraseña *',   
+  'password_again' => 'Repita contraseña *',   
+));
+            
+            
+      //mensajes
+      
+    $this->validatorSchema['email_address']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
+    $this->validatorSchema['username']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));    
+    $this->validatorSchema['password']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));
   }
 }
