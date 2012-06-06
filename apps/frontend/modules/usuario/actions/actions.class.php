@@ -53,4 +53,53 @@ class usuarioActions extends sfActions
       $this->redirect('default/index');
     }
   }
+  
+    
+  
+  
+  
+      
+    public function executeEnvioConfirmacion(sfWebRequest $request) {
+        $this->usuario = Doctrine::getTable('sfGuardUser')
+                ->createQuery('u')
+                ->where('u.email_address = ?', $request->getParameter('email'))
+                ->fetchOne();
+        $to = $this->usuario->getEmailAddress();
+        $from = 'administracion@allel.es';
+        $url_base = 'http://seria.allel.es';
+        $asunto = 'Alta nuevo usuario';
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto));
+
+       try {
+           $mensaje = Swift_Message::newInstance()
+                        ->setFrom($from)
+                        ->setTo($to)
+                        ->setSubject($asunto)
+                        ->setBody($mailBody, 'text/html');
+
+           sfContext::getInstance()->getMailer()->send($mensaje);
+           $envio_ok = true;
+           echo "enviado ok con $from $to $asunto<br>";
+           echo "$mailBody<br>";
+       }
+       catch (Exception $e)
+       {
+           $envio_ok = false;
+           echo "error al enviar";
+       }
+
+    }
+
+     
+    
+        public function executeConfirmarAlta(sfWebRequest $request) {
+        $usuario = Doctrine::getTable('sfGuardUser')
+                ->createQuery('u')
+                ->where('u.email_address = ?', $request->getParameter('e_mail'))
+                ->fetchOne();
+        //echo $usuario->id;
+        $usuario->setIsActive(1);
+        $usuario->save();
+        $this->getUser()->signIn($usuario);
+    }
 }

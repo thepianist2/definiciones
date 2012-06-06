@@ -11,7 +11,7 @@ Author URI: http://dev7studios.com
 
 .theme-default .nivoSlider {
 	position:relative;
-	background:#fff url(loading.gif) no-repeat 50% 50%;
+	background:#fff url(/images/loading.gif) no-repeat 50% 50%;
     margin-bottom:50px;
     -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
     -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
@@ -286,12 +286,7 @@ a:hover, a:active {
     margin-top:150px;
 }
 
-/*====================*/
-/*=== Other Styles ===*/
-/*====================*/
-.clear {
-	clear:both;
-}
+
 </style>
 
 

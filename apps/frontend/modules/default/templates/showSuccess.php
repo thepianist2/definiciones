@@ -30,8 +30,10 @@
  onclick="get_selection('es','ml');">
 Selecciona un texto y<br/>clica aquí para oírlo</button>
 <br></br><br></br><br></br><br></br>
+<?php if ($sf_user->isAuthenticated()){ ?>
 <div style="text-align: center;" >
          <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
 &nbsp;
 <?php echo link_to(image_tag('iconos/editar.png').'Editar', 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?>
 </div><br></br>
+<?php } ?>

@@ -39,8 +39,9 @@
              <?php }else{ ?>
             
 
-             <?php if($sf_request->getParameter('action') == 'index' ){ ?>
+             <?php if($sf_request->getParameter('action') == 'index' and $sf_request->getParameter('module') == 'default' ){ ?>
         <?php include_component('bloque', 'bloqueCarrusel'); ?>
+            <?php include_component('bloque', 'bloqueDefiniciones'); ?>
             <?php } } ?>
           <?php echo $sf_content ?>
             
