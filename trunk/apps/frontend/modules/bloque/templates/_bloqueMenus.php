@@ -36,7 +36,7 @@ jQuery(document).ready(function () {
 
 </script>
 
-<div style="text-align: center; float: left;">
+<div style="text-align: center; float: left; margin-left: 45px;">
 <ul id="navMenu">
 	<li><a href="<?php echo url_for('default/index') ?>">Home</a></li>
         <?php foreach ($contenidos as $contenido) { ?>
@@ -47,7 +47,7 @@ jQuery(document).ready(function () {
 </div>
 <br>
 <?php if($sf_request->getParameter('action') != 'index' ){ ?>
-<br></br><br></br><br></br>
+<br></br><br></br>
 
 <?php } ?>
 

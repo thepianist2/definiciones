@@ -82,7 +82,15 @@ usuario_update:
   
 usuario_index:
   url:   /usuario
-  param: { module: usuario, action: index }       
+  param: { module: usuario, action: index }      
+  
+usuario_envioConfirmacion:
+  url:   /envio-confirmacion
+  param: { module: usuario, action: envioConfirmacion }
+  
+usuario_confirmarAlta:
+  url:   /confirmar-alta
+  param: { module: usuario, action: confirmarAlta }     
   
 
 sf_guard_signin:

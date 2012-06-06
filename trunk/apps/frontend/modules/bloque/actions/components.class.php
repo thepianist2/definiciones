@@ -13,6 +13,20 @@ class bloqueComponents extends sfComponents {
 	}
         
         /**
+         * 
+         */
+        public function executeBloqueDefiniciones(){
+    $this->palabras = Doctrine_Core::getTable('palabra')
+      ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+             ->orderBy('RANDOM()')
+            ->limit(8)
+      ->execute();
+
+        }
+        
+        /**
          * bloque de los menus
          */
       	public function executeBloqueMenus()
