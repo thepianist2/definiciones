@@ -325,3 +325,34 @@ imagen_delete:
 imagen_show:
   url:   /ver-imagen
   param: { module: imagen, action: show }        
+  
+  
+#contenido
+
+contenido_index:
+  url:   /contenido
+  param: { module: contenido, action: index }     
+
+contenido_new:
+  url:   /nuevo-contenido
+  param: { module: contenido, action: new }      
+  
+contenido_create:
+  url:   /crear-contenido
+  param: { module: contenido, action: create }     
+  
+contenido_edit:
+  url:   /editar-contenido
+  param: { module: contenido, action: edit }  
+  
+contenido_update:
+  url:   /actualizar-contenido
+  param: { module: contenido, action: update }    
+  
+contenido_delete:
+  url:   /borrar-contenido
+  param: { module: contenido, action: delete }      
+  
+contenido_show:
+  url:   /ver-contenido
+  param: { module: contenido, action: show }          

@@ -12,9 +12,30 @@ class bloqueComponents extends sfComponents {
 		
 	}
         
-        
-        	public function executeBloqueCarrusel()
+        /**
+         * bloque de los menus
+         */
+      	public function executeBloqueMenus()
 	{
+      $this->contenidos = Doctrine_Core::getTable('Contenido')
+      ->createQuery('a')
+      ->where('a.borrado =?',false)
+      ->andWhere('a.activo =?',true)
+      ->execute();
+		
+	}  
+        
+        
+        /**
+         * 
+         */
+        public function executeBloqueCarrusel()
+	{    
+       $this->albums = Doctrine_Core::getTable('Album')
+      ->createQuery('a')
+      ->where('a.descripcion LIKE?','frontend')
+      ->limit(1)
+      ->execute();
 		
 	}
         

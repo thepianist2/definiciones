@@ -13,9 +13,9 @@ default:
     language:     es    
     robots:       index, follow
 
-  stylesheets:    [jquery-ui-1.8.17.custom.css, main.css, frontend.css,/resources/css/jquery.toastmessage.css, accordionImageMenu.css]
+  stylesheets:    [jquery-ui-1.8.17.custom.css, main.css, frontend.css,/resources/css/jquery.toastmessage.css, accordionImageMenu.css, nivo-slider.css, bloqueMenu.css]
 
-  javascripts:    [jquery-1.7.1.min.js, jquery-ui-1.8.17.custom.min.js, accordionImageMenu-0.4.min.js, tiny_mce/tiny_mce]
+  javascripts:    [jquery-1.7.1.min.js, jquery-ui-1.8.17.custom.min.js, accordionImageMenu-0.4.min.js, tiny_mce/tiny_mce, jquery.nivo.slider.js]
 
   has_layout:     true
   layout:         layout

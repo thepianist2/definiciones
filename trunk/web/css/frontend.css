@@ -50,4 +50,11 @@ background:#fff;border:1px solid #ccc;display:inline-block;outline:none;padding:
    
 }
 
+#content{
+    
+  min-height: 950px;
+  width: 783px;
+  margin: 0 auto;
+}
+
 
