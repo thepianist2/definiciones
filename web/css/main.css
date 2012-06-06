@@ -22,7 +22,8 @@ a
 body
 {
     background: url(../images/background.jpg) repeat-y top;
-  font: 12px "Lucida Grande", Lucida, Verdana, sans-serif;
+
+  
 
 }
 
@@ -31,6 +32,7 @@ body
   margin-left: auto;
   margin-right: auto;
   background: #fff;
+  
 }
 
 #header
@@ -149,6 +151,7 @@ height: 860px;
   min-height: 950px;
   width: 783px;
   margin: 0 auto;
+    font: 12px "Lucida Grande", Lucida, Verdana, sans-serif;
 }
 
 #content h1

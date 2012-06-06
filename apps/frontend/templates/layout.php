@@ -18,9 +18,13 @@
 
         </div>
       </div>
+      
 
-      <div id="content">
-
+      <div id="content" ><?php if (!$sf_user->isAuthenticated()){ ?></br>
+               
+            <?php include_component('bloque', 'bloqueMenus'); ?>
+                
+              <?php  }?>
                <?php include_partial('bloque/bloqueMensaje'); ?>
         <div class="content">   
             <?php if ($sf_user->isAuthenticated()){ ?>
@@ -34,9 +38,10 @@
             <?php  } ?>
              <?php }else{ ?>
             
-             <div style="float: right;"><?php echo link_to(image_tag('iconos/conectar.png', array('class' => 'cerrar-sesion', 'title' => 'Conectarme')), 'sf_guard_signin', array()) ?></div>
-             <?php include_component('bloque', 'bloqueCarrusel'); ?>
-            <?php } ?>
+
+             <?php if($sf_request->getParameter('action') == 'index' ){ ?>
+        <?php include_component('bloque', 'bloqueCarrusel'); ?>
+            <?php } } ?>
           <?php echo $sf_content ?>
             
         </div>

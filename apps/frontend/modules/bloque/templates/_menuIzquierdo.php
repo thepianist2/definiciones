@@ -20,7 +20,7 @@
     
 <h1>Menu</h1>
 
-<div id="acc-menu2" style="margin:10px auto">
+<div id="acc-menu2" style="margin:2px auto">
     <a href="<?php echo url_for('default/index') ?>"><span>Definiciones</span><img id="imagenMenu" src="/images/Definicionesff.png" alt="Definiciones" title="Definiciones" /></a>
     <a href="<?php echo url_for('estudiar/index') ?>"><span>Estudiar</span><img id="imagenMenu" src="/images/estudiarff.png" alt="Estudiar" title="Estudiar" /></a>
     <a href="<?php echo url_for('documento/index') ?>"><span>Documentos</span><img id="imagenMenu" src="/images/documentoff.png" alt="" /></a>   
