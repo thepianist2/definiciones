@@ -22,6 +22,7 @@ class bandejaSalidaActions extends sfActions
 
     $this->sf_guard_users = Doctrine_Core::getTable('sfGuardUser')
       ->createQuery('a')
+      ->whereNotIn('a.id',array('1',$this->getUser()->getGuardUser()->getId()))
       ->execute();
   }
   
