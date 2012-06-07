@@ -22,6 +22,7 @@
 
     <?php } ?>
 </div>
+<br></br>
 <button style="background:#ddeeff 
  url(http://vozme.com/img/paper_sound32x32.gif) 
  no-repeat left center; 
@@ -30,7 +31,7 @@
  onclick="get_selection('es','ml');">
 Selecciona un texto y<br/>clica aquí para oírlo</button>
 <br></br><br></br><br></br><br></br>
-<?php if ($sf_user->isAuthenticated()){ ?>
+<?php if ($sf_user->isAuthenticated() and $palabra->getIdUsuario()==$sf_user->getGuardUser()->getId()){ ?>
 <div style="text-align: center;" >
          <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
 &nbsp;

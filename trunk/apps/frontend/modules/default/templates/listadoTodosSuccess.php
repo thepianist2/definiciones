@@ -1,18 +1,16 @@
    <?php if ($sf_user->isAuthenticated()){ ?>
-<h1 style="text-align: center;">Tus definiciones</h1>
+<h1 style="text-align: center;">Todas las definiciones de seria y sus usuarios</h1>
+<br>
+<div style="text-align: center;" >
+  <?php echo link_to(image_tag('iconos/atras.png').'Volver a mis palabras', 'default/index', array('title' => 'Volver a mis palabras')) ?>
+
+</div>
 <?php } ?>
 <?php if(count($palabras)>0){ ?>
-<div style="text-align: center;" >
-  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nueva palabra', 'default/new', array('title' => 'Nueva palabra')) ?>
-  <?php echo link_to(image_tag('iconos/datos.png').'Administrar palabras', 'default/listado', array('title' => 'Listar palabras')) ?>
-  <?php echo link_to(image_tag('iconos/mundo.png').'Buscar palabras en la red', 'default/listadoTodos', array('title' => 'Buscar palabras de la red')) ?>
-
-</div>
 <div id="buscador">
-<?php include_partial('default/buscador2', array('filtro' => $filtro, 'query' => $query)); ?>
+<?php include_partial('default/buscador', array('filtro' => $filtro, 'query' => $query)); ?>
     <div class="clear"></div>
 </div>
-
        <br></br>
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $palabras, 'action' => $action)) ?>
 
@@ -21,8 +19,7 @@
 
     <?php foreach ($palabras as $palabra): ?>
 
-<div class="box rounded masonry-brick" id="<?php echo $palabra->id ?>">
-    <div title="Eliminar" style="color: #0A246A;" id="cruz"><?php echo link_to('X', 'default/delete?id='.$palabra->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro que deseas borrar la palabra '.$palabra->getTextoPalabra().'?')) ?></div>
+    <div class="box rounded masonry-brick" id="<?php echo $palabra->id ?>">
 	<h1><?php echo $palabra->obtenerTextoCortoPalabra() ?></h1> 
 
 	<?php if($palabra->getImagen()){ ?>
@@ -38,39 +35,30 @@
 <div class="entry">
     <p style="color: white;"><?php echo $palabra->obtenerTextoCorto()  ?><a class="rmore" href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>">&nbsp;&nbsp; Leer más ...</a></p><div class="clear"></div>
 </div>
-<!--<span class="comm"><a href="http://www.allel.es/2012/04/25/programa-de-estudio-de-definiciones-y-test-aleatorio-de-palabras/#comments" title="Comentarios en Definiciones 2.0">1 Comment</a></span>-->
-<a class="plusmore" href="<?php echo url_for('default/show?id='.$palabra->getId()) ?>"></a>
-</div>
+        
+        
+        
+        
+        <a title="Agregar a mis definiciones" href="<?php echo url_for('default/addFavorito?palabra_id=' . $palabra->id . '&usuario_id=' . $sf_user->getGuardUser()->getId()) ?>"><img onmouseout="this.src='/images/iconos/icono_favorito_no.png';" onmouseover="this.src='/images/iconos/icono_anadir-favorito.png';" style="height: 20px; width: 20px;" src="/images/iconos/icono_favorito_no.png"></img></a>
+	</div>
 <div class="clear"></div>
 
     <?php endforeach; ?>
 
 </div>
-       
-       
+    <?php }else{ ?>
+
+<div id="buscador">
+<?php include_partial('default/buscador', array('filtro' => $filtro, 'query' => $query)); ?>
+    <div class="clear"></div>
+</div>
+<p style="text-align: center; font-size: 15px;">No se han encontrado definiciones de otros usuarios</p>
+
+<?php } ?>
+
         <br/>
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $palabras, 'action' => $action)) ?>
 <br></br>
-    <?php }else{   ?>
-    <?php if ($sf_user->isAuthenticated()){ ?>
-<div style="text-align: center;" >
-      <?php echo link_to(image_tag('iconos/mundo.png').'Buscar palabras en la red', 'default/listadoTodos', array('title' => 'Buscar palabras de la red')) ?>
-
-    <br></br><br></br>
-        <?php echo link_to(image_tag('iconos/administrar.gif','class=imageMenuEstudiar').'<br>Añadir nueva definición', 'default/new', array('title' => 'Agregar nueva palabra definición')) ?>   <br></br> 
-
-        
-        <div id="buscador">
-<?php include_partial('default/buscador2', array('filtro' => $filtro, 'query' => $query)); ?>
-    <div class="clear"></div>
-</div>
-        <br></br>
-        <p style="text-align: center; font-size: 15px;">No se ha encontrado ninguna definición</p>
-        
-</div>
-    
-    <?php } } ?>
-
 <div id="ver" style="display: none;"></div>
 
 <script type="text/javascript">
@@ -94,7 +82,7 @@ jQuery.noConflict();
     }); 
     
     
-    jQuery('.ver').mouseover(function() {
+jQuery('.ver').mouseover(function() {
         var id = jQuery(this).attr('id');
         id="#"+id;
     jQuery(id).css({backgroundColor: "deepskyblue" });
@@ -106,6 +94,7 @@ jQuery.noConflict();
     jQuery(id).css({backgroundColor: "darkCyan" });
     });    
     
+
     
 </script>
 

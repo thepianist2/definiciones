@@ -30,7 +30,7 @@
             <?php if ($sf_user->isAuthenticated()){ ?>
             <div style="float: right;"><?php echo link_to(image_tag('iconos/desconectar.png', array('class' => 'cerrar-sesion', 'title' => 'Cerrar sesión')), 'sf_guard_signout', array()) ?></div>
            
-            <?php if($sf_request->getParameter('action') == 'index' or $sf_request->getParameter('action') == 'show' or $sf_request->getParameter('action') == 'listado' or $sf_request->getParameter('action') == 'editarUsuario' or $sf_request->getParameter('action') == 'seleccionaUsuario' or $sf_request->getParameter('action') == 'configurarTest'){ ?>
+            <?php if($sf_request->getParameter('action') == 'index' or $sf_request->getParameter('action') == 'show' or $sf_request->getParameter('action') == 'listado' or $sf_request->getParameter('action') == 'editarUsuario' or $sf_request->getParameter('action') == 'seleccionaUsuario' or $sf_request->getParameter('action') == 'configurarTest' or $sf_request->getParameter('action') == 'listadoTodos' or $sf_request->getParameter('action') == 'buscar' or $sf_request->getParameter('action') == 'buscar2'){ ?>
             <div id="menuIzquierdo">
                 
         <?php include_component('bloque', 'menuIzquierdo'); ?>

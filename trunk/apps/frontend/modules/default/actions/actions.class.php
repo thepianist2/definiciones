@@ -13,18 +13,214 @@ class defaultActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
       if ($this->getUser()->isAuthenticated()){
-    $this->palabras = Doctrine_Core::getTable('palabra')
+    $q = Doctrine_Core::getTable('palabra')
       ->createQuery('a')
             ->where('a.borrado=?',0)
             ->andWhere('a.activo=?',1)
             ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
-             ->orderBy('RANDOM()')
-            ->limit(6)
-      ->execute();
+            ->orderBy('a.textoPalabra');        
+//             ->orderBy('RANDOM()')
+
+                    $this->palabras = new sfDoctrinePager('palabra', 6);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+        //route del paginado
+        $this->action = '@default_index_page';
+    
+
+            
+            
       }else{
       $this->palabras=null;
       }
   }
+  
+  
+   public function executeBuscar(sfWebRequest $request)
+    {
+       
+       
+       
+
+        if($this->getUser()->hasAttribute('buscadorDefault') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorDefault');
+            $filtro = $buscador['filtro'];
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $filtro = $request->getParameter('filtro');
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorDefault', $request->getParameterHolder()->getAll());
+        }
+        
+        
+                   $array = Doctrine_Query::create()
+                ->select('a.id, a.textoPalabra')
+                     ->from('Palabra a')
+                     ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+              ->execute();
+             
+             
+   	foreach ($array as $c) {
+   		$r[$c->id]=$c->textoPalabra;
+   	}
+        if(!count($array)>0){
+            $r[0]=0;
+        }
+        
+
+
+        if($filtro=="1")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario !=?',$this->getUser()->getGuardUser()->getId())
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->andWhereNotIn('a.textoPalabra', $r)    
+            ->orderBy('a.textoPalabra');  
+
+        else if($filtro=="2")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario !=?',$this->getUser()->getGuardUser()->getId())
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')
+            ->andWhereNotIn('a.textoPalabra', $r)     
+            ->orderBy('a.textoPalabra');  
+        else if($filtro=="3")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario !=?',$this->getUser()->getGuardUser()->getId())
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->andWhereNotIn('a.textoPalabra', $r)
+            ->orderBy('a.textoPalabra'); 
+
+        
+        
+        $this->palabras = new sfDoctrinePager('palabra', 6);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+
+            $this->action = 'default/buscar';
+
+            $this->filtro = $filtro;
+            $this->query = $query;
+
+            $this->setTemplate('listadoTodos');
+
+    }
+  
+    
+    
+     public function executeBuscar2(sfWebRequest $request)
+    {
+       
+       
+       
+
+        if($this->getUser()->hasAttribute('buscadorDefault') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorDefault');
+            $filtro = $buscador['filtro'];
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $filtro = $request->getParameter('filtro');
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorDefault', $request->getParameterHolder()->getAll());
+        }
+        
+        
+
+
+        if($filtro=="1")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+            ->andWhere('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->orderBy('a.textoPalabra');  
+
+        else if($filtro=="2")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+           ->andWhere('a.borrado=?',0)        
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')  
+            ->orderBy('a.textoPalabra');  
+        else if($filtro=="3")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+            ->andWhere('a.borrado=?',0)          
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->orderBy('a.textoPalabra'); 
+        else
+            $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+            ->andWhere('a.borrado=?',0)                  
+            ->andWhere('a.activo=?',1)
+            ->orderBy('a.textoPalabra'); 
+        
+        $this->palabras = new sfDoctrinePager('palabra', 6);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+
+            $this->action = 'default/buscar2';
+
+            $this->filtro = $filtro;
+            $this->query = $query;
+
+            $this->setTemplate('index');
+
+    }
+  
+    
+    
+  
+  
+  	public function executeAddFavorito(sfWebRequest $request) {
+            
+		$palabra= new Palabra();
+                $palabra->setIdUsuario($request->getParameter('usuario_id'));
+		$palabraOriginal = Doctrine::getTable('Palabra')->find($request->getParameter('palabra_id'));
+                if(Doctrine_Core::getTable('Palabra')->verificarExiste($palabraOriginal->getIdSubCategoria(),$this->getUser()->getGuardUser()->getId(),$palabraOriginal->getTextoPalabra())){
+                              
+                    
+              $this->getUser()->setFlash('mensajeError','Esta palabra ya existe en tu perfil');
+
+            }else{
+                
+                
+                $palabra->setIdSubCategoria($palabraOriginal->getIdSubCategoria());
+                $palabra->setTextoPalabra($palabraOriginal->getTextoPalabra());
+                $palabra->setTextoDefinicion($palabraOriginal->getTextoDefinicion());
+                $palabra->setBorrado(0);
+                $palabra->setActivo(1);
+                $palabra->setImagen($palabraOriginal->getImagen());
+                $palabra->save();
+                $this->getUser()->setFlash('mensajeTerminado','Palabra agregada a con éxito.');
+            }
+                $this->redirect('default/listadoTodos');
+	}
   
    public function executeListado(sfWebRequest $request)
   {
@@ -33,14 +229,64 @@ class defaultActions extends sfActions
             ->createQuery('a')
             ->where('a.borrado=?',0)
             ->andWhere('a.activo=?',1)
-            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId());
-    
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->orderBy('a.textoPalabra');        
         $this->palabras = new sfDoctrinePager('palabra', 5);
 	$this->palabras->setQuery($q);   	
         $this->palabras->setPage($this->getRequestParameter('page',1));
 	$this->palabras->init();
         //route del paginado
         $this->action = '@default_listado_page';
+    
+
+    
+    
+      }else{
+      $this->palabras=null;
+      }
+       
+   }
+   
+   
+   
+     public function executeListadoTodos(sfWebRequest $request)
+  {
+             if ($this->getUser()->isAuthenticated()){
+                 
+
+                 
+                 
+             $array = Doctrine_Query::create()
+                ->select('a.id, a.textoPalabra')
+                     ->from('Palabra a')
+                     ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+              ->execute();
+             
+             
+   	foreach ($array as $c) {
+   		$r[$c->id]=$c->textoPalabra;
+   	}
+        if(!count($array)>0){
+            $r[0]=0;
+        }
+                
+             //obtenemos las palabras que no pertennezcan al usuario logeado, y tambien verificamos que no esten repetidas
+    $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario !=?',$this->getUser()->getGuardUser()->getId())
+            ->andWhereNotIn('a.textoPalabra', $r)
+            ->orderBy('a.textoPalabra');        
+    
+        $this->palabras = new sfDoctrinePager('palabra', 6);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+        //route del paginado
+        $this->action = '@default_listadoTodos_page';
     
 
     

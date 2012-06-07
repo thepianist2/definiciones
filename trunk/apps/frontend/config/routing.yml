@@ -12,7 +12,12 @@ default_index:
   url:   /inicio
   param: { module: default, action: index }
   
-
+default_index_page:
+  url: /default/index/:page
+  param: { module: default, action: index }
+  requirements:
+  page: \d+ 
+  
 default_new:
   url:   /nueva
   param: { module: default, action: new }
@@ -42,6 +47,38 @@ default_show:
 default_getSubCategoriasOptions:
   url:   /subcategorias
   param: { module: default, action: getSubCategoriasOptions }   
+  
+default_listado:
+  url: /default/listado/
+  param: { module: default, action: listado }          
+
+default_listado_page:
+  url: /default/listado/:page
+  param: { module: default, action: listado }
+  requirements:
+  page: \d+
+  
+default_listadoTodos:
+  url: /default/listado-todos/
+  param: { module: default, action: listadoTodos }          
+
+default_listadoTodos_page:
+  url: /default/listado-todos/:page
+  param: { module: default, action: listadoTodos }
+  requirements:
+  page: \d+ 
+  
+default_addFavorito:
+  url:   /addFavorito
+  param: { module: default, action: addFavorito }  
+  
+default_buscar:
+  url:   /buscar
+  param: { module: default, action: buscar }   
+  
+default_buscar2:
+  url:   /buscar-tus-palabras
+  param: { module: default, action: buscar2 }     
   
   
   #estudiar
@@ -115,15 +152,7 @@ sf_guard_forgot_password:
 
 
 
-default_listado:
-  url: /default/listado/
-  param: { module: default, action: listado }          
 
-default_listado_page:
-  url: /default/listado/:page
-  param: { module: default, action: listado }
-  requirements:
-  page: \d+
   
 estudiar_listado:
   url: /estudiar/listado/

@@ -48,6 +48,7 @@ class bloqueComponents extends sfComponents {
        $this->albums = Doctrine_Core::getTable('Album')
       ->createQuery('a')
       ->where('a.descripcion LIKE?','frontend')
+      ->andWhere('a.idUsuario =?',1)         
       ->limit(1)
       ->execute();
 		
