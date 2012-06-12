@@ -57,7 +57,9 @@ jQuery.noConflict();
     <?php } ?>
     
 </div>
-
+<div style="text-align: center;">
+         <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'estudiar/index', array('title' => 'Volver')) ?>
+</div>
 <script  type="text/javascript">
 
     

@@ -80,6 +80,15 @@ default_buscar2:
   url:   /buscar-tus-palabras
   param: { module: default, action: buscar2 }     
   
+default_exportarPdf:
+  url: /palabra-exportar-a-PDF/:id
+  class:   sfDoctrineRoute
+  options: { model: Palabra, type: object}
+  param: { module: default, action: exportarPdf }
+  requirements:
+    id: \d+
+    sf_method: [get]    
+  
   
   #estudiar
   

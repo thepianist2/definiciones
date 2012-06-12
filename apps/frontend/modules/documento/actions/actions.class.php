@@ -130,7 +130,7 @@ class documentoActions extends sfActions
                 $contenido=html_entity_decode(ucfirst(strtolower($documento->getTexto())), ENT_COMPAT , 'UTF-8');
 
 		// pdf object
-		$pdf = new sfTCPDF();
+		$pdf = new TCPDF();
                 // set document information
                 $pdf->SetCreator(PDF_CREATOR);
                 $pdf->SetAuthor('Seria');
@@ -166,9 +166,13 @@ class documentoActions extends sfActions
 
 		// Empezamos a escribir
 		$pdf->Ln($alto_linea);
-		$pdf->writeHTML($contenido);
+		$pdf->writeHTML($contenido,true,true,true);
 
 
+                $imagen=sfConfig::get('sf_web_dir').'/uploads/'.$documento->getImagen();
+               
+               // draw jpeg image
+                $pdf->Image($imagen, 90, 100, 60, 60, '', $imagen, '', true, 72); 
 
 		$pdf->Ln($alto_linea);
 		
