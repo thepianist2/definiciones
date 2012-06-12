@@ -16,11 +16,13 @@ class bloqueComponents extends sfComponents {
          * 
          */
         public function executeBloqueDefiniciones(){
+        
     $this->palabras = Doctrine_Core::getTable('palabra')
       ->createQuery('a')
+            ->select('DISTINCT a.textoPalabra')
             ->where('a.borrado=?',0)
             ->andWhere('a.activo=?',1)
-             ->orderBy('RANDOM()')
+//             ->orderBy('RANDOM()')
             ->limit(8)
       ->execute();
 

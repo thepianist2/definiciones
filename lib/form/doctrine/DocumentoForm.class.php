@@ -32,7 +32,7 @@ class DocumentoForm extends BaseDocumentoForm
                           'theme_advanced_buttons4 : "",'.
                           'language: "es",'
         ), array('class' => 'documento')));
-    
+          $this->setValidator('texto',new sfValidatorString(array('required' => true)));
     
                       $imagenPicFileSrc = '/uploads/'.$this->getObject()->imagen;
             $this->widgetSchema['imagen'] = new sfWidgetFormInputFileEditable(array('file_src'  => $imagenPicFileSrc, 

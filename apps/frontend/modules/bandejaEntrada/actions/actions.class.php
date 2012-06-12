@@ -13,10 +13,42 @@ class bandejaEntradaActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
             if ($this->getUser()->isAuthenticated()){
-    $this->bandeja_entradas = Doctrine_Core::getTable('BandejaEntrada')
+                
+    $mensajes = Doctrine_Core::getTable('BandejaEntrada')
       ->createQuery('a')
       ->where('a.idUsuarioReceptor =?',$this->getUser()->getGuardUser()->getId())      
       ->execute();
+    
+                 
+   	foreach ($mensajes as $c) {
+   		$r[$c->id]=$c->idUsuarioRemitente;
+   	}
+        if(!count($mensajes)>0){
+            $r[0]=0;
+        }
+    
+        $this->sf_guard_users = Doctrine_Core::getTable('sfGuardUser')
+      ->createQuery('a')
+//      ->whereNotIn('a.id',array('1',$this->getUser()->getGuardUser()->getId()))
+      ->andWhereIn('a.id',$r)          
+      ->execute();
+              }else{
+                $this->bandeja_entradas=null;
+         }
+  }
+  
+  
+    public function executeDentroUsuario(sfWebRequest $request)
+  {
+            if ($this->getUser()->isAuthenticated()){
+                if($request->getParameter('idUsuario')){
+                    
+    $this->getUser()->setAttribute('idUsuario', $request->getParameter('idUsuario'));          
+    $this->bandeja_entradas = Doctrine_Core::getTable('BandejaEntrada')
+      ->createQuery('a')
+      ->where('a.idUsuarioReceptor =?',$this->getUser()->getGuardUser()->getId()) 
+     ->andWhere('a.idUsuarioRemitente =?',$request->getParameter('idUsuario'))          
+      ->execute();}
               }else{
                 $this->bandeja_entradas=null;
          }
@@ -36,8 +68,7 @@ class bandejaEntradaActions extends sfActions
 
     $this->forward404Unless($bandeja_entrada = Doctrine_Core::getTable('BandejaEntrada')->find(array($request->getParameter('id'))), sprintf('Object bandeja_entrada does not exist (%s).', $request->getParameter('id')));
     $bandeja_entrada->delete();
-
-    $this->redirect('bandejaEntrada/index');
+    $this->redirect('bandejaEntrada/dentroUsuario?idUsuario='.$this->getUser()->getAttribute('idUsuario'));
   }
 
 }
