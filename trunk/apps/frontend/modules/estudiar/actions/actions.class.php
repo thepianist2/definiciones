@@ -35,12 +35,80 @@ class estudiarActions extends sfActions
             ->where('a.borrado=?',0)
             ->andWhere('a.activo=?',1)
             ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+             ->orderBy('a.textoPalabra')                  
+      ->execute();
+    
+    
+    
+        $this->categorias = Doctrine_Core::getTable('categoria')
+      ->createQuery('a')
+      ->orderBy('a.texto')              
       ->execute();
       }else{
       $this->palabras=null;
       }
     }
 
+    
+       public function executeBuscarCategoria(sfWebRequest $request)
+    {
+           
+      $this->categorias = Doctrine_Core::getTable('categoria')
+      ->createQuery('a')
+      ->orderBy('a.texto')             
+      ->execute();
+      
+      
+      
+      
+    
+      
+           
+           
+         $categoria=$request->getParameter('filtro');
+         
+         
+       $subCategorias = Doctrine_Core::getTable('subCategoria')
+      ->createQuery('a')
+      ->Where('a.idCategoria =?',$categoria)
+      ->orderBy('a.texto')            
+      ->execute();
+            	foreach ($subCategorias as $c) {
+   		$r[$c->id]=$c->id;
+   	}
+        
+                if(!count($subCategorias)>0){
+            $r[0]=0;
+        }
+         
+         
+         if($categoria!='0'){
+                 $this->palabras = Doctrine_Core::getTable('palabra')
+                  ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->andWhereIn('a.idSubCategoria',$r)
+            ->orderBy('a.textoPalabra')           
+                ->execute();
+         }else{
+                 $this->palabras = Doctrine_Core::getTable('palabra')
+      ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->orderBy('a.textoPalabra')     
+      ->execute();
+         }
+         
+         
+         $this->filtro=$categoria;
+         
+         
+         
+            $this->setTemplate('configurarTest');
+
+       }
     /**
   * Executes index action
   *

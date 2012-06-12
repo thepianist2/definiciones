@@ -205,7 +205,7 @@ class defaultActions extends sfActions
                 if(Doctrine_Core::getTable('Palabra')->verificarExiste($palabraOriginal->getIdSubCategoria(),$this->getUser()->getGuardUser()->getId(),$palabraOriginal->getTextoPalabra())){
                               
                     
-              $this->getUser()->setFlash('mensajeError','Esta palabra ya existe en tu perfil');
+//              $this->getUser()->setFlash('mensajeError','Esta palabra ya existe en tu perfil');
 
             }else{
                 
@@ -217,9 +217,8 @@ class defaultActions extends sfActions
                 $palabra->setActivo(1);
                 $palabra->setImagen($palabraOriginal->getImagen());
                 $palabra->save();
-                $this->getUser()->setFlash('mensajeTerminado','Palabra agregada a con éxito.');
+//                $this->getUser()->setFlash('mensajeTerminado','Palabra agregada a con éxito.');
             }
-                $this->redirect('default/listadoTodos');
 	}
   
    public function executeListado(sfWebRequest $request)

@@ -37,9 +37,30 @@
 </div>
         
         
+        		<?php
+				if ($sf_user->isAuthenticated()) {
+					$imagen_fav = '<a id="icono_favorito_' . $palabra->id . '" href="javascript:void()" ';
+
+					if ($palabra->getIdUsuario()==$sf_user->getGuardUser()->getId()) {
+						$imagen_fav .= '>';
+						$imagen_fav .= image_tag('/images/iconos/icono_favorito.png', array("id" => 'imagen_fav_' . $palabra->id));
+					} else {
+						$imagen_fav .= ' onmouseover=document.getElementById("imagen_fav_' . $palabra->id . '").src="' . image_path('iconos/icono_anadir-favorito.png') . '"';
+						$imagen_fav .= ' onmouseout=document.getElementById("imagen_fav_' . $palabra->id . '").src="' . image_path('iconos/icono_no-favorito.png') . '"';
+						$imagen_fav .= '>';
+						$imagen_fav .= image_tag('/images/iconos/icono_no-favorito.png', array("alt" => 'Añadir a favoritos',
+                                        "id" => "imagen_fav_" . $palabra->id,
+                                        "title" => 'Añadir a favoritos',
+                                        "class" => 'favoritos',            
+                                        "onclick" => 'javascript:addFavorito("' . url_for('default/addFavorito?palabra_id=' . $palabra->id . '&usuario_id=' . $sf_user->getGuardUser()->getId()) . '","' . image_path('/images/iconos/icono_favorito.png') . '",' . $palabra->id . ')',
+						));
+					}
+					$imagen_fav .= '</a>';
+					echo $imagen_fav;
+				}
+				?>
         
-        
-        <a title="Agregar a mis definiciones" href="<?php echo url_for('default/addFavorito?palabra_id=' . $palabra->id . '&usuario_id=' . $sf_user->getGuardUser()->getId()) ?>"><img onmouseout="this.src='/images/iconos/icono_favorito_no.png';" onmouseover="this.src='/images/iconos/icono_anadir-favorito.png';" style="height: 20px; width: 20px;" src="/images/iconos/icono_favorito_no.png"></img></a>
+<!--        <a title="Agregar a mis definiciones" href="<?php echo url_for('default/addFavorito?palabra_id=' . $palabra->id . '&usuario_id=' . $sf_user->getGuardUser()->getId()) ?>"><img onmouseout="this.src='/images/iconos/icono_favorito_no.png';" onmouseover="this.src='/images/iconos/icono_anadir-favorito.png';" style="height: 20px; width: 20px;" src="/images/iconos/icono_favorito_no.png"></img></a>-->
 	</div>
 <div class="clear"></div>
 
@@ -60,7 +81,7 @@
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $palabras, 'action' => $action)) ?>
 <br></br>
 <div id="ver" style="display: none;"></div>
-
+<div id="ajax-favoritos"></div>
 <script type="text/javascript">
     //se agrega jQuery.noConflict(); porque está prottools y el simbolo $ se reelmplaza por jQuery para evitar confictos 
 jQuery.noConflict();
@@ -94,6 +115,22 @@ jQuery('.ver').mouseover(function() {
     jQuery(id).css({backgroundColor: "darkCyan" });
     });    
     
+
+
+function addFavorito(url,imagen,id_inmueble)
+{
+    if( jQuery('#imagen_fav_'+id_inmueble).attr('src') != imagen) {
+        if (confirm("¿Desea añadir esta palabra a sus palabras?")) {
+            jQuery('#ajax-favoritos').load(url,{},function() {
+                jQuery('#imagen_fav_'+id_inmueble).attr('src',imagen);
+                jQuery('#icono_favorito_'+id_inmueble).attr('onmouseover','');
+                jQuery('#icono_favorito_'+id_inmueble).attr('onmouseout','');
+            });
+        }      
+    }
+}
+
+
 
     
 </script>

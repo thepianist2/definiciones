@@ -106,7 +106,11 @@ estudiar_configurarTest:
   
 estudiar_accionSeleccionados:
   url:   /configurar-test2
-  param: { module: estudiar, action: accionSeleccionados }     
+  param: { module: estudiar, action: accionSeleccionados }   
+  
+estudiar_buscarCategoria:
+  url:   /categorias
+  param: { module: estudiar, action: buscarCategoria }     
  #usuario 
   
 usuario_editarUsuario:
@@ -247,6 +251,11 @@ bandejaEntrada_show:
 bandejaEntrada_responder:
   url:   /entrada-responder
   param: { module: bandejaEntrada, action: responder }  
+  
+  
+bandejaEntrada_dentroUsuario:
+  url:   /ver-mensajes
+  param: { module: bandejaEntrada, action: dentroUsuario }    
   
   
 #bandejaSalida
