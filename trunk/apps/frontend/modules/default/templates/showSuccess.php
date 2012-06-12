@@ -33,8 +33,10 @@ Selecciona un texto y<br/>clica aquí para oírlo</button>
 <br></br><br></br><br></br><br></br>
 <?php if ($sf_user->isAuthenticated() and $palabra->getIdUsuario()==$sf_user->getGuardUser()->getId()){ ?>
 <div style="text-align: center;" >
-         <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
+<?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
 &nbsp;
 <?php echo link_to(image_tag('iconos/editar.png').'Editar', 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?>
+&nbsp;
+<?php echo link_to(image_tag('iconos/pdf.png').'Exportar a pdf', 'default_exportarPdf', $palabra, array('title' => 'Exportar a PDF', 'target'=>'_blank')) ?>
 </div><br></br>
 <?php } ?>

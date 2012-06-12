@@ -5,7 +5,7 @@
 <table>
   <thead>
     <tr>
-      <th colspan="3">Acciones</th>
+      <th colspan="4">Acciones</th>
       <th>Texto palabra</th>
       <th>Sub categoria</th>
       <th>Imagen</th>
@@ -19,6 +19,7 @@
       <td><?php echo link_to(image_tag('iconos/vistaPrevia.png'), 'default/show?id='.$palabra->getId(), array('title' => 'Ver')) ?></td>
       <td><?php echo link_to(image_tag('iconos/editar.png'), 'default/edit?id='.$palabra->getId(), array('title' => 'Editar')) ?></td>
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'default/delete?id='.$palabra->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>
+      <td><?php echo link_to(image_tag('iconos/pdf.png'), 'default_exportarPdf', $palabra, array('title' => 'Exportar a PDF',  'target'=>'_blank')) ?></td>
       <td><?php echo $palabra->getTextoPalabra() ?></td>
       <td><?php echo $palabra->getSubCategoria()->getTexto() ?></td>
       
