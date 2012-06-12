@@ -1,7 +1,14 @@
 
 <h1 style="text-align: center;"><?php echo $album->getDescripcion()." ".$album->getCreatedAt(); ?></h1>
-
-
+<br></br>
+<div style="text-align: center;" >
+<?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'album/index', array('title' => 'Volver')) ?>
+&nbsp;
+<?php echo link_to(image_tag('iconos/editar.png').'Editar Album', 'album/edit?id='.$album->getId(), array('title' => 'Editar')) ?>
+&nbsp;
+<?php echo link_to(image_tag('iconos/guardar.png').'Agregar Imágen', 'imagen/new?idAlbum='.$album->id, array('title' => 'Editar')) ?>
+</div>
+<br></br>
 
 <?php $imagenes=$album->getImagen(); ?>
 
@@ -27,11 +34,7 @@
 
 <?php } ?>
 <div id="ver" style="display: none;"></div>
-<div style="text-align: center;" >
-<?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'album/index', array('title' => 'Volver')) ?>
-&nbsp;
-<?php echo link_to(image_tag('iconos/editar.png').'Editar Album', 'album/edit?id='.$album->getId(), array('title' => 'Editar')) ?>
-</div><br></br><br></br>
+
 
 <script type="text/javascript">
     //se agrega jQuery.noConflict(); porque está prottools y el simbolo $ se reelmplaza por jQuery para evitar confictos 
