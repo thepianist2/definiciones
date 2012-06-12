@@ -24,7 +24,12 @@
 <br></br>
 <div id="ver" style="display: none; color: white; background-color: #3399ff; border: 1px solid #3399ff; width: 540px;float: right;"></div>
 
-<?php }else{ echo "No has realizado ningún test"; } ?>
+<?php }else{ ?>
+    
+<p style="text-align: center;">No has realizado ningún test</p>
+    
+    
+  <?php  } ?>
 <script type="text/javascript">
         //se agrega jQuery.noConflict(); porque está prottools y el simbolo $ se reelmplaza por jQuery para evitar confictos 
 jQuery.noConflict();
