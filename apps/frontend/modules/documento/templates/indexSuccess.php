@@ -6,7 +6,8 @@
 <?php } ?>
 <?php if(count($documentos)>0){ ?>
 <br></br>
-
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $documentos, 'action' => $action)) ?>
+<br></br>
 <table>
   <thead>
     <tr>
@@ -40,9 +41,9 @@
 </table>
 <div id="ver" style="display: none;"></div>
 <br></br>
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $documentos, 'action' => $action)) ?>
+<br></br>
 <div style="text-align: center;" >
-         <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
-
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'documento/new', array('title' => 'Nuevo')) ?>
 </div>
 <br></br>

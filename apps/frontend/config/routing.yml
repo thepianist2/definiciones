@@ -216,6 +216,12 @@ documento_exportarPdf:
   requirements:
     id: \d+
     sf_method: [get]   
+    
+documento_index_page:
+  url: /documento/index/:page
+  param: { module: documento, action: index }
+  requirements:
+  page: \d+     
   
 
 
@@ -230,6 +236,11 @@ bandejaEntrada_index:
   url:   /bandeja-entrada
   param: { module: bandejaEntrada, action: index }
   
+bandejaEntrada_index_page:
+  url: /bandejaEntrada/index/:page
+  param: { module: bandejaEntrada, action: index }
+  requirements:
+  page: \d+   
 
 bandejaEntrada_new:
   url:   /nuevo-mensaje
@@ -266,11 +277,23 @@ bandejaEntrada_dentroUsuario:
   url:   /ver-mensajes
   param: { module: bandejaEntrada, action: dentroUsuario }    
   
+bandejaEntrada_dentroUsuario_page:
+  url: /bandejaEntrada/ver-mensajes/:page
+  param: { module: bandejaEntrada, action: dentroUsuario }
+  requirements:
+  page: \d+   
+  
   
 #bandejaSalida
 bandejaSalida_index:
   url:   /bandeja-salida
   param: { module: bandejaSalida, action: index }
+  
+bandejaSalida_index_page:
+  url: /bandejaSalida/index/:page
+  param: { module: bandejaSalida, action: index }
+  requirements:
+  page: \d+   
   
 
 bandejaSalida_new:
@@ -306,6 +329,12 @@ bandejaSalida_seleccionaUsuario:
   url:   /selecciona-usuario
   param: { module: bandejaSalida, action: seleccionaUsuario }    
   
+bandejaSalida_seleccionaUsuario_page:
+  url: /bandejaSalida/seleccionaUsuario/:page
+  param: { module: bandejaSalida, action: seleccionaUsuario }
+  requirements:
+  page: \d+     
+  
   
 #test 
 
@@ -318,6 +347,11 @@ test_show:
   url:   /detalles-test
   param: { module: test, action: show }  
   
+test_index_page:
+  url: /test/index/:page
+  param: { module: test, action: index }
+  requirements:
+  page: \d+ 
   
 #album 
 
@@ -325,6 +359,12 @@ test_show:
 album_index:
   url:   /album
   param: { module: album, action: index }
+  
+album_index_page:
+  url: /album/index/:page
+  param: { module: album, action: index }
+  requirements:
+  page: \d+   
   
 album_show:
   url:   /mostrar-album

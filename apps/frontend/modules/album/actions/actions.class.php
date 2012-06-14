@@ -13,10 +13,17 @@ class albumActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
                   if ($this->getUser()->isAuthenticated()){
-    $this->albums = Doctrine_Core::getTable('Album')
+    $q = Doctrine_Core::getTable('Album')
       ->createQuery('a')
-      ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())      
-      ->execute();
+      ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId());
+    
+        $this->albums = new sfDoctrinePager('album', 8);
+	$this->albums->setQuery($q);   	
+        $this->albums->setPage($this->getRequestParameter('page',1));
+	$this->albums->init();
+        //route del paginado
+        $this->action = '@album_index_page';
+    
      }else{
                 $this->albums=null;
          }
@@ -96,7 +103,9 @@ class albumActions extends sfActions
     {
       $album = $form->save();
       $this->getUser()->setFlash('mensajeTerminado','Ahora agrega las imágenes.');
-      $this->redirect('imagen/new?idAlbum='.$album->id);
+//      $this->redirect('imagen/new?idAlbum='.$album->id);
+            $this->redirect('album/index');
+
     }else
     {
        if($errorAlbum){

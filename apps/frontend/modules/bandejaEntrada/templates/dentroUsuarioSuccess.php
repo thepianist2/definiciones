@@ -3,6 +3,12 @@
 <h1 style="text-align: center;">Bandeja de Entrada</h1>
 <?php } ?>
 <br></br>
+<div style="text-align: center;" >
+         <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'bandejaEntrada/index', array('title' => 'Volver')) ?>
+</div>
+       <br></br>
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $bandeja_entradas, 'action' => $action)) ?>
+       <br></br>
 
 <?php if(count($bandeja_entradas)>0){ ?>
 <table>
@@ -28,7 +34,9 @@
 </table>
 <br></br>
 <div id="ver" style="display: none;"></div>
-<br></br>
+       <br></br>
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $bandeja_entradas, 'action' => $action)) ?>
+       <br></br>
 <?php }else{ ?>
 <p style="text-align: center;">No se han encontrado mensajes</p>
 

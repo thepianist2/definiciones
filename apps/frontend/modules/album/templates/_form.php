@@ -1,6 +1,6 @@
 <?php use_stylesheets_for_form($form) ?>
 <?php use_javascripts_for_form($form) ?>
-
+<div style="margin-left: 200px;">
 <form action="<?php echo url_for('album/'.($form->getObject()->isNew() ? 'create' : 'update').(!$form->getObject()->isNew() ? '?id='.$form->getObject()->getId() : '')) ?>" method="post" <?php $form->isMultipart() and print 'enctype="multipart/form-data" ' ?>>
 <?php if (!$form->getObject()->isNew()): ?>
 <input type="hidden" name="sf_method" value="put" />
@@ -14,7 +14,7 @@
           <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to(image_tag('iconos/borrar.png').'Borrar', 'album/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?>
           <?php endif; ?>
-          <input type="submit" value="Guardar y agregar imágenes" />
+          <input type="submit" value="Guardar" />
         </td>
       </tr>
     </tfoot>
@@ -23,3 +23,4 @@
     </tbody>
   </table>
 </form>
+</div>

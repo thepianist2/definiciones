@@ -1,5 +1,12 @@
 <script type="text/javascript" src="http://vozme.com/get_text.js"></script>
+<script type="text/javascript">
 
+    jQuery(window).load(function () {
+  document.forms[0].palabraTexto.focus();
+  document.forms[0].palabraTexto.selectionStart=jQuery("#palabraTexto").get(0).value.length;
+
+});
+</script>
 <form action="<?php echo url_for('estudiar/responder') ?>" method="post" enctype="multipart/form-data">
 <h1 style="text-align: center;">Exámen</h1>
 <div style="font-size: 15px;">

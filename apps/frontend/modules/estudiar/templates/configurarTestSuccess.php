@@ -15,8 +15,10 @@ jQuery.noConflict();
 <br></br>
 <div style="text-align: center; font-size: 20px;">Selecciona las palabras que quieres estudiar.</div>
 <br></br>
-
-
+<div style="text-align: center;">
+         <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'estudiar/index', array('title' => 'Volver')) ?>
+</div>
+<br></br>
 <form name="categorias" id="buscador-eventos" action="<?php echo url_for('estudiar/buscarCategoria') ?>" method="post">
 	<h2 class="titulo" style="margin-left:10px; margin-top:2px; margin-right:10px; float:left;">Selecciona por categoria</h2>
 

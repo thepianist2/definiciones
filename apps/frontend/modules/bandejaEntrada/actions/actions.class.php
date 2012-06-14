@@ -27,13 +27,22 @@ class bandejaEntradaActions extends sfActions
             $r[0]=0;
         }
     
-        $this->sf_guard_users = Doctrine_Core::getTable('sfGuardUser')
+        $q = Doctrine_Core::getTable('sfGuardUser')
       ->createQuery('a')
 //      ->whereNotIn('a.id',array('1',$this->getUser()->getGuardUser()->getId()))
-      ->andWhereIn('a.id',$r)          
-      ->execute();
+      ->andWhereIn('a.id',$r);
+        
+        $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 9);
+	$this->sf_guard_users->setQuery($q);   	
+        $this->sf_guard_users->setPage($this->getRequestParameter('page',1));
+	$this->sf_guard_users->init();
+        //route del paginado
+        $this->action = '@bandejaEntrada_index_page';
+        
+        
+        
               }else{
-                $this->bandeja_entradas=null;
+                $this->sf_guard_users=null;
          }
   }
   
@@ -44,11 +53,22 @@ class bandejaEntradaActions extends sfActions
                 if($request->getParameter('idUsuario')){
                     
     $this->getUser()->setAttribute('idUsuario', $request->getParameter('idUsuario'));          
-    $this->bandeja_entradas = Doctrine_Core::getTable('BandejaEntrada')
+    $q = Doctrine_Core::getTable('BandejaEntrada')
       ->createQuery('a')
       ->where('a.idUsuarioReceptor =?',$this->getUser()->getGuardUser()->getId()) 
-     ->andWhere('a.idUsuarioRemitente =?',$request->getParameter('idUsuario'))          
-      ->execute();}
+     ->andWhere('a.idUsuarioRemitente =?',$request->getParameter('idUsuario'));
+        
+        
+                
+        $this->bandeja_entradas = new sfDoctrinePager('bandejaEntrada', 1);
+	$this->bandeja_entradas->setQuery($q);   	
+        $this->bandeja_entradas->setPage($this->getRequestParameter('page',1));
+	$this->bandeja_entradas->init();
+        //route del paginado
+        $this->action = '@bandejaEntrada_dentroUsuario_page';
+        
+        
+     }
               }else{
                 $this->bandeja_entradas=null;
          }

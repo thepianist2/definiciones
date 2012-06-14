@@ -80,6 +80,10 @@
         <br/>
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $palabras, 'action' => $action)) ?>
 <br></br>
+<div style="text-align: center;" >
+  <?php echo link_to(image_tag('iconos/atras.png').'Volver a mis palabras', 'default/index', array('title' => 'Volver a mis palabras')) ?>
+
+</div><br></br>
 <div id="ver" style="display: none;"></div>
 <div id="ajax-favoritos"></div>
 <script type="text/javascript">

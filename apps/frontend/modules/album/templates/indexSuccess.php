@@ -3,6 +3,8 @@
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo album', 'album/new', array('title' => 'Nuevo album')) ?>
 </div>
 <br></br>
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $albums, 'action' => $action)) ?>
+<br></br>
 
 
 <div>
@@ -11,7 +13,7 @@
     
     <?php  $foto=$album->getImagen(); ?>
     <div id="albumes">
-        <h1><?php echo $album->getDescripcion(); ?></h1>
+        <h1><?php echo 'Album: '.$album->getDescripcion(); ?></h1>
 	<?php if($foto[0]->getImagen()){ ?>
     <a href="<?php echo url_for('album/show?id='.$album->getId()) ?>"><img class="postimg" src="<?php echo '/uploads/'.$foto[0]->getImagen() ?>" alt=""></a>
 <?php }else{ ?>
@@ -23,8 +25,11 @@
 
     </div>
     <?php endforeach; ?>
-    
+<br></br>
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $albums, 'action' => $action)) ?>
+<br></br>       
 </div>
+
 
 
 

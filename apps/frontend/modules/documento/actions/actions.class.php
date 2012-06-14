@@ -13,10 +13,17 @@ class documentoActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
             if ($this->getUser()->isAuthenticated()){
-    $this->documentos = Doctrine_Core::getTable('Documento')
+    $q = Doctrine_Core::getTable('Documento')
       ->createQuery('a')
-      ->Where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
-      ->execute();
+      ->Where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId());
+    
+        $this->documentos = new sfDoctrinePager('documento', 6);
+	$this->documentos->setQuery($q);   	
+        $this->documentos->setPage($this->getRequestParameter('page',1));
+	$this->documentos->init();
+        //route del paginado
+        $this->action = '@documento_index_page';
+    
             }else{
                 $this->documentos=null;
             }
