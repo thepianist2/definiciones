@@ -186,7 +186,6 @@ class estudiarActions extends sfActions
         $this->getUser()->setAttribute('numeroPalabras', count($this->palabras));
         $this->getUser()->setAttribute('palabras', $this->palabras);
         $this->getUser()->setAttribute('i', $this->i);
-        echo $this->i;
          if($this->getUser()->getAttribute('numeroPalabras')<3){
             $this->getUser()->setFlash('mensajeError','Debe tener al menos 3 definiciones almacenadas.');
             $this->redirect('estudiar/index');
@@ -201,8 +200,6 @@ class estudiarActions extends sfActions
             
             $this->palabras=$this->getUser()->getAttribute('palabras');
             $numero=$this->getUser()->getAttribute('numeroPalabras');
-            echo $this->i;  
-            echo "de".$numero;  
             if($this->i<$numero-1){
               if($request->getParameter('palabraTexto')){
              $respuesta= $request->getParameter('palabraTexto');

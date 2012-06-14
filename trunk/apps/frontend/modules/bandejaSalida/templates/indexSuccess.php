@@ -3,7 +3,8 @@
 <h1 style="text-align: center;">Bandeja de salida</h1>
 <?php } ?>
 <br></br>
-
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $bandeja_salidas, 'action' => $action)) ?>
+       <br></br>
 
 <?php if(count($bandeja_salidas)>0){ ?>
 <table>
@@ -29,6 +30,8 @@
 <br></br>
 <div id="ver" style="display: none;"></div>
 <br></br>
+    <?php include_component('bloque', 'bloquePaginador', array('pager' => $bandeja_salidas, 'action' => $action)) ?>
+       <br></br>
 <?php }else{ ?>
 <p style="text-align: center;">No se han encontrado mensajes</p>
 

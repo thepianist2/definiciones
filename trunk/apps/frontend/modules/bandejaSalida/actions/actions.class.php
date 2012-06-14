@@ -12,18 +12,33 @@ class bandejaSalidaActions extends sfActions
 {
   public function executeIndex(sfWebRequest $request)
   {
-    $this->bandeja_salidas = Doctrine_Core::getTable('BandejaSalida')
+    $q = Doctrine_Core::getTable('BandejaSalida')
       ->createQuery('a')
-      ->Where('a.idUsuarioRemitente =?',$this->getUser()->getGuardUser()->getId())         
-      ->execute();
+      ->Where('a.idUsuarioRemitente =?',$this->getUser()->getGuardUser()->getId());         
+
+    
+    
+       $this->bandeja_salidas = new sfDoctrinePager('bandejaSalida', 10);
+	$this->bandeja_salidas->setQuery($q);   	
+        $this->bandeja_salidas->setPage($this->getRequestParameter('page',1));
+	$this->bandeja_salidas->init();
+        //route del paginado
+        $this->action = '@bandejaSalida_index_page';
   }
   
   public function executeSeleccionaUsuario(sfWebRequest $request){
 
-    $this->sf_guard_users = Doctrine_Core::getTable('sfGuardUser')
+    $q = Doctrine_Core::getTable('sfGuardUser')
       ->createQuery('a')
-      ->whereNotIn('a.id',array('1',$this->getUser()->getGuardUser()->getId()))
-      ->execute();
+      ->whereNotIn('a.id',array('1',$this->getUser()->getGuardUser()->getId()));
+    
+           $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 9);
+	$this->sf_guard_users->setQuery($q);   	
+        $this->sf_guard_users->setPage($this->getRequestParameter('page',1));
+	$this->sf_guard_users->init();
+        //route del paginado
+        $this->action = '@bandejaSalida_seleccionaUsuario_page';
+    
   }
   
 

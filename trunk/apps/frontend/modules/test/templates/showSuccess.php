@@ -1,4 +1,4 @@
-<a href="javascript:void(0)"><div title="Cerrar" style="color: #000;" onclick="cerrar()" id="cruz">X</div></a>
+<!--<a href="javascript:void(0)"><div title="Cerrar" style="color: #000;" onclick="cerrar()" id="cruz">X</div></a>-->
 
 
 <?php $respuestas=$test->getRespuesta();

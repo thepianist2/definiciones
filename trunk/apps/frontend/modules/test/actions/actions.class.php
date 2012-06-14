@@ -13,10 +13,18 @@ class testActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
             if ($this->getUser()->isAuthenticated()){
-    $this->tests = Doctrine_Core::getTable('Test')
+    $q = Doctrine_Core::getTable('Test')
       ->createQuery('a')
-      ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())       
-      ->execute();
+      ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId());       
+    
+        $this->tests = new sfDoctrinePager('test', 10);
+	$this->tests->setQuery($q);   	
+        $this->tests->setPage($this->getRequestParameter('page',1));
+	$this->tests->init();
+        //route del paginado
+        $this->action = '@test_index_page';
+    
+    
             }else{
                 $this->test=null;
             }
