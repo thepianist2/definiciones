@@ -4,9 +4,16 @@
    <?php if ($sf_user->isAuthenticated()){ ?>
 <h1 style="text-align: center;">Documentos</h1>
 <?php } ?>
+    <br></br>
+<?php include_partial('documento/buscador', array('query' => $query)); ?>
+    <br></br>
 <?php if(count($documentos)>0){ ?>
 <br></br>
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $documentos, 'action' => $action)) ?>
+<br></br>
+<div style="text-align: center;" >
+  <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo', 'documento/new', array('title' => 'Nuevo')) ?>
+</div>
 <br></br>
 <table>
   <thead>

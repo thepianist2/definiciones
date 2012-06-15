@@ -17,7 +17,7 @@ class documentoActions extends sfActions
       ->createQuery('a')
       ->Where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId());
     
-        $this->documentos = new sfDoctrinePager('documento', 6);
+        $this->documentos = new sfDoctrinePager('documento', 10);
 	$this->documentos->setQuery($q);   	
         $this->documentos->setPage($this->getRequestParameter('page',1));
 	$this->documentos->init();
@@ -28,6 +28,39 @@ class documentoActions extends sfActions
                 $this->documentos=null;
             }
   }
+  
+  
+  
+     public function executeBuscar(sfWebRequest $request)
+    {
+        if($this->getUser()->hasAttribute('buscadorDocumento') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorDocumento');
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorDocumento', $request->getParameterHolder()->getAll());
+        }
+        
+            $q = Doctrine_Core::getTable('Documento')
+      ->createQuery('a')
+      ->Where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+      ->andWhere('a.titulo LIKE ?','%'.$query.'%')
+      ->andWhere('a.texto LIKE ?','%'.$query.'%');
+        $this->documentos = new sfDoctrinePager('documento', 10);
+	$this->documentos->setQuery($q);   	
+        $this->documentos->setPage($this->getRequestParameter('page',1));
+	$this->documentos->init();
+        //route del paginado
+        $this->action = 'documento/buscar';
+        
+            $this->query = $query;
+
+            $this->setTemplate('index');
+        
+    }
 
   public function executeShow(sfWebRequest $request)
   {

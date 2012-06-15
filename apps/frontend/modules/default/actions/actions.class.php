@@ -194,7 +194,76 @@ class defaultActions extends sfActions
     }
   
     
-    
+      public function executeBuscar3(sfWebRequest $request)
+    {
+       
+       
+       
+
+        if($this->getUser()->hasAttribute('buscadorDefault3') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorDefault3');
+            $filtro = $buscador['filtro'];
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $filtro = $request->getParameter('filtro');
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorDefault3', $request->getParameterHolder()->getAll());
+        }
+        
+        
+
+
+        if($filtro=="1")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+            ->andWhere('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->orderBy('a.textoPalabra');  
+
+        else if($filtro=="2")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+           ->andWhere('a.borrado=?',0)        
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')  
+            ->orderBy('a.textoPalabra');  
+        else if($filtro=="3")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+            ->andWhere('a.borrado=?',0)          
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->orderBy('a.textoPalabra'); 
+        else
+            $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+           ->where('a.idUsuario =?',$this->getUser()->getGuardUser()->getId()) 
+            ->andWhere('a.borrado=?',0)                  
+            ->andWhere('a.activo=?',1)
+            ->orderBy('a.textoPalabra'); 
+        
+        $this->palabras = new sfDoctrinePager('palabra', 6);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+
+            $this->action = 'default/buscar3';
+
+            $this->filtro = $filtro;
+            $this->query = $query;
+
+            $this->setTemplate('listado');
+
+    }
+  
   
   
   	public function executeAddFavorito(sfWebRequest $request) {

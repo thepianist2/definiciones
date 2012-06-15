@@ -20,7 +20,70 @@ class estudiarActions extends sfActions
     
     }
     
-    
+    public function executeBuscar(sfWebRequest $request)
+    {
+       
+       
+       
+
+        if($this->getUser()->hasAttribute('buscadorEstudiar') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorEstudiar');
+            $filtro = $buscador['filtro'];
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $filtro = $request->getParameter('filtro');
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorEstudiar', $request->getParameterHolder()->getAll());
+        }
+        
+
+
+        if($filtro=="1")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->orderBy('a.textoPalabra');  
+
+        else if($filtro=="2")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->andWhere('a.textoPalabra LIKE ?','%'.$query.'%')  
+            ->orderBy('a.textoPalabra');  
+        else if($filtro=="3")
+                $q = Doctrine_Core::getTable('palabra')
+            ->createQuery('a')
+            ->where('a.borrado=?',0)
+            ->andWhere('a.activo=?',1)
+            ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId())
+            ->andWhere('a.textoDefinicion LIKE ?','%'.$query.'%')
+            ->orderBy('a.textoPalabra'); 
+
+        
+        
+        $this->palabras = new sfDoctrinePager('palabra', 6);
+	$this->palabras->setQuery($q);   	
+        $this->palabras->setPage($this->getRequestParameter('page',1));
+	$this->palabras->init();
+
+            $this->action = 'estudiar/buscar';
+
+            $this->filtro = $filtro;
+            $this->query = $query;
+
+            $this->setTemplate('listado');
+
+    }
+  
     
 
     

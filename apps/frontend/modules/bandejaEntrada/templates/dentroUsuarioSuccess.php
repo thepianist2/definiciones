@@ -2,7 +2,9 @@
    <?php if ($sf_user->isAuthenticated()){ ?>
 <h1 style="text-align: center;">Bandeja de Entrada</h1>
 <?php } ?>
-<br></br>
+    <br></br>
+<?php include_partial('bandejaEntrada/buscadorMensaje', array('query' => $query)); ?>
+    <br></br>
 <div style="text-align: center;" >
          <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'bandejaEntrada/index', array('title' => 'Volver')) ?>
 </div>

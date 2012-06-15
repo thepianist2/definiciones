@@ -1,4 +1,9 @@
 <h1 style="text-align: center;">Albumes</h1>
+<br></br>
+<?php include_partial('album/buscador', array('query' => $query)); ?>
+<br></br>
+
+
 <div style="text-align: center;" >
   <?php echo link_to(image_tag('iconos/nuevo.png').'Añadir nuevo album', 'album/new', array('title' => 'Nuevo album')) ?>
 </div>
@@ -6,6 +11,7 @@
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $albums, 'action' => $action)) ?>
 <br></br>
 
+<?php if(count($albums)){ ?>
 
 <div>
     
@@ -29,6 +35,12 @@
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $albums, 'action' => $action)) ?>
 <br></br>       
 </div>
+
+<?php }else{ ?>
+
+<p style="text-align: center;">No se ha encontrado ningún album</p>
+<?php } ?>
+
 
 
 

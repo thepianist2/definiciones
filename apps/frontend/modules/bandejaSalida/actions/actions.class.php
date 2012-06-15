@@ -40,8 +40,79 @@ class bandejaSalidaActions extends sfActions
         $this->action = '@bandejaSalida_seleccionaUsuario_page';
     
   }
-  
+      public function executeBuscarMensajeSalida(sfWebRequest $request)
+  {    
+                  
+        if($this->getUser()->hasAttribute('buscadorBandejaSalida') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorBandejaSalida');
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorBandejaSalida', $request->getParameterHolder()->getAll());
+        }
+          
+          
+          $q = Doctrine_Core::getTable('BandejaSalida')
+      ->createQuery('a')
+       ->where('a.mensaje LIKE ?','%'.$query.'%')           
+      ->andWhere('a.idUsuarioRemitente =?',$this->getUser()->getGuardUser()->getId());         
 
+    
+    
+       $this->bandeja_salidas = new sfDoctrinePager('bandejaSalida', 10);
+	$this->bandeja_salidas->setQuery($q);   	
+        $this->bandeja_salidas->setPage($this->getRequestParameter('page',1));
+	$this->bandeja_salidas->init();
+        //route del paginado
+            $this->action = 'bandejaSalida/buscarMensajeSalida';
+
+            $this->query = $query;
+
+            $this->setTemplate('index');
+          
+      }
+
+    public function executeBuscar(sfWebRequest $request)
+  {
+        
+        
+        
+        if($this->getUser()->hasAttribute('buscadorBandejaSalida') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorBandejaSalida');
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorBandejaSalida', $request->getParameterHolder()->getAll());
+        }
+        
+        
+        
+            $q = Doctrine_Core::getTable('sfGuardUser')
+      ->createQuery('a')
+      
+      ->where('a.first_name LIKE ?','%'.$query.'%')
+      ->where('a.last_name LIKE ?','%'.$query.'%')        
+     ->where('a.username LIKE ?','%'.$query.'%')
+     ->whereNotIn('a.id',array('1',$this->getUser()->getGuardUser()->getId()));
+           $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 9);
+	$this->sf_guard_users->setQuery($q);   	
+        $this->sf_guard_users->setPage($this->getRequestParameter('page',1));
+	$this->sf_guard_users->init();
+        
+        
+            $this->action = 'bandejaSalida/buscar';
+
+            $this->query = $query;
+
+            $this->setTemplate('seleccionaUsuario');
+    }
+  
   public function executeShow(sfWebRequest $request)
   {
     $this->bandeja_salida = Doctrine_Core::getTable('BandejaSalida')->find(array($request->getParameter('id')));

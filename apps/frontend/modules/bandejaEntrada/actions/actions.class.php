@@ -47,6 +47,90 @@ class bandejaEntradaActions extends sfActions
   }
   
   
+     public function executeBuscar(sfWebRequest $request)
+    {
+        if($this->getUser()->hasAttribute('buscadorBandejaEntrada') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorBandejaEntrada');
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorBandejaEntrada', $request->getParameterHolder()->getAll());
+        }
+        
+              if ($this->getUser()->isAuthenticated()){
+                
+    $mensajes = Doctrine_Core::getTable('BandejaEntrada')
+      ->createQuery('a')
+      ->where('a.idUsuarioReceptor =?',$this->getUser()->getGuardUser()->getId())       
+      ->execute();
+              }
+                 
+   	foreach ($mensajes as $c) {
+   		$r[$c->id]=$c->idUsuarioRemitente;
+   	}
+        if(!count($mensajes)>0){
+            $r[0]=0;
+        }
+    
+        $q = Doctrine_Core::getTable('sfGuardUser')
+      ->createQuery('a')
+      ->where('a.first_name LIKE ?','%'.$query.'%')
+      ->where('a.last_name LIKE ?','%'.$query.'%')        
+     ->where('a.username LIKE ?','%'.$query.'%')
+      ->WhereIn('a.id',$r);
+        
+        $this->sf_guard_users = new sfDoctrinePager('sfGuardUser', 9);
+	$this->sf_guard_users->setQuery($q);   	
+        $this->sf_guard_users->setPage($this->getRequestParameter('page',1));
+	$this->sf_guard_users->init();
+        //route del paginado
+        $this->action = 'bandejaEntrada/buscar';
+        
+            $this->query = $query;
+
+            $this->setTemplate('index');
+        
+    }
+  
+    
+    
+    
+         public function executeBuscarMensaje(sfWebRequest $request)
+    {
+        if($this->getUser()->hasAttribute('buscadorBandejaEntradaMensaje') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorBandejaEntradaMensaje');
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorBandejaEntradaMensaje', $request->getParameterHolder()->getAll());
+        }
+        
+                    
+    $q = Doctrine_Core::getTable('BandejaEntrada')
+      ->createQuery('a')
+     ->where('a.mensaje LIKE ?','%'.$query.'%')           
+     ->andWhere('a.idUsuarioReceptor =?',$this->getUser()->getGuardUser()->getId());
+//     ->where('a.idUsuarioRemitente =?',$request->getParameter('idUsuario'));
+ 
+     
+                
+        $this->bandeja_entradas = new sfDoctrinePager('bandejaEntrada', 10);
+	$this->bandeja_entradas->setQuery($q);   	
+        $this->bandeja_entradas->setPage($this->getRequestParameter('page',1));
+	$this->bandeja_entradas->init();
+        $this->action = 'bandejaEntrada/buscarMensaje';
+        
+            $this->query = $query;
+
+            $this->setTemplate('dentroUsuario');
+    }
+  
     public function executeDentroUsuario(sfWebRequest $request)
   {
             if ($this->getUser()->isAuthenticated()){
@@ -60,7 +144,7 @@ class bandejaEntradaActions extends sfActions
         
         
                 
-        $this->bandeja_entradas = new sfDoctrinePager('bandejaEntrada', 1);
+        $this->bandeja_entradas = new sfDoctrinePager('bandejaEntrada', 10);
 	$this->bandeja_entradas->setQuery($q);   	
         $this->bandeja_entradas->setPage($this->getRequestParameter('page',1));
 	$this->bandeja_entradas->init();

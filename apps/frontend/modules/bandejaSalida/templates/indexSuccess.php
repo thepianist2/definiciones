@@ -3,6 +3,8 @@
 <h1 style="text-align: center;">Bandeja de salida</h1>
 <?php } ?>
 <br></br>
+<?php include_partial('bandejaSalida/buscadorMensajeSalida', array('query' => $query)); ?>
+<br></br>
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $bandeja_salidas, 'action' => $action)) ?>
        <br></br>
 
