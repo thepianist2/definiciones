@@ -28,6 +28,37 @@ class albumActions extends sfActions
                 $this->albums=null;
          }
   }
+  
+    public function executeBuscar(sfWebRequest $request)
+  {
+         if($this->getUser()->hasAttribute('buscadorAlbum') and $request->hasParameter('page'))
+        {
+            $buscador = $this->getUser()->getAttribute('buscadorAlbum');
+            $query = $buscador['query'];
+        }
+        else
+        {
+            $query = $request->getParameter('query');
+            $this->getUser()->setAttribute('buscadorAlbum', $request->getParameterHolder()->getAll());
+        }
+        
+        
+        $q = Doctrine_Core::getTable('Album')
+      ->createQuery('a')
+      ->where('a.descripcion LIKE ?','%'.$query.'%')          
+      ->andWhere('a.idUsuario =?',$this->getUser()->getGuardUser()->getId());
+    
+        $this->albums = new sfDoctrinePager('album', 8);
+	$this->albums->setQuery($q);   	
+        $this->albums->setPage($this->getRequestParameter('page',1));
+	$this->albums->init();
+        
+            $this->action = 'album/buscar';
+
+            $this->query = $query;
+
+            $this->setTemplate('index');
+    }
 
   public function executeShow(sfWebRequest $request)
   {

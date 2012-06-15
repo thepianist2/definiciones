@@ -25,7 +25,7 @@
     <a href="<?php echo url_for('estudiar/index') ?>"><span>Estudiar</span><img id="imagenMenu" src="/images/estudiarff.png" alt="Estudiar" title="Estudiar" /></a>
     <a href="<?php echo url_for('documento/index') ?>"><span>Documentos</span><img id="imagenMenu" src="/images/documentoff.png" alt="" /></a>   
     <a href="<?php echo url_for('usuario/index') ?>"><span>Usuario</span><img id="imagenMenu" src="/images/usuarioff.png" alt="" /></a>
-    <a href="<?php echo url_for('album/index') ?>"><span>Albumes</span><img id="imagenMenu" src="/images/galeriaff.png" alt="" /></a>    
+<!--    <a href="<?php echo url_for('album/index') ?>"><span>Albumes</span><img id="imagenMenu" src="/images/galeriaff.png" alt="" /></a>    -->
 </div>    
 
 

@@ -2,8 +2,8 @@
   <tbody>
     <tr>
       <th>Enviado a:</th>
-      <td><?php echo $bandeja_salida->getIdUsuarioReceptor() ?></td>
-    </tr>
+      <td><?php $usuario= $bandeja_salida->obtenerUserNamePorId($bandeja_salida->getIdUsuarioReceptor());
+      echo $usuario; ?></td>    </tr>
      <tr>
       <th></th>
       <td><p><?php echo html_entity_decode(ucfirst(strtolower($bandeja_salida->getMensaje())), ENT_COMPAT , 'UTF-8'); ?></p></td>

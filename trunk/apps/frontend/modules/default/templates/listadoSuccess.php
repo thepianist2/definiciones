@@ -2,6 +2,8 @@
 <link rel="stylesheet" type="text/css" media="screen" href="/css/listado.css">
 <h1 style="text-align: center;">Listado de Palabras</h1>
 <br></br>
+<?php include_partial('default/buscador3', array('filtro' => $filtro, 'query' => $query)); ?>
+<br></br>
 <table>
   <thead>
     <tr>

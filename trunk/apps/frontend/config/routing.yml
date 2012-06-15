@@ -79,6 +79,10 @@ default_buscar:
 default_buscar2:
   url:   /buscar-tus-palabras
   param: { module: default, action: buscar2 }     
+
+default_buscar3:
+  url:   /buscar-palabras
+  param: { module: default, action: buscar3 }   
   
 default_exportarPdf:
   url: /palabra-exportar-a-PDF/:id
@@ -120,6 +124,10 @@ estudiar_accionSeleccionados:
 estudiar_buscarCategoria:
   url:   /categorias
   param: { module: estudiar, action: buscarCategoria }     
+  
+estudiar_buscar:
+  url:   /buscar-estudiar
+  param: { module: estudiar, action: buscar }    
  #usuario 
   
 usuario_editarUsuario:
@@ -223,6 +231,10 @@ documento_index_page:
   requirements:
   page: \d+     
   
+documento_buscar:
+  url:   /buscar-documento
+  param: { module: documento, action: buscar }     
+  
 
 
 #mensaje
@@ -283,6 +295,14 @@ bandejaEntrada_dentroUsuario_page:
   requirements:
   page: \d+   
   
+bandejaEntrada_buscar:
+  url:   /buscar-bandeja-entrada
+  param: { module: bandejaEntrada, action: buscar }  
+  
+bandejaEntrada_buscarMensaje:
+  url:   /buscar-bandeja-entrada-mensaje
+  param: { module: bandejaEntrada, action: buscarMensaje }    
+  
   
 #bandejaSalida
 bandejaSalida_index:
@@ -299,6 +319,10 @@ bandejaSalida_index_page:
 bandejaSalida_new:
   url:   /nuevo-mensaje-salida
   param: { module: bandejaSalida, action: new }
+  
+bandejaSalida_buscar:
+  url:   /buscar-usuario-mensaje-salida
+  param: { module: bandejaSalida, action: buscar }  
   
   
 bandejaSalida_create:
@@ -335,7 +359,9 @@ bandejaSalida_seleccionaUsuario_page:
   requirements:
   page: \d+     
   
-  
+bandejaSalida_buscarMensajeSalida:
+  url:   /mensaje-salida-buscar
+  param: { module: bandejaSalida, action: buscarMensajeSalida }   
 #test 
 
 
@@ -390,7 +416,9 @@ album_delete:
   url:   /borrar-album
   param: { module: album, action: delete }     
   
-  
+album_buscar:
+  url:   /buscar-album
+  param: { module: album, action: buscar }      
 #imagen
 
 imagen_index:

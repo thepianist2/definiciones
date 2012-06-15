@@ -30,7 +30,7 @@
 
 
 <br></br><br></br><br></br>
-<div style="text-align: center;">Este album no tiene imágenes</div>
+<div style="text-align: center;">Este album no contiene imágenes</div>
 
 <?php } ?>
 <div id="ver" style="display: none;"></div>

@@ -1,5 +1,11 @@
 <script type="text/javascript" src="http://vozme.com/get_text.js"></script>
+<h1 style="text-align: center;">Estudiar las palabras</h1>
+<div id="buscador">
+<?php include_partial('estudiar/buscador', array('filtro' => $filtro, 'query' => $query)); ?>
+    <br></br>
+</div>
 
+<?php if(count($palabras)>0){ ?>
 <?php foreach ($palabras->getResults() as $palabra): ?>
 
 
@@ -36,3 +42,9 @@ Selecciona un texto y<br/>clica aquí para oírlo</button>
     <?php endforeach; ?>
 
     <?php include_component('bloque', 'bloquePaginador', array('pager' => $palabras, 'action' => $action)) ?>
+
+<?php }else{ ?>
+
+<p style="text-align: center;">No se han encontrado resultados</p>
+
+<?php } ?>
