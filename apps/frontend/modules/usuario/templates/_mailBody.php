@@ -16,18 +16,17 @@
     </tr>
     <tr>
       <td>
-      	<center><b><?php echo 'Confirmación de alta de usuario en Dreams&Chocolate' ?></b></center>
+      	<center><b><?php echo 'Confirmación de alta de usuario en Seria' ?></b></center>
       </td>
     </tr>
     <tr>
       <td>
           <?php echo 'Para confirmar la creación de tu usuario y completar el proceso de registro pulsa en el siguiente enlace. <br />Si tu correo no te permite abrir un navegador, copialo en la dirección para acceder' ?>
           <br /><br />
-          <a href="<?php echo $url_base.'/usuario/confirmarAlta/e_mail/'.$e_mail ?>"><?php echo $url_base.'/usuario/confirmarAlta/e_mail/'.$e_mail ?></a>
+          <a href="<?php echo $url_base.'/confirmarAlta?e_mail='.$e_mail ?>"><?php echo $url_base.'/confirmarAlta?e_mail='.$e_mail ?></a>
       </td>
     </tr>
   </tbody>
 </table>
 </body>
 </html>
-
