@@ -147,7 +147,7 @@ usuario_envioConfirmacion:
   param: { module: usuario, action: envioConfirmacion }
   
 usuario_confirmarAlta:
-  url:   /confirmar-alta
+  url:   /confirmarAlta
   param: { module: usuario, action: confirmarAlta }     
   
 
@@ -478,4 +478,4 @@ contenido_delete:
   
 contenido_show:
   url:   /ver-contenido
-  param: { module: contenido, action: show }          
+  param: { module: contenido, action: show }        

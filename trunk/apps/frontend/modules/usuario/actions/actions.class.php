@@ -79,8 +79,9 @@ class usuarioActions extends sfActions
 
            sfContext::getInstance()->getMailer()->send($mensaje);
            $envio_ok = true;
-           echo "enviado ok con $from $to $asunto<br>";
-           echo "$mailBody<br>";
+//           echo "enviado ok con $from $to $asunto<br>";
+//           echo "$mailBody<br>";
+
        }
        catch (Exception $e)
        {
@@ -101,5 +102,8 @@ class usuarioActions extends sfActions
         $usuario->setIsActive(1);
         $usuario->save();
         $this->getUser()->signIn($usuario);
+        $this->getUser()->setFlash('mensajeTerminado','Cuenta activada correctamente.');
+        $this->redirect('default/index');
+
     }
 }

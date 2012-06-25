@@ -3,7 +3,7 @@
 <div>
     <p>
         
-        <?php echo html_entity_decode(ucfirst(strtolower($contenido->getContenido())), ENT_COMPAT , 'UTF-8'); ?>
+        <?php echo nl2br(html_entity_decode($contenido->getContenido(), ENT_COMPAT , 'UTF-8')); ?>
         
         
         

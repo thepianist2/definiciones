@@ -430,8 +430,16 @@ class defaultActions extends sfActions
    $idSubCategoria = $valores['idSubCategoria'];
    $idUsuario = $valores['idUsuario'];
    $errorPalabra=false;
-   
-   
+//   $numero=strlen($palabra);
+//   $asteriscos='';
+//   for($i=0;$i<$numero;$i++){
+//       $asteriscos.'*';
+//   }
+   $definicionSinPalabra=str_replace(strtolower($palabra),'****',$valores['textoDefinicion']);
+   $definicionSinPalabra=str_replace(ucfirst($palabra),'****',$definicionSinPalabra);
+   $definicionSinPalabra=str_replace(strtoupper($palabra),'****',$definicionSinPalabra);
+  
+//   $this->getUser()->setFlash('mensajeError',$definicionSinPalabra);
             if($form->getObject()->isNew() or $form->getObject()->textoPalabra != $valores['textoPalabra'] or $form->getObject()->idSubCategoria != $valores['idSubCategoria'] or $form->getObject()->idUsuario != $valores['idUsuario'])
         {
             if(Doctrine_Core::getTable('Palabra')->verificarExiste($idSubCategoria,$idUsuario,$palabra))
@@ -443,6 +451,8 @@ class defaultActions extends sfActions
     if ($form->isValid() & $errorPalabra==false)
     {
       $palabra = $form->save();
+      $palabra->setTextoDefinicion($definicionSinPalabra);
+      $palabra->save();
       $this->getUser()->setFlash('mensajeTerminado','Palabra guardada.');
       $this->redirect('default/index');
     }else

@@ -18,7 +18,7 @@
 <table>
   <thead>
     <tr>
-      <th colspan="4">Acciones</th>   
+      <th colspan="3">Acciones</th>   
       <th>Título</th>
       <th>Imagen de portada</th>
       <th>Creado en</th>
@@ -31,7 +31,7 @@
         <td><a class="ver" href="javascript:void(0)" id="<?php echo $documento->id ?>"><img src="/images/iconos/vistaPrevia.png"></a></td>
       <td><?php echo link_to(image_tag('iconos/editar.png'), 'documento/edit?id='.$documento->getId(), array('title' => 'Editar')) ?></td>
       <td><?php echo link_to(image_tag('iconos/borrar.png'), 'documento/delete?id='.$documento->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?', 'title' => 'Eliminar')) ?></td>   
-      <td><?php echo link_to(image_tag('iconos/pdf.png'), 'documento_exportarPdf', $documento, array('title' => 'Exportar a pdf', 'target'=>'_blank')) ?></td>      
+<!--      <td><?php #echo link_to(image_tag('iconos/pdf.png'), 'documento_exportarPdf', $documento, array('title' => 'Exportar a pdf', 'target'=>'_blank')) ?></td>      -->
       <td><?php echo $documento->getTitulo() ?></td>
       <?php if($documento->getImagen()){ ?>
       <td><img id="imagenIndex" src="<?php echo '/uploads/'.$documento->getImagen() ?>"></td>
