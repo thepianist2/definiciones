@@ -55,8 +55,6 @@
             
         </div>
       </div>
-<!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>-->
-<!--<script type="text/javascript">var plugChatInTheme = "dot-luv";</script>
-<script type="text/javascript" src="http://static.plugchat.in/js/plugchatin-en.min.js"></script>-->
+<script type="text/javascript" src="http://static.plugchat.in/js/users/e2c60ec36c3f5bdcb7c397d8765716e9.min.js"></script>
   </body>
 </html>

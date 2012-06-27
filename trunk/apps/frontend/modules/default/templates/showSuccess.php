@@ -22,6 +22,7 @@
 
     <?php } ?>
 </div>
+<div id="ajax-favoritos"></div>
 <br></br>
 <button style="background:#ddeeff 
  url(http://vozme.com/img/paper_sound32x32.gif) 
@@ -31,6 +32,38 @@
  onclick="get_selection('es','ml');">
 Selecciona un texto y<br/>clica aquí para oírlo</button>
 <br></br><br></br><br></br><br></br>
+
+<?php if ($sf_user->isAuthenticated() and $palabra->getIdUsuario()!=$sf_user->getGuardUser()->getId()){ ?>
+
+
+        		<?php
+
+					$imagen_fav = '<a id="icono_favorito_' . $palabra->id . '" href="javascript:void()" ';
+
+					if ($palabra->getIdUsuario()==$sf_user->getGuardUser()->getId()) {
+						$imagen_fav .= '>';
+						$imagen_fav .= image_tag('/images/iconos/icono_favorito.png', array("id" => 'imagen_fav_' . $palabra->id));
+					} else {
+						$imagen_fav .= ' onmouseover=document.getElementById("imagen_fav_' . $palabra->id . '").src="' . image_path('iconos/icono_anadir-favorito.png') . '"';
+						$imagen_fav .= ' onmouseout=document.getElementById("imagen_fav_' . $palabra->id . '").src="' . image_path('iconos/icono_no-favorito.png') . '"';
+						$imagen_fav .= '>';
+						$imagen_fav .= image_tag('/images/iconos/icono_no-favorito.png', array("alt" => 'Añadir a favoritos',
+                                        "id" => "imagen_fav_" . $palabra->id,
+                                        "title" => 'Añadir a favoritos',
+                                        "class" => 'favoritos',            
+                                        "onclick" => 'javascript:addFavorito("' . url_for('default/addFavorito?palabra_id=' . $palabra->id . '&usuario_id=' . $sf_user->getGuardUser()->getId()) . '","' . image_path('/images/iconos/icono_favorito.png') . '",' . $palabra->id . ')',
+						));
+					}
+					$imagen_fav .= '</a>';
+					echo $imagen_fav;
+				
+				?>
+
+
+<?php } ?>
+
+
+
 <?php if ($sf_user->isAuthenticated() and $palabra->getIdUsuario()==$sf_user->getGuardUser()->getId()){ ?>
 <div style="text-align: center;" >
 <?php echo link_to(image_tag('iconos/atras.png').'Volver atras', 'default/index', array('title' => 'Volver')) ?>
@@ -40,3 +73,23 @@ Selecciona un texto y<br/>clica aquí para oírlo</button>
 <?php echo link_to(image_tag('iconos/pdf.png').'Exportar a pdf', 'default_exportarPdf', $palabra, array('title' => 'Exportar a PDF', 'target'=>'_blank')) ?>
 </div><br></br>
 <?php } ?>
+
+
+<script type="text/javascript">
+function addFavorito(url,imagen,id_inmueble)
+{
+    if( jQuery('#imagen_fav_'+id_inmueble).attr('src') != imagen) {
+        if (confirm("¿Desea añadir esta palabra a sus palabras?")) {
+            jQuery('#ajax-favoritos').load(url,{},function() {
+                jQuery('#imagen_fav_'+id_inmueble).attr('src',imagen);
+                jQuery('#icono_favorito_'+id_inmueble).attr('onmouseover','');
+                jQuery('#icono_favorito_'+id_inmueble).attr('onmouseout','');
+            });
+        }      
+    }
+}
+
+
+
+    
+</script>
