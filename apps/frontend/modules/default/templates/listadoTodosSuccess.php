@@ -60,7 +60,6 @@
 				}
 				?>
         
-<!--        <a title="Agregar a mis definiciones" href="<?php echo url_for('default/addFavorito?palabra_id=' . $palabra->id . '&usuario_id=' . $sf_user->getGuardUser()->getId()) ?>"><img onmouseout="this.src='/images/iconos/icono_favorito_no.png';" onmouseover="this.src='/images/iconos/icono_anadir-favorito.png';" style="height: 20px; width: 20px;" src="/images/iconos/icono_favorito_no.png"></img></a>-->
 	</div>
 <div class="clear"></div>
 
