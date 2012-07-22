@@ -50,12 +50,16 @@ class usuarioActions extends sfActions
       $sf_guard_user = $form->save();
       $this->getUser()->setFlash('mensajeTerminado','Usuario editado.');
 
-      $this->redirect('default/index');
+      $this->redirect('usuario/index');
     }
   }
   
     
-  
+    public function executeShow(sfWebRequest $request)
+  {
+    $this->sf_guard_user = Doctrine_Core::getTable('sfGuardUser')->find(array($request->getParameter('id')));
+    $this->forward404Unless($this->sf_guard_user);
+  }
   
   
       
@@ -68,7 +72,7 @@ class usuarioActions extends sfActions
         $from = 'administracion@allel.es';
         $url_base = 'http://seria.allel.es';
         $asunto = 'Alta nuevo usuario';
-        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto));
+        $mailBody = $this->getPartial('mailBody', array('e_mail' => $to, 'url_base' => $url_base, 'asunto' => $asunto,'usuario'=>$this->usuario));
 
        try {
            $mensaje = Swift_Message::newInstance()

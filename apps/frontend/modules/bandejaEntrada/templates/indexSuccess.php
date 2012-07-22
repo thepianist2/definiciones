@@ -17,8 +17,13 @@
     <?php foreach ($sf_guard_users as $usuario): ?>
 
 <div class="caja">
-<h1><?php echo $usuario->getUserName() ?></h1>
+<a title="<?php echo $usuario->getUserName() ?>" href="<?php echo url_for('usuario/show?id='.$usuario->getId()) ?>"><h1><?php echo $usuario->obtenerTextoCortoUsuario() ?></h1></a>
+<?php if($usuario->getImagenPerfil()){ ?>
+<a target="_blank" href="<?php echo '/uploads/'.$usuario->getImagenPerfil(); ?>"><img  style="width: 100px; height: 100px;" src="<?php echo '/uploads/'.$usuario->getImagenPerfil(); ?>"></img></a>
+<?php }else{ ?>
+<img style="width: 100px; height: 100px;" src="<?php echo '/images/imagenPerfil.jpg'; ?>"></img>
 
+<?php } ?>
 <div class="title">
     <label style="color: white;">Nombres:</label><?php echo ucfirst(strtolower($usuario->getFirstName())) ?><br></br>
     <label style="color: white;">Apellidos:</label><?php echo ucfirst(strtolower($usuario->getLastName())) ?><br></br>

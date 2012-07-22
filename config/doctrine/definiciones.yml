@@ -460,42 +460,6 @@ BandejaSalida:
       type: many        
       
       
-ImagenPerfil:
-  connection: doctrine
-  tableName: imagenPerfil
-  actAs:
-    Timestampable:
-  columns:
-    idUsuario:
-      type: integer(8)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false    
-    descripcion:
-      type: string(255)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false  
-    imagen:
-      type: string(255)
-      fixed: false
-      unsigned: false
-      primary: false
-      notnull: true
-      autoincrement: false  
-  relations:
-    sfGuardUser:
-      local: idUsuario
-      foreign: id
-      type: one        
-     
-      
-      
-      
 Album:
   connection: doctrine
   tableName: album
@@ -561,5 +525,217 @@ Imagen:
       local: idAlbum
       foreign: id
       type: one        
+      
+PublicacionMuro:
+  connection: doctrine
+  tableName: publicacionMuro
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    idUsuarioEscribe:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false      
+    publicacion:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    archivo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+    borrado:
+      type: boolean()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one      
+      
+      
+Amigo:
+  connection: doctrine
+  tableName: amigo
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    idUsuarioAmigo:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false      
+  relations:
+    sfGuardUser:
+      local: idUsuarioAmigo
+      foreign: id
+      type: many    
+      
+Piso:
+  connection: doctrine
+  tableName: piso
+  actAs:
+    Timestampable:
+  columns:
+    idUsuario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    direccion:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    coordenadaX:
+      type: float(10,6)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    coordenadaY:
+      type: float(10,6)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    metro:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    linea:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false     
+    pais:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true   
+    contacto:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false   
+    caracteristicasPrecio:
+      type: text()
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+    dormitorios:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false   
+    banios:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      default: "0"
+      autoincrement: false     
+    precio:
+      type: string(100)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false      
+  relations:
+    sfGuardUser:
+      local: idUsuario
+      foreign: id
+      type: one   
+    ImagenPiso:
+      local: id
+      foreign: idPiso
+      type: many           
+      onDelete: Cascade      
+        
+ImagenPiso:
+  connection: doctrine
+  tableName: imagenPiso
+  actAs:
+    Timestampable:
+  columns:
+    idPiso:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false    
+    descripcion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false  
+    imagen:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false  
+  relations:
+    Piso:
+      local: idPiso
+      foreign: id
+      type: one    
+      onDelete: Cascade    
+      
       
       

@@ -45,4 +45,45 @@ abstract class PluginsfGuardUserTable extends Doctrine_Table
 
     return $query->fetchOne();
   }
+  
+  
+    public function saberEsAmigo($idUsuario, $idAmigo)
+  {
+    $query = Doctrine_Core::getTable('amigo')->createQuery('u')
+      ->where('u.idUsuario = ?', $idUsuario)
+      ->andWhere('u.idUsuarioAmigo =?',$idAmigo);
+
+     $u=$query->fetchOne();
+     
+     if ($u) {
+                 //si ya esta en la base de datos
+	 		return true;
+	     }else{
+                 //si no esta en la base de datos
+	 		return false;
+             }
+     
+  }
+  
+  
+      public function obtenerById($idUsuario)
+  {
+    $query = Doctrine_Core::getTable('sfGuardUser')->createQuery('u')
+      ->where('u.id = ?', $idUsuario);
+
+     $u=$query->fetchOne();
+     
+     if ($u) {
+                 //si ya esta en la base de datos
+	 		return $u;
+	     }else{
+                 //si no esta en la base de datos
+	 		return false;
+             }
+     
+  }
+  
+  
+  
+  
 }

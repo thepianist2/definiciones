@@ -16,6 +16,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
   {
     $this->setWidgets(array(
       'id'               => new sfWidgetFormInputHidden(),
+      'imagenPerfil'     => new sfWidgetFormInputText(),
       'first_name'       => new sfWidgetFormInputText(),
       'last_name'        => new sfWidgetFormInputText(),
       'email_address'    => new sfWidgetFormInputText(),
@@ -34,6 +35,7 @@ abstract class BasesfGuardUserForm extends BaseFormDoctrine
 
     $this->setValidators(array(
       'id'               => new sfValidatorChoice(array('choices' => array($this->getObject()->get('id')), 'empty_value' => $this->getObject()->get('id'), 'required' => false)),
+      'imagenPerfil'     => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'first_name'       => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'last_name'        => new sfValidatorString(array('max_length' => 255, 'required' => false)),
       'email_address'    => new sfValidatorString(array('max_length' => 255)),

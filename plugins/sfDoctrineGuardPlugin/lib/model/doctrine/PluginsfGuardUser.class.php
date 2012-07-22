@@ -289,4 +289,17 @@ abstract class PluginsfGuardUser extends BasesfGuardUser
       $this->_set('password', $v);
     }
   }
+  
+    public function obtenerTextoCortoUsuario(){
+    $usuario=$this->getUserName();
+    
+    if(strlen($usuario)>13){
+        $final=substr($usuario, 0,13);
+       $final=$final.'...';
+        return $final;
+    }else{
+        return $usuario;
+    }  
+    }
+    
 }

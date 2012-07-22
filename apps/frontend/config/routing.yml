@@ -142,6 +142,11 @@ usuario_index:
   url:   /usuario
   param: { module: usuario, action: index }      
   
+usuario_show:
+  url:   /mostrar-usuario
+  param: { module: usuario, action: show }    
+  
+  
 usuario_envioConfirmacion:
   url:   /envio-confirmacion
   param: { module: usuario, action: envioConfirmacion }
@@ -478,4 +483,268 @@ contenido_delete:
   
 contenido_show:
   url:   /ver-contenido
-  param: { module: contenido, action: show }        
+  param: { module: contenido, action: show }      
+  
+#amigo
+amigo_index:
+  url:   /amigo
+  param: { module: amigo, action: index }  
+  
+amigo_addAmigo:
+  url:   /agragar-amigo
+  param: { module: amigo, action: addAmigo }  
+  
+amigo_index_page:
+  url: /amigo/index/:page
+  param: { module: amigo, action: index }
+  requirements:
+  page: \d+ 
+  
+amigo_indexTodos:
+  url:   /amigos-red
+  param: { module: amigo, action: indexTodos }  
+  
+amigo_indexTodos_page:
+  url: /amigos-red/indexTodos/:page
+  param: { module: amigo, action: indexTodos }
+  requirements:
+  page: \d+   
+  
+  
+amigo_new:
+  url:   /agregar-amigo
+  param: { module: amigo, action: new }
+  
+amigo_create:
+  url:   /nuevo-amigo
+  param: { module: amigo, action: create }  
+  
+amigo_edit:
+  url:   /editar-amigo
+  param: { module: amigo, action: edit }
+  
+amigo_update:
+  url:   /actualizar-amigo
+  param: { module: amigo, action: update }  
+  
+amigo_delete:
+  url:   /eliminar-amigo
+  param: { module: amigo, action: delete }
+
+amigo_show:
+  url:   /mostrar-amigo
+  param: { module: amigo, action: show }  
+
+amigo_buscar:
+  url:   /buscar-amigo
+  param: { module: amigo, action: buscar }  
+  
+amigo_buscarSolicitudes:
+  url:   /buscar-amigos-me-agregan
+  param: { module: amigo, action: buscarSolicitudes }    
+  
+amigo_buscarTodos:
+  url:   /buscar-amigos-red
+  param: { module: amigo, action: buscarTodos }   
+  
+amigo_solicitudes:
+  url:   /amigos-te-agregan
+  param: { module: amigo, action: solicitudes }   
+  
+amigo_solicitudes_page:
+  url: /amigos-te-agregan/solicitudes/:page
+  param: { module: amigo, action: solicitudes }
+  requirements:
+  page: \d+   
+  
+  
+#muro
+publicacionMuro_index:
+  url:   /que-te-dicen
+  param: { module: publicacionMuro, action: index }    
+  
+publicacionMuro_indexAmigos:
+  url:   /que-dicen-tus-amigos
+  param: { module: publicacionMuro, action: indexAmigos }     
+  
+  
+publicacionMuro_indexEntrarMuro:
+  url:   /muro-amigo
+  param: { module: publicacionMuro, action: indexEntrarMuro }     
+  
+publicacionMuro_indexTuPublicado:
+  url:   /que-dices-a-los-demas
+  param: { module: publicacionMuro, action: indexTuPublicado } 
+  
+publicacionMuro_nuevaOtroMuro:
+  url:   /nueva-publicacion-muro-amigo
+  param: { module: publicacionMuro, action: nuevaOtroMuro } 
+  
+publicacionMuro_nuevaMio:
+  url:   /publicacion-mi-muro
+  param: { module: publicacionMuro, action: nuevaMio }   
+  
+publicacionMuro_publicacionesAmigos:
+  url:   /publicaciones-amigos
+  param: { module: publicacionMuro, action: publicacionesAmigos }     
+  
+publicacionMuro_index_page:
+  url: /que-te-dicen/index/:page
+  param: { module: publicacionMuro, action: index }
+  requirements:
+  page: \d+ 
+  
+publicacionMuro_indexEntrarMuro_page:
+  url: /muro-amigo/index/:page
+  param: { module: publicacionMuro, action: indexEntrarMuro }
+  requirements:
+  page: \d  
+  
+publicacionMuro_indexAmigos_page:
+  url: /que-dicen-tus-amigos/index/:page
+  param: { module: publicacionMuro, action: indexAmigos }
+  requirements:
+  page: \d+   
+  
+publicacionMuro_indexTuPublicado_page:
+  url: /que-dices-a-los-demas/index/:page
+  param: { module: publicacionMuro, action: indexTuPublicado }
+  requirements:
+  page: \d+     
+  
+publicacionMuro_new:
+  url:   /agregar-a-muro
+  param: { module: publicacionMuro, action: new }
+  
+publicacionMuro_create:
+  url:   /nuevo-muro-publicacion
+  param: { module: publicacionMuro, action: create }  
+  
+publicacionMuro_edit:
+  url:   /editar-publicacion
+  param: { module: publicacionMuro, action: edit }
+  
+publicacionMuro_update:
+  url:   /actualizar-publicacion
+  param: { module: publicacionMuro, action: update }  
+  
+publicacionMuro_delete:
+  url:   /eliminar-publicacionMuro
+  param: { module: publicacionMuro, action: delete }
+
+publicacionMuro_show:
+  url:   /mostrar-publicacion
+  param: { module: publicacionMuro, action: show }  
+
+publicacionMuro_buscarMiMuro:
+  url:   /buscar-publicacion-mi-muro
+  param: { module: publicacionMuro, action: buscarMiMuro }  
+  
+publicacionMuro_buscarEntraMuro:
+  url:   /buscar-muro-amigo
+  param: { module: publicacionMuro, action: buscarEntraMuro }     
+
+
+publicacionMuro_buscarMuroAmigos:
+  url:   /buscar-publicacion-muro-amigos
+  param: { module: publicacionMuro, action: buscarMuroAmigos }   
+
+publicacionMuro_buscarTuPublicado:
+  url:   /buscar-publicacion-tuya
+  param: { module: publicacionMuro, action: buscarTuPublicado }   
+
+
+#pisos
+piso_index:
+  url:   /pisos
+  param: { module: piso, action: index }    
+  
+piso_index_page:
+  url: /piso/index/:page
+  param: { module: piso, action: index }
+  requirements:
+  page: \d+ 
+ 
+piso_misPisos:
+  url:   /mis-pisos
+  param: { module: piso, action: misPisos }    
+  
+piso_misPisos_page:
+  url: /mis-pisos/index/:page
+  param: { module: piso, action: misPisos }
+  requirements:
+  page: \d+ 
+    
+  
+piso_new:
+  url:   /nuevo-piso
+  param: { module: piso, action: new }
+  
+piso_create:
+  url:   /crear-piso
+  param: { module: piso, action: create }  
+  
+piso_edit:
+  url:   /editar-piso
+  param: { module: piso, action: edit }
+  
+piso_update:
+  url:   /actualizar-piso
+  param: { module: piso, action: update }  
+  
+piso_delete:
+  url:   /eliminar-piso
+  param: { module: piso, action: delete }
+
+piso_show:
+  url:   /mostrar-piso
+  param: { module: piso, action: show }  
+  
+piso_showPorDireccion:
+  url:   /mostrar-piso-direccion
+  param: { module: piso, action: showPorDireccion }  
+  
+piso_buscar:
+  url:   /buscar-piso
+  param: { module: piso, action: buscar }    
+  
+#imagen piso
+
+imagenPiso_index:
+  url:   /imagen-piso
+  param: { module: imagenPiso, action: index }    
+  
+imagenPiso_index_page:
+  url: /imagen-piso/index/:page
+  param: { module: imagenPiso, action: index }
+  requirements:
+  page: \d+  
+    
+imagenPiso_new:
+  url:   /nueva-imagen-piso
+  param: { module: imagenPiso, action: new }
+  
+imagenPiso_create:
+  url:   /crear-image-piso
+  param: { module: imagenPiso, action: create }  
+  
+imagenPiso_edit:
+  url:   /editar-imagen-piso
+  param: { module: imagenPiso, action: edit }
+  
+imagenPiso_update:
+  url:   /actualizar-imagen-piso
+  param: { module: imagenPiso, action: update }  
+  
+imagenPiso_delete:
+  url:   /eliminar-imagen-piso
+  param: { module: imagenPiso, action: delete }
+
+imagenPiso_show:
+  url:   /mostrar-imagen-piso
+  param: { module: imagenPiso, action: show }  
+
+imagenPiso_buscar:
+  url:   /buscar-imagen-piso
+  param: { module: imagenPiso, action: buscar }    
+

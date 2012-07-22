@@ -57,6 +57,9 @@ sfGuardGroupPermission:
 sfGuardUser:
   actAs: [Timestampable]
   columns:
+    imagenPerfil:
+      type: string(255)
+      notnull: false  
     first_name: string(255)
     last_name: string(255)
     email_address:
@@ -74,7 +77,7 @@ sfGuardUser:
     salt: string(128)
     password:
       type: string(128)
-      notnull: true
+      notnull: true    
     is_active:
       type: boolean
       default: 0
@@ -85,12 +88,24 @@ sfGuardUser:
       type: timestamp
   indexes:
     is_active_idx:
-      fields: [is_active]
+      fields: [is_active] 
   relations:
+    PublicacionMuro:
+      local: id
+      foreign: idUsuario
+      type: many       
+    Amigo:
+      local: id
+      foreign: idUsuarioAmigo
+      type: many        
     Contenido:
       local: id
       foreign: idUsuario
       type: one
+    Piso:
+      local: id
+      foreign: idUsuario
+      type: many
     Palabra:
       local: id
       foreign: idUsuario

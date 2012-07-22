@@ -17,17 +17,27 @@
 
     <?php foreach ($sf_guard_users as $usuario): ?>
 
-<div class="caja">
-<h1><?php echo $usuario->getUserName() ?></h1>
+    <div class="caja">
+<a title="<?php echo $usuario->getUserName() ?>" href="<?php echo url_for('usuario/show?id='.$usuario->getId()) ?>"><h1><?php echo $usuario->obtenerTextoCortoUsuario() ?></h1></a>
+<?php if($usuario->getImagenPerfil()){ ?>
+<a target="_blank" href="<?php echo '/uploads/'.$usuario->getImagenPerfil(); ?>"><img  style="width: 100px; height: 100px;" src="<?php echo '/uploads/'.$usuario->getImagenPerfil(); ?>"></img></a>
+<?php }else{ ?>
+<img style="width: 100px; height: 100px;" src="<?php echo '/images/imagenPerfil.jpg'; ?>"></img>
 
+<?php } ?>
 <div class="title">
     <label style="color: white;">Nombres:</label><?php echo ucfirst(strtolower($usuario->getFirstName())) ?><br></br>
     <label style="color: white;">Apellidos:</label><?php echo ucfirst(strtolower($usuario->getLastName())) ?><br></br>
     
 </div>
-            <?php echo link_to(image_tag('iconos/pencil.png').'Enviar mensaje', 'bandejaSalida/new?idUsuario='.$usuario->id) ?>
+            <?php echo link_to(image_tag('iconos/pencil.png').'Enviar mensaje', 'bandejaSalida/new?idUsuario='.$usuario->id) ?><br>
+            
+                    
+         <?php if(Doctrine_Core::getTable('sfGuardUser')->saberEsAmigo($sf_user->getGuardUser()->getId(), $usuario->id)){ ?>
+    <?php echo link_to(image_tag('iconos/pencil.png').'Que le dicen', 'publicacionMuro/indexEntrarMuro?idPerfil='.$usuario->id) ?>
 
-</div>
+    <?php } ?>
+    </div>
 <div class="clear"></div>
 
     <?php endforeach; ?>
