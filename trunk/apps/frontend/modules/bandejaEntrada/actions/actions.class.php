@@ -140,7 +140,8 @@ class bandejaEntradaActions extends sfActions
     $q = Doctrine_Core::getTable('BandejaEntrada')
       ->createQuery('a')
       ->where('a.idUsuarioReceptor =?',$this->getUser()->getGuardUser()->getId()) 
-     ->andWhere('a.idUsuarioRemitente =?',$request->getParameter('idUsuario'));
+     ->andWhere('a.idUsuarioRemitente =?',$request->getParameter('idUsuario'))
+     ->orderBy('a.updated_At DESC');
         
         
                 

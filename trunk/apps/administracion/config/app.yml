@@ -4,3 +4,4 @@
 all:
   sf_guard_plugin:
     routes_register: true
+    success_signin_url: default/index 

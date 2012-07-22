@@ -1,4 +1,4 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><?php echo $asunto ?></title>
@@ -21,8 +21,13 @@
     </tr>
     <tr>
       <td>
+	<p> Para iniciar sesion  <br>
+	    <b>Usuario: </b> <?php echo $usuario->getUserName() ?><br> Junto con su contraseña. </p>
+		
           <?php echo 'Para confirmar la creación de tu usuario y completar el proceso de registro pulsa en el siguiente enlace. <br />Si tu correo no te permite abrir un navegador, copialo en la dirección para acceder' ?>
           <br /><br />
+<a href="<?php echo $url_base.'/confirmarAlta?e_mail='.$e_mail ?>">Confirmar Alta</a>
+<br /><br />o
           <a href="<?php echo $url_base.'/confirmarAlta?e_mail='.$e_mail ?>"><?php echo $url_base.'/confirmarAlta?e_mail='.$e_mail ?></a>
       </td>
     </tr>

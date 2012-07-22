@@ -21,12 +21,13 @@ class sfGuardRegisterForm extends BasesfGuardRegisterForm
   'first_name'    => 'Nombre',
   'last_name'   => 'Apellidos',
   'email_address' => 'Email *',
-  'username' => 'Login *',
+  'username' => 'Usuario *',
   'password' => 'Contraseña *',   
   'password_again' => 'Repita contraseña *',   
 ));
             
-            
+      //                       //ocultar campo de imagenPerfil
+      $this->setWidget('imagenPerfil', new sfWidgetFormInputHidden());  
       //mensajes
       
     $this->validatorSchema['email_address']->setMessages(array('required' => 'Campo Obligatorio.','invalid' => 'Campo inválido'));

@@ -5,8 +5,7 @@
 
     <?php foreach ($palabras as $palabra): ?>
 
-<div class="box rounded masonry-brick">
-    <div title="Eliminar" style="color: #0A246A;" id="cruz"><?php echo link_to('X', 'default/delete?id='.$palabra->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro que deseas borrar la palabra '.$palabra->getTextoPalabra().'?')) ?></div>
+<div class="box rounded masonry-brick" id="<?php echo $palabra->id ?>">
 	<h1><?php echo $palabra->obtenerTextoCortoPalabra() ?></h1> 
 
 	<?php if($palabra->getImagen()){ ?>
@@ -62,6 +61,20 @@ jQuery.noConflict();
             title: "<?php echo 'Ver definición'; ?>"
         });
     }); 
+    
+    
+        
+    jQuery('.ver').mouseover(function() {
+        var id = jQuery(this).attr('id');
+        id="#"+id;
+    jQuery(id).css({backgroundColor: "deepskyblue" });
+    });
+    
+    jQuery('.ver').mouseout(function() {
+        var id = jQuery(this).attr('id');
+        id="#"+id;
+    jQuery(id).css({backgroundColor: "darkCyan" });
+    });    
     
 </script>
 

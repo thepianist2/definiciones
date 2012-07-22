@@ -21,6 +21,15 @@ root {
     border:1px solid #99CCFF;
 }
 
+#cerrar-sesion :hover{
+    	-moz-transform: scale(1.3, 1.3);
+	-webkit-transform: scale(1.3, 1.3);
+	-o-transform: scale(1.3, 1.3);
+}
+
+.imagenPiso{
+    padding: 6px;
+}
 
 label {display:block;font-weight:bold;} 
 legend {font-size:120%;} 
@@ -40,6 +49,9 @@ background: transparent;
 
 }
 
+.caja-imagen { position: relative; float: left; width: 200px; margin-right: 10px; }
+
+
 #albumes{
 background:#fff;border:1px solid #ccc;display:inline-block;outline:none;padding:4px;position:relative;vertical-align:bottom;
 
@@ -55,6 +67,7 @@ background:#fff;border:1px solid #ccc;display:inline-block;outline:none;padding:
   min-height: 950px;
   width: 783px;
   margin: 0 auto;
+  display: block;
 }
 
 

@@ -17,7 +17,7 @@ class sfGuardFormSignin extends BasesfGuardFormSignin
   {
       
       
-    $this->widgetSchema['username']->setLabel('Username');
+    $this->widgetSchema['username']->setLabel('Usuario');
     $this->widgetSchema['password']->setLabel('Contraseña');
     $this->widgetSchema['remember']->setLabel('Recordar');
     

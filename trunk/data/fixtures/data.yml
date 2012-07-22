@@ -1,0 +1,1652 @@
+CategoriaContenido:
+  CategoriaContenido_1:
+    texto: Corporativo
+    imagen: null
+    created_at: '2012-06-06 20:10:06'
+    updated_at: '2012-06-06 20:10:06'
+Palabra:
+  Palabra_1:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Mercurio
+    textoDefinicion: 'es el planeta del Sistema Solar más próximo al Sol y el más pequeño. Forma parte de los denominados planetas interiores o rocosos y carece de satélites. Se conocía muy poco sobre su superficie hasta que fue enviada la sonda planetaria Mariner 10 y se hicieron observaciones con radares y radiotelescopios.'
+    borrado: false
+    activo: true
+    imagen: 21f086fcb45c2d7a51919d33f43dcacfe1994d6f.jpg
+    created_at: '2012-06-06 21:05:17'
+    updated_at: '2012-06-06 21:05:17'
+  Palabra_2:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Venus
+    textoDefinicion: 'es el segundo planeta de del Sistema Solar en orden de distancia desde el Sol, y el tercero en cuanto a tamaño, de menor a mayor. Recibe su nombre en honor a Venus, la diosa Antigua romana del amor. Se trata de un planeta de tipo rocoso y terrestre, llamado con frecuencia el planeta hermano de la Tierra, ya que ambos son similares en cuanto a tamaño, masa y composición, aunque totalmente diferentes en cuestiones térmicas y atmosféricas. La órbita de Venus es una elipse con una excentricidad de menos del 1%, formando la órbita más circular de todos los planetas; apenas supera la de Neptuno. Su presión atmosférica es 90 veces superior a la terrestre; es por tanto la mayor presión atmosférica de todos los planetas rocosos. A pesar de no estar más cerca del sol que Mercurio'
+    borrado: false
+    activo: true
+    imagen: 10ac0730066f910b4fb1c855b0eb5f5d0fa7d67b.jpg
+    created_at: '2012-06-06 21:06:18'
+    updated_at: '2012-06-07 00:07:59'
+  Palabra_3:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Tierra
+    textoDefinicion: 'es un planeta del Sistema Solar que gira alrededor de su estrella en la tercera órbita más interna. Es el más denso y el quinto mayor de los ocho planetas del Sistema Solar. También es el mayor de los cuatro terrestres.'
+    borrado: false
+    activo: true
+    imagen: 0309209fad369359732ac8a58e48f6d48db68026.jpg
+    created_at: '2012-06-06 21:07:22'
+    updated_at: '2012-06-06 21:07:22'
+  Palabra_4:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Marte
+    textoDefinicion: 'es el cuarto planeta del Sistema Solar. Llamado así por el dios de la guerra de la mitología romana Marte, recibe a veces el apodo de Planeta rojo debido a la apariencia rojiza que le confiere el óxido de hierro que domina su superficie.'
+    borrado: false
+    activo: true
+    imagen: 031e9025939c49dcc0b633bf1efc4dded9f1039c.jpg
+    created_at: '2012-06-06 21:08:10'
+    updated_at: '2012-06-07 00:07:29'
+  Palabra_5:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Júpiter
+    textoDefinicion: "es el quinto planeta del Sistema Solar. Forma parte de los denominados planetas exteriores o gaseosos. Recibe su nombre del dios romano Júpiter (Zeus en la mitología griega).\r\nSe trata del planeta que ofrece un mayor brillo a lo largo del año dependiendo de su fase. Es, además, después del Sol, el mayor cuerpo celeste del Sistema Solar, con una masa casi dos veces y media la de los demás planetas juntos (con una masa 318 veces mayor que la de la Tierra y 3 veces mayor que la de Saturno)."
+    borrado: false
+    activo: true
+    imagen: 026ab5e7b272001474ae2f74160429b305be2e16.jpg
+    created_at: '2012-06-06 21:08:49'
+    updated_at: '2012-06-06 21:08:49'
+  Palabra_6:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Saturno
+    textoDefinicion: 'es el sexto planeta del Sistema Solar, el segundo en tamaño y masa después de Júpiter y el único con un sistema de anillos visible desde nuestro planeta. Su nombre proviene del dios romano Saturno. Forma parte de los denominados planetas exteriores o gaseosos, también llamados jovianos por su parecido a Júpiter. El aspecto más característico de Saturno son sus brillantes anillos. Antes de la invención del telescopio, Saturno era el más lejano de los planetas conocidos y, a simple vista, no parecía luminoso ni interesante. '
+    borrado: false
+    activo: true
+    imagen: aba571c67e218207f353c214c6ccdea5114c7611.jpg
+    created_at: '2012-06-06 21:09:53'
+    updated_at: '2012-06-06 21:09:53'
+  Palabra_7:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Urano
+    textoDefinicion: 'es el séptimo planeta del Sistema Solar, el tercero en cuanto a mayor tamaño, y el cuarto más masivo. Se llama en honor de la divinidad griega del cielo Urano (del griego antiguo «???????») el padre de Cronos (Saturno) y el abuelo de Zeus (Júpiter). Aunque es detectable a simple vista en el cielo nocturno, no fue catalogado como planeta por los astrónomos de la antigüedad debido a su escasa luminosidad y a la lentitud de su órbita.16 Sir William Herschel anunció su descubrimiento el 13 de marzo de 1781, ampliando las fronteras conocidas del Sistema Solar hasta entonces por primera vez en la historia moderna. Urano es también el primer planeta descubierto por medio de un telescopio.'
+    borrado: false
+    activo: true
+    imagen: d20a3abac6dc073af6a18d7c2b4aecb6f3aad71d.jpg
+    created_at: '2012-06-06 21:10:27'
+    updated_at: '2012-06-06 21:10:27'
+  Palabra_8:
+    idUsuario: '1'
+    idSubCategoria: '1'
+    textoPalabra: Neptuno
+    textoDefinicion: ' es el octavo planeta en distancia respecto al Sol y el más lejano del Sistema Solar. Forma parte de los denominados planetas exteriores o gigantes gaseosos, y es el primero que fue descubierto gracias a predicciones matemáticas. Su nombre fue puesto en honor al dios romano del mar —Neptuno—, y es el cuarto planeta en diámetro y el tercero más grande en masa. Su masa es 17 veces la de la Tierra y ligeramente más masivo que su planeta «gemelo» Urano, que tiene 15 masas terrestres y no es tan denso.12 En promedio, Neptuno orbita el Sol a una distancia de 30,1 UA. Su símbolo astronómico es ?, una versión estilizada del tridente del dios Neptuno.'
+    borrado: false
+    activo: true
+    imagen: 361a4aa5092f3be1d8d32dfd1dd53ce95a96f018.jpg
+    created_at: '2012-06-06 21:10:59'
+    updated_at: '2012-06-06 21:10:59'
+  Palabra_44:
+    idUsuario: '2'
+    idSubCategoria: '1'
+    textoPalabra: Mercurio
+    textoDefinicion: 'es el planeta del Sistema Solar más próximo al Sol y el más pequeño. Forma parte de los denominados planetas interiores o rocosos y carece de satélites. Se conocía muy poco sobre su superficie hasta que fue enviada la sonda planetaria Mariner 10 y se hicieron observaciones con radares y radiotelescopios.'
+    borrado: false
+    activo: true
+    imagen: 21f086fcb45c2d7a51919d33f43dcacfe1994d6f.jpg
+    created_at: '2012-06-07 20:34:12'
+    updated_at: '2012-06-07 20:34:12'
+  Palabra_45:
+    idUsuario: '2'
+    idSubCategoria: '1'
+    textoPalabra: Urano
+    textoDefinicion: 'es el séptimo planeta del Sistema Solar, el tercero en cuanto a mayor tamaño, y el cuarto más masivo. Se llama en honor de la divinidad griega del cielo Urano (del griego antiguo «???????») el padre de Cronos (Saturno) y el abuelo de Zeus (Júpiter). Aunque es detectable a simple vista en el cielo nocturno, no fue catalogado como planeta por los astrónomos de la antigüedad debido a su escasa luminosidad y a la lentitud de su órbita.16 Sir William Herschel anunció su descubrimiento el 13 de marzo de 1781, ampliando las fronteras conocidas del Sistema Solar hasta entonces por primera vez en la historia moderna. Urano es también el primer planeta descubierto por medio de un telescopio.'
+    borrado: false
+    activo: true
+    imagen: d20a3abac6dc073af6a18d7c2b4aecb6f3aad71d.jpg
+    created_at: '2012-06-07 20:34:16'
+    updated_at: '2012-06-07 20:34:16'
+  Palabra_46:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Neón
+    textoDefinicion: ' es un elemento químico de número atómico 10 y símbolo Ne. Es un gas noble, incoloro, prácticamente inerte, presente en trazas en el aire, pero muy abundante en el universo, que proporciona un tono rojizo (no es un color) característico a la luz de las lámparas fluorescentes en las que se emplea.'
+    borrado: false
+    activo: true
+    imagen: 1554228a0fb5d41217b0ea4492a229d71bf3f842.jpg
+    created_at: '2012-06-08 17:27:37'
+    updated_at: '2012-06-08 17:27:37'
+  Palabra_48:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Aluminio
+    textoDefinicion: 'es un elemento químico, de símbolo Al y número atómico 13. Se trata de un metal no ferromagnético. Es el tercer elemento más común encontrado en la corteza terrestre. Los compuestos de aluminio forman el 8% de la corteza de la tierra y se encuentran presentes en la mayoría de las rocas, de la vegetación y de los animales.1 En estado natural se encuentra en muchos silicatos (feldespatos, plagioclasas y micas). Como metal se extrae únicamente del mineral conocido con el nombre de bauxita, por transformación primero en alúmina mediante el proceso Bayer y a continuación en aluminio metálico mediante electrólisis.'
+    borrado: false
+    activo: true
+    imagen: 345b1128ea0a997ea8ae363ef95ca9277eef4e98.jpg
+    created_at: '2012-06-08 17:29:00'
+    updated_at: '2012-06-08 17:29:00'
+  Palabra_50:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Xenón
+    textoDefinicion: 'es un elemento químico de la tabla periódica cuyo símbolo es Xe y su número atómico el 54. Gas noble inodoro, muy pesado, incoloro, el xenón está presente en la atmósfera terrestre sólo en trazas y fue parte del primer compuesto de gas noble sintetizado.'
+    borrado: false
+    activo: true
+    imagen: 4c954140e0840a7c67a12fbaab6d59e90c1665e7.jpg
+    created_at: '2012-06-08 17:33:23'
+    updated_at: '2012-06-08 17:33:23'
+  Palabra_51:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Rubidio
+    textoDefinicion: 'es un elemento químico de la tabla periódica cuyo símbolo es el Rb y su número atómico es 37.'
+    borrado: false
+    activo: true
+    imagen: 7121b36cfb2c89244c197b5c600aa109e93797f6.jpg
+    created_at: '2012-06-08 17:33:46'
+    updated_at: '2012-06-08 17:33:46'
+  Palabra_52:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Estaño
+    textoDefinicion: 'cuyo símbolo es Sn (del latín stannum), es un elemento químico de número atómico 50 situado en el grupo 14 de la tabla periódica de los elementos. Se conocen 10 isótopos estables. Su principal mena es la casiterita.'
+    borrado: false
+    activo: true
+    imagen: 2b14661bc380bc7305e778ca6e5b7da6b8c91733.jpg
+    created_at: '2012-06-08 17:34:52'
+    updated_at: '2012-06-08 17:34:52'
+  Palabra_53:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Radio
+    textoDefinicion: "es un elemento químico de la tabla periódica. Su símbolo es Ra y su número atómico es 88.\r\nEs de color blanco inmaculado, pero se ennegrece con la exposición al aire. El radio es un alcalinotérreo que se encuentra a nivel de trazas en minas de uranio. Es extremadamente radiactivo, un millón de veces más que el uranio. Su isótopo más estable, Ra-226, tiene un periodo de semidesintegración de 1.602 años y se transmuta dando radón."
+    borrado: false
+    activo: true
+    imagen: c0affc7eba4ce9770c29631168b0559696afd18b.jpg
+    created_at: '2012-06-08 17:37:16'
+    updated_at: '2012-06-08 17:37:16'
+  Palabra_54:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Selenio
+    textoDefinicion: 'es un elemento químico de la tabla periódica cuyo símbolo es Se y cuyo número atómico es 34.'
+    borrado: false
+    activo: true
+    imagen: 439ffbe57589f471d02da4167e09dfa937648df6.jpg
+    created_at: '2012-06-08 17:37:59'
+    updated_at: '2012-06-08 17:37:59'
+  Palabra_56:
+    idUsuario: '1'
+    idSubCategoria: '12'
+    textoPalabra: Fútbol
+    textoDefinicion: '(del inglés británico football), también llamado futbol o balompié (conocido como soccer en EE. UU.), es un deporte de equipo jugado entre dos conjuntos de 11 jugadores cada uno y cuatro árbitros que se ocupan de que las normas se cumplan correctamente. Es ampliamente considerado el deporte más popular del mundo, pues participan en él unos 270 millones de personas.1 Se juega en un campo rectangular de césped, con una meta o portería a cada lado del campo. El objetivo del juego es desplazar una pelota a través del campo para intentar ubicarla dentro de la meta contraria, acción que se denomina gol. El equipo que marque más goles al cabo del partido es el que resulta ganador.'
+    borrado: false
+    activo: true
+    imagen: e467b3f2e4071d649e1d14caad159f69a4e59d91.jpg
+    created_at: '2012-06-08 17:41:36'
+    updated_at: '2012-06-08 17:41:36'
+  Palabra_57:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Europio
+    textoDefinicion: "es un elemento químico de la tabla periódica cuyo símbolo es Eu y su número atómico es 63.\r\nFue descubierto en 1890 por Paul Emile Lecoq de Boisbaudran. Debe su nombre al continente europeo, al igual que el americio a América."
+    borrado: false
+    activo: true
+    imagen: a7bdc5da12615d40fb6281ff2606a28364ced936.jpg
+    created_at: '2012-06-08 17:45:56'
+    updated_at: '2012-06-08 17:45:56'
+  Palabra_83:
+    idUsuario: '3'
+    idSubCategoria: '93'
+    textoPalabra: Cobre
+    textoDefinicion: '(del latín c?prum, y éste del griego kýpros),6 cuyo símbolo es Cu, es el elemento químico de número atómico 29. Se trata de un metal de transición de color rojizo y brillo metálico que, junto con la plata y el oro, forma parte de la llamada familia del cobre, se caracteriza por ser uno de los mejores conductores de electricidad (el segundo después de la plata). Gracias a su alta conductividad eléctrica, ductilidad y maleabilidad, se ha convertido en el material más utilizado para fabricar cables eléctricos y otros componentes eléctricos y electrónicos.'
+    borrado: false
+    activo: true
+    imagen: 1338883b3474e20246a08bb06a4cb5e058200afd.jpg
+    created_at: '2012-06-26 21:59:08'
+    updated_at: '2012-06-26 21:59:08'
+  Palabra_84:
+    idUsuario: '3'
+    idSubCategoria: '1'
+    textoPalabra: Júpiter
+    textoDefinicion: "es el quinto planeta del Sistema Solar. Forma parte de los denominados planetas exteriores o gaseosos. Recibe su nombre del dios romano Júpiter (Zeus en la mitología griega).\r\nSe trata del planeta que ofrece un mayor brillo a lo largo del año dependiendo de su fase. Es, además, después del Sol, el mayor cuerpo celeste del Sistema Solar, con una masa casi dos veces y media la de los demás planetas juntos (con una masa 318 veces mayor que la de la Tierra y 3 veces mayor que la de Saturno)."
+    borrado: false
+    activo: true
+    imagen: 026ab5e7b272001474ae2f74160429b305be2e16.jpg
+    created_at: '2012-06-26 21:59:23'
+    updated_at: '2012-06-26 21:59:23'
+  Palabra_85:
+    idUsuario: '3'
+    idSubCategoria: '93'
+    textoPalabra: Estaño
+    textoDefinicion: 'cuyo símbolo es Sn (del latín stannum), es un elemento químico de número atómico 50 situado en el grupo 14 de la tabla periódica de los elementos. Se conocen 10 isótopos estables. Su principal mena es la casiterita.'
+    borrado: false
+    activo: true
+    imagen: 2b14661bc380bc7305e778ca6e5b7da6b8c91733.jpg
+    created_at: '2012-06-26 22:07:48'
+    updated_at: '2012-06-26 22:07:48'
+  Palabra_87:
+    idUsuario: '3'
+    idSubCategoria: '1'
+    textoPalabra: Mercurio
+    textoDefinicion: 'es el planeta del Sistema Solar más próximo al Sol y el más pequeño. Forma parte de los denominados planetas interiores o rocosos y carece de satélites. Se conocía muy poco sobre su superficie hasta que fue enviada la sonda planetaria Mariner 10 y se hicieron observaciones con radares y radiotelescopios.'
+    borrado: false
+    activo: true
+    imagen: 21f086fcb45c2d7a51919d33f43dcacfe1994d6f.jpg
+    created_at: '2012-06-26 22:08:15'
+    updated_at: '2012-06-26 22:08:15'
+  Palabra_88:
+    idUsuario: '1'
+    idSubCategoria: '93'
+    textoPalabra: Cobre
+    textoDefinicion: '(del latín c?prum, y éste del griego kýpros),6 cuyo símbolo es Cu, es el elemento químico de número atómico 29. Se trata de un metal de transición de color rojizo y brillo metálico que, junto con la plata y el oro, forma parte de la llamada familia del cobre, se caracteriza por ser uno de los mejores conductores de electricidad (el segundo después de la plata). Gracias a su alta conductividad eléctrica, ductilidad y maleabilidad, se ha convertido en el material más utilizado para fabricar cables eléctricos y otros componentes eléctricos y electrónicos.'
+    borrado: false
+    activo: true
+    imagen: 1338883b3474e20246a08bb06a4cb5e058200afd.jpg
+    created_at: '2012-06-26 22:10:50'
+    updated_at: '2012-06-26 22:10:50'
+Documento:
+  Documento_1:
+    idUsuario: '1'
+    titulo: Noticia
+    texto: "<div class=\"titles\">\r\n<h2 class=\"title\">El BCE pide que las necesidades de capital de la banca espa&ntilde;ola se calcule de manera \"realista\"</h2>\r\n<p class=\"subtitle\">Alemania ultima un plan para ayudar a Espa&ntilde;a sin un rescate expl&iacute;cito y Espa&ntilde;a, por su parte, aparca las decisiones sobre la banca hasta conocer informes del FMI y de las consultoras.</p>\r\n</div>\r\n<div class=\"content\">\r\n<div class=\"addthisJoly\">\r\n<div class=\"addthis_toolbox addthis_default_style \">&nbsp;</div>\r\n</div>\r\n<div id=\"newsBody\" class=\"body\">El presidente del Banco Central Europeo (BCE),&nbsp;<strong>Mario Draghi,</strong>&nbsp;ha defendido este mi&eacute;rcoles que las&nbsp;<strong>necesidades de capital de los bancos espa&ntilde;oles sean calculadas de manera \"realista\"</strong>. De este modo, ha preferido no profundizar en la cuesti&oacute;n a la espera de conocer el informe que publicar&aacute; el Fondo Monetario Internacional (FMI), as&iacute; como la auditor&iacute;a que llevar&aacute;n a cabo las consultoras independientes contratadas, Oliver Wyman y Roland Berger. El<strong>&nbsp;Gobierno espa&ntilde;ol ha decidido aparcar por ahora las decisiones sobre el sector bancario</strong>&nbsp;hasta conocer dichos informes y auditor&iacute;as.&nbsp;&nbsp;<br /><br /><strong>\"Los c&aacute;lculos deben ser realistas\",</strong>&nbsp;afirm&oacute; Draghi en rueda de prensa al referirse a las posibles necesidades de capital del sistema financiero espa&ntilde;ol. El banquero italiano apunt&oacute; al mismo tiempo que, antes de recurrir a otras fuentes para esa recapitalizaci&oacute;n<strong>, \"hay que tener en cuenta los fondos disponibles por el propio Gobierno\".&nbsp;<br /></strong>No obstante, el presidente del BCE declin&oacute; pronunciarse sobre la necesidad de que Espa&ntilde;a solicite ayuda externa afirmando que \"<strong>no es misi&oacute;n del BCE empujar a los gobiernos a hacer algo</strong>\". Por otro lado, Draghi destac&oacute; que los miembros del Consejo del BCE son conscientes de que los &uacute;ltimos datos macroecon&oacute;micos recibidos con posterioridad a la elaboraci&oacute;n de las previsiones de la<strong>&nbsp;instituci&oacute;n sugieren un debilitamiento de la econom&iacute;a.&nbsp;&nbsp;</strong><br /><strong><br />\"Estamos listos para actuar\"</strong>, afirm&oacute; el banquero italiano, que acord&oacute; en la &uacute;ltima sesi&oacute;n del Consejo de Gobierno del BCE mantener estables los tipos en el 1%. Sin embargo, Dragui volvi&oacute; a enviar un recado a los gobiernos de la eurozona al asegurar que<strong>&nbsp;\"la pol&iacute;tica monetaria no puede suplantar el papel de las instituciones\".</strong><br /><br />En cualquier caso, el presidente del organismo monetario europeo advirti&oacute; de que&nbsp;<strong>\"no existen balas de plata\"</strong>&nbsp;para resolver la situaci&oacute;n, apuntando que, por lo tanto, la mejor contribuci&oacute;n que puede hacer el BCE es mantener una<strong>&nbsp;pol&iacute;tica monetaria orientada a la estabilidad de precios.&nbsp;<br /></strong><span><strong><br />Espa&ntilde;a a la espera de los informes del FMI y las consultoras<br /></strong></span><br />En este contexto, el Gobierno espa&ntilde;ol ha rechazado la idea de que est&eacute; planteando&nbsp;<strong>solicitar una l&iacute;nea de cr&eacute;dito preventiva del fondo de rescate europeo</strong>&nbsp;para recapitalizar a la banca espa&ntilde;ola, apuntando que no adoptar&aacute; decisiones sobre el sector hasta conocer el informe del FMI y el resultado de la auditor&iacute;a elaborada por las consultoras Oliver Wyman y Roland Berger.&nbsp; As&iacute; lo ha asegurado este mi&eacute;rcoles en la Euroc&aacute;mara el ministro de Econom&iacute;a y Competitividad, Luis De Guindos, que ha precisado que el informe que publicar&aacute; el FMI el pr&oacute;ximo 11 de junio \"va a poner de manifiesto clar&iacute;simamente que el&nbsp;<strong>problema de la banca espa&ntilde;ola est&aacute; circunscrito a determinadas entidades</strong>\".&nbsp;&nbsp;<br /><br />El posterior an&aacute;lisis que har&aacute;n las dos consultoras, seg&uacute;n ha concretado De Guindos, se presentar&aacute;n<strong>\"no m&aacute;s de 10, 15 d&iacute;as\" despu&eacute;s.</strong>&nbsp;\"A partir de ah&iacute;, el Gobierno espa&ntilde;ol tomar&aacute; las decisiones que tenga que tomar. Evidentemente desde el punto de vista de lo que es la recapitalizaci&oacute;n de las instituciones\", ha explicado. Asimismo, De Guindos ha apuntado que \"<strong>Bankia es una entidad que est&aacute; en proceso de nacionalizaci&oacute;n por parte</strong>&nbsp;de las instituciones p&uacute;blicas y que evidentemente est&aacute; en estos momentos bajo lo que es el apoyo y la tutela del sector p&uacute;blico espa&ntilde;ol\". \"<strong>No ha habido la m&aacute;s m&iacute;nima pregunta sobre una situaci&oacute;n de rescate</strong>\", ha subrayado.&nbsp;&nbsp;<br /><br /><span><strong>Uni&oacute;n bancaria&nbsp;</strong></span><br /><br />Por otro lado, De Guindos ha reconocido no obstante que el&nbsp;<strong>Gobierno espa&ntilde;ol est&aacute; \"convencido\" de que \"el futuro de la uni&oacute;n monetaria</strong>&nbsp;pasa por otro tipo de actuaciones de<strong>&nbsp;mayor integraci&oacute;n en el &aacute;mbito de pol&iacute;tica econ&oacute;mica</strong>&nbsp;y uno es la uni&oacute;n bancaria\".&nbsp; \"Es un concepto que creemos que es fundamental. Si tenemos una uni&oacute;n monetaria y tenemos una moneda &uacute;nica debemos tener unos bancos que de alguna forma tengan un tratamiento a nivel paneuro del conjunto\", ha precisado el ministro.&nbsp;<br /><br />Frente a las palabras de De Guindos, Bruselas ha aclarado que su propuesta de crear fondos de resoluci&oacute;n nacionales para hacer frente a eventuales quiebras de bancos con contribuciones de las propias entidades bancarias no sirve para resolver el problema de recapitalizaci&oacute;n de Bankia.&nbsp;&nbsp;<br />&nbsp;\"No puedo decir que esta<strong>&nbsp;propuesta vaya a tratar el caso de Bankia y de la banca espa&ntilde;ola</strong>. Lo que puedo decir es que lo que se propone se hace precisamente para evitar una situaci&oacute;n as&iacute; en el futuro. En Espa&ntilde;a y en el resto\", ha explicado el comisario de Mercado Interior, Michel Barnier, en rueda de prensa.&nbsp;&nbsp;<br /><br /><span><strong>Recapitalizar la banca a trav&eacute;s del MEDE</strong></span><br /><br />En este contexto, el presidente del BCE ha advertido de que la<strong>&nbsp;actual redacci&oacute;n del tratado que dio origen al Mecanismo Europeo de Estabilidad (MEDE) no permite la recapitalizaci&oacute;n directa de los bancos,</strong>&nbsp;apuntando adem&aacute;s que&nbsp; esta posibilidad no implicar&iacute;a la ausencia de condicionalidad para acceder a las ayudas. En este sentido, el banquero italiano apunt&oacute; que, si bien recurrir directamente al MEDE para recapitalizar la banca tendr&iacute;a el aspecto positivo de que evitar&iacute;a un repunte de la deuda p&uacute;blica, \"existen otras dimensiones que deber&iacute;an ser tomadas en cuenta\".&nbsp; \"<strong>El tratado del MEDE no permite esto.</strong>&nbsp;El fondo podr&iacute;a tomar acciones de los bancos que recapitalizar&aacute;, pero, &iquest;realmente quieren como accionista al MEDE? &iquest;Se ha dise&ntilde;ado para convertirse en accionista de los bancos de la eurozona? El MEDE no naci&oacute; para esto\", puntualiz&oacute;.&nbsp; A este respecto, el ministro franc&eacute;s de Fianzas, Pierre Mocovici, ha asegurado, antes de reunirse este mi&eacute;rcoles con De Guindos, que<strong>Europa cuenta con las herramientas necesarias para prestar asistencia a Espa&ntilde;a</strong>&nbsp;en caso de que el pa&iacute;s lo pidiera, incluyendo la posibilidad de recurrir al actual fondo de rescate (FEEF) si fuera necesario. \"Si el Gobierno espa&ntilde;ol as&iacute; lo desea, contamos con instrumentos de solidaridad que pueden movilizarse con rapidez\", afirm&oacute;. \"Francia apoya que el MEDE pueda<strong>&nbsp;emplearse directamente en la recapitalizaci&oacute;n de los bancos</strong>&nbsp;bajo una supervisi&oacute;n adecuada\", a&ntilde;adi&oacute;.&nbsp;<br /><br /><br /><span><strong>Alemania ultima un plan para ayudar a Espa&ntilde;a</strong></span><br /><br />A pesar de que Alemania se mantiene firmemente en contra de las peticiones de Espa&ntilde;a de&nbsp;<strong>utilizar los fondos de rescate para recapitalizar sus bancos</strong>, funcionarios germanos indicaron que si Madrid presentara una solicitud formal de ayuda podr&iacute;a recibir fondos sin tener que someterse a un<strong>programa de rescate como los pactados con Grecia, Irlanda y Portugal.&nbsp;</strong>&nbsp;En vez de esto, Espa&ntilde;a s&oacute;lo tendr&iacute;a que llegar a un acuerdo sobre las nuevas condiciones de la reforma del sector bancario. Asimismo, Berl&iacute;n estar&iacute;a explorando la posibilidad de canalizar cualquier posible ayuda<strong>&nbsp;a trav&eacute;s del FROB con el fin de reforzar el mensaje de que es en los bancos donde residen los problemas del pa&iacute;s</strong>. En cualquier caso, la Comisi&oacute;n Europea ha asegurado que \"la financiaci&oacute;n del Estado espa&ntilde;ol est&aacute; garantizada\" en la actualidad a pesar de \"las tensiones\" en el mercado de la deuda soberana.&nbsp;&nbsp;<br /><br />As&iacute; lo ha asegurado el portavoz del comisario de Asuntos Econ&oacute;micos y Monetarios, Amadeu Altajaf, que no obstante ha&nbsp;<strong>reconocido que la rentabilidad que Espa&ntilde;a tiene que ofrecer por sus bonos a 10 a&ntilde;os no es sostenible</strong>&nbsp;\"durante mucho tiempo\".&nbsp;<br /><br />Mientras tanto, la Comisi&oacute;n est&aacute; a la espera de que Espa&ntilde;a le notifique las ayudas p&uacute;blicas para recapitalizar a Bankia, as&iacute; como las que se han empleado en el caso de las otras tres entidades intervenidas por el Gobierno como son CaixaCatalu&ntilde;a, NovacaixaGalicia y Banco de Valencia.&nbsp; \"Por el momento,<strong>&nbsp;no hemos tenido una notificaci&oacute;n ni medidas particulares sobre ayudas de Estado.&nbsp;</strong>Pero evidentemente esto forma parte de un di&aacute;logo y un seguimiento bastante estrecho\", ha explicado el portavoz de Competencia del Ejecutivo comunitario, Antoine Colombani.</div>\r\n</div>"
+    imagen: null
+    created_at: '2012-06-06 21:16:16'
+    updated_at: '2012-06-06 21:16:47'
+  Documento_2:
+    idUsuario: '3'
+    titulo: ejemplo
+    texto: "<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Presentaci&oacute;n Documentos B&aacute;sicos con comentarios y Documentos de Apoyo</div>\r\n<div class=\"dbtxt\">\r\n<p>La Secretar&iacute;a de Estado de Vivienda y Actuaciones Urbanas mantiene una pol&iacute;tica activa de aclaraci&oacute;n de dudas, interpretaciones, etc. dirigidas a mejorar la aplicabilidad del CTE. Dicha pol&iacute;tica incluye la elaboraci&oacute;n de documentos con comentarios, documentos de apoyo, etc. cuya relaci&oacute;n con el CTE es muy directa.<br /><br />Estos documentos, elaborados por el Ministerio, aunque no sean obligatorios, conforman, junto con el texto articulado del C&oacute;digo, el marco regulador aplicable.&nbsp;<br /><br />Hace tiempo que el Ministerio ya hab&iacute;a iniciado esta labor de aclaraci&oacute;n e interpretaci&oacute;n de dudas. En este sentido las recopilaciones de consultas relacionadas con los Documentos B&aacute;sicos SI y SUA, as&iacute; como la gu&iacute;a de aplicaci&oacute;n del Documento B&aacute;sico HR persegu&iacute;an este objetivo. A partir de este momento ir&aacute;n apareciendo de forma paulatina documentos con comentarios&nbsp; y Documentos de Apoyo para todos los requisitos.</p>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Real Decreto + Parte I</div>\r\n<div class=\"dbtxt\">\r\n<p>El CTE establece las exigencias que deben cumplir los edificios en relaci&oacute;n con los requisitos b&aacute;sicos de seguridad y habitabilidad establecidos en la LOE.</p>\r\n<p>&nbsp;</p>\r\n<p>A continuaci&oacute;n podra elegir entre descargar el documento en formato pdf, o bien, visualizarlo en esta web a trav&eacute;s de la opci&oacute;n explorar.</p>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">Generales</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD3142006.pdf\">Real Decreto 314/2006</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD3142006.pdf\"><img title=\"Descargar Real Decreto 314/2006\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Real Decreto 314/2006\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/parte1/RealDecreto/\"><img title=\"Explorar Real Decreto\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar Real Decreto\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/Parte_I_31mar2010.pdf\">Parte I</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/Parte_I_31mar2010.pdf\"><img title=\"Descargar Parte I\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Parte I\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/parte1/parte1/\"><img title=\"Explorar Parte I\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar Parte I\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/Parte_I_31mar2010_modif.pdf\">Parte I con modificaciones del RD 410/2010 se&ntilde;aladas</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/Parte_I_31mar2010_modif.pdf\"><img title=\"Descargar Parte I con modificaciones se&ntilde;aladas\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Parte I con modificaciones se&ntilde;aladas\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Seguridad Estructural</div>\r\n<div class=\"dbtxt\">\r\n<p>Este Documento B&aacute;sico (DB) tiene por objeto establecer reglas y procedimientos que permitan cumplir las exigencias b&aacute;sicas de seguridad estructural.</p>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB SE: Bases de c&aacute;lculo</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE_abril_2009.pdf\">DB SE Seguridad estructural</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE_abril_2009.pdf\"><img title=\"Descargar DB SE Seguridad estructural\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SE Seguridad estructural\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbse/se1/\"><img title=\"Explorar DB SE Seguridad estructural\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB SE Seguridad estructural\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB SE-AE: Acciones de la edificaci&oacute;n</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE-AE_abril_2009.pdf\">DB SE-AE Acciones de la edificaci&oacute;n</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE-AE_abril_2009.pdf\"><img title=\"Descargar DB SE Seguridad estructural\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SE Seguridad estructural\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbse/se3/\"><img title=\"Explorar DB SE Seguridad estructural\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB SE Seguridad estructural\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB SE-C: Cimientos</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/CTE_Parte_2_DB_SE-C.pdf\">DB SE-C Cimientos</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/CTE_Parte_2_DB_SE-C.pdf\"><img title=\"Descargar DB SE-C Cimientos\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SE-C Cimientos\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbse/se4/\"><img title=\"Explorar DB SE-C Cimientos\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB SE-C Cimientos\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB SE-A: Acero</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/CTE_Parte_2_DB_SE-A.pdf\">DB SE-A Acero</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/CTE_Parte_2_DB_SE-A.pdf\"><img title=\"Descargar DB SE-A Acero\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SE-A Acero\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbse/se2/\"><img title=\"Explorar DB SE-A Acero\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB SE-A Acero\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB SE-F: F&aacute;brica</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE-F_abril_2009.pdf\">DB SE-F F&aacute;brica</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE-F_abril_2009.pdf\"><img title=\"Descargar DB SE-F F&aacute;brica\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SE-F F&aacute;brica\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbse/se5/\"><img title=\"Explorar DB SE-F F&aacute;brica\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB SE-F F&aacute;brica\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB SE-M: Madera</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE-M_abril_2009.pdf\">DB SE-M Madera</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SE-M_abril_2009.pdf\"><img title=\"Descargar DB SE-M Madera\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SE-M Madera\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbse/se6/\"><img title=\"Explorar DB SE-M Madera\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB SE-M Madera\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Seguridad Caso de Incendio</div>\r\n<div class=\"dbtxt\">\r\n<p>Este Documento B&aacute;sico (DB) tiene por objeto establecer reglas y procedimientos que permiten cumplir las exigencias b&aacute;sicas de seguridad en caso de incendio.</p>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB SI: Seguridad en caso de incendio</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SI_19feb2010.pdf\">DB SI: Seguridad Caso de Incendio</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SI_19feb2010.pdf\"><img title=\"Descargar DB SI: Seguridad Caso de Incendio\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SI: Seguridad Caso de Incendio\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbsi/\"><img title=\"Explorar DB SI: Seguridad Caso de Incendio\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB SI: Seguridad Caso de Incendio\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/SI_modif173-2010.pdf\">DB SI con modificaciones del RD 173/2010 se&ntilde;aladas</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/SI_modif173-2010.pdf\"><img title=\"Descargar DB SI con modificaciones del RD173/2010 se&ntilde;aladas\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SI con modificaciones del RD173/2010 se&ntilde;aladas\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DBSI_19feb2010_comentarios_16dic2011.pdf\">DB SI con comentarios del Ministerio de Fomento (versi&oacute;n diciembre 2011)</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DBSI_19feb2010_comentarios_16dic2011.pdf\"><img title=\"Descargar DB SI con comentarios del Ministerio de Fomento\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SI con comentarios del Ministerio de Fomento\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">Documentos de Apoyo</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_DB-SI_1_-_Justficacion_documental_productos_de_construccion_6-2011.pdf\">DA DB-SI / 1 - Justificaci&oacute;n de la puesta en obra de productos de construcci&oacute;n en cuanto a sus caracter&iacute;sticas de comportamiento ante el fuego</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_DB-SI_1_-_Justficacion_documental_productos_de_construccion_6-2011.pdf\"><img title=\"Descargar DA DB-SI / 1\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DA DB-SI / 1\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_DB-SI_2_-_Normas_puertas_y_mecanismos_6-2011.pdf\">DA DB-SI / 2 - Normas de ensayo y clasificaci&oacute;n de las puertas resistentes al fuego y sus herrajes y mecanismos de apertura</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_DB-SI_2_-_Normas_puertas_y_mecanismos_6-2011.pdf\"><img title=\"Descargar DA DB-SI / 2\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DA DB-SI / 2\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_DB-SI_3_-_Mantenimiento_puertas_peatonales_6-2011.pdf\">DA DB-SI / 3 - Mantenimiento de puertas peatonales con funciones de protecci&oacute;n contra incendios reguladas por el DB SI</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_DB-SI_3_-_Mantenimiento_puertas_peatonales_6-2011.pdf\"><img title=\"Descargar DA DB-SI / 3\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DA DB-SI / 3\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Seguridad de Utilizaci&oacute;n y Accesibilidad</div>\r\n<div class=\"dbtxt\">\r\n<p>Este Documento B&aacute;sico (DB) tiene por objeto establecer reglas y procedimientos que permiten cumplir las exigencias b&aacute;sicas de seguridad de utilizaci&oacute;n y accesibilidad.</p>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB-SUA: Seguridad de utilizaci&oacute;n y accesibilidad</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SUA_19feb2010.pdf\">DB-SUA: Seguridad de utilizaci&oacute;n y accesibilidad</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SUA_19feb2010.pdf\"><img title=\"Descargar DB-SUA: Seguridad de utilizaci&oacute;n y accesibilidad\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB-SUA: Seguridad de utilizaci&oacute;n y accesibilidad\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbsu/\"><img title=\"Explorar DB-SUA: Seguridad de utilizaci&oacute;n y accesibilidad\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB-SUA: Seguridad de utilizaci&oacute;n y accesibilidad\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/SU_Modif-173-2010.pdf\">DB SUA con modificaciones del RD 173/2010 se&ntilde;aladas</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/SU_Modif-173-2010.pdf\"><img title=\"Descargar DB SUA con modificaciones del RD173/2010 se&ntilde;aladas\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SUA con modificaciones del RD173/2010 se&ntilde;aladas\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SUA_19feb2010_comentarios_2dic2011.pdf\">DB SUA con comentarios del Ministerio de Fomento (versi&oacute;n Diciembre 2011)</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_SUA_19feb2010_comentarios_2dic2011.pdf\"><img title=\"Descargar DB SUA con comentarios del Ministerio de Fomento\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB SUA con comentarios del Ministerio de Fomento\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">Documentos de Apoyo</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_SUA_1_-_Clasificacixn_de_los_vidrios_a_impacto_6-2011.pdf\">DA DB-SUA / 1 - Clasificaci&oacute;n de los vidrios seg&uacute;n sus prestaciones frente a impacto y su forma de rotura seg&uacute;n la norma UNE-EN 12600:2003</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_SUA_1_-_Clasificacixn_de_los_vidrios_a_impacto_6-2011.pdf\"><img title=\"Descargar DA DB-SUA / 1\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DA DB-SUA / 1\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_SUA_2_-_Dispositivos_Mecanicos_6-2011.pdf\">DA DB-SUA / 2 - Criterios para la utilizaci&oacute;n de elementos y dispositivos mec&aacute;nicos</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_SUA_2_-_Dispositivos_Mecanicos_6-2011.pdf\"><img title=\"Descargar DA DB-SUA / 2\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DA DB-SUA / 2\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Salubridad</div>\r\n<div class=\"dbtxt\">\r\n<p>Este Documento B&aacute;sico (DB) tiene por objeto establecer reglas y procedimientos que permiten cumplir las exigencias b&aacute;sicas de salubridad.</p>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB HS: Salubridad</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_HS_2009.pdf\">DB HS: Salubridad</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_HS_2009.pdf\"><img title=\"Descargar DB HS: Salubridad\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB HS: Salubridad\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbhs/\"><img title=\"Explorar DB HS: Salubridad\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB HS: Salubridad\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Protecci&oacute;n frente al Ruido</div>\r\n<div class=\"dbtxt\">\r\n<p>Este Documento B&aacute;sico (DB) tiene por objeto establecer reglas y procedimientos que permiten cumplir las exigencias b&aacute;sicas de protecci&oacute;n frente al ruido.</p>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB HR: Protecci&oacute;n frente al Ruido</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_HR_sept_2009.pdf\">DB HR: Protecci&oacute;n frente al Ruido</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_HR_sept_2009.pdf\"><img title=\"Descargar DB HR: Protecci&oacute;n frente al Ruido\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB HR: Protecci&oacute;n frente al Ruido\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbhr/\"><img title=\"Explorar DB HR: Protecci&oacute;n frente al Ruido\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB HR: Protecci&oacute;n frente al Ruido\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/HR_comentado.pdf\">DB HR con comentarios del Ministerio de Fomento</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/HR_comentado.pdf\"><img title=\"Descargar DB HR con comentarios del Ministerio de Fomento\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB HR con comentarios del Ministerio de Fomento\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">Documentos de apoyo</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/GUIADB_HR.pdf\">Gu&iacute;a de aplicaci&oacute;n del DB HR</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/GUIADB_HR.pdf\"><img title=\"Descargar la Gu&iacute;a de aplicaci&oacute;n del DB HR\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar la Gu&iacute;a de aplicaci&oacute;n del DB HR\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Ahorro de Energ&iacute;a</div>\r\n<div class=\"dbtxt\">\r\n<p>Este Documento B&aacute;sico (DB) tiene por objeto establecer reglas y procedimientos que permiten cumplir las exigencias b&aacute;sicas de ahorro de energ&iacute;a.</p>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">DB HE: Ahorro de energ&iacute;a</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_HE_abril_2009.pdf\">DB HE Ahorro de energ&iacute;a</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DB_HE_abril_2009.pdf\"><img title=\"Descargar DB HE Ahorro de energ&iacute;a\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DB HE Ahorro de energ&iacute;a\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/opencms/web/recursos/documentos/dbhe/\"><img title=\"Explorar DB HE Ahorro de energ&iacute;a\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnExplorar.gif\" alt=\"Explorar DB HE Ahorro de energ&iacute;a\" width=\"25\" height=\"25\" /></a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">Documentos de Apoyo</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_zonas-climaticas-solar_V01.pdf\">DA DB-HE / 1 Zonificaci&oacute;n clim&aacute;tica en funci&oacute;n de la radiaci&oacute;n solar global media diaria anual</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/DA_zonas-climaticas-solar_V01.pdf\"><img title=\"Descargar DA DB-HE / 1\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar DA DB-HE / 1\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>\r\n<div class=\"linea\">\r\n<div class=\"dbname\"><img src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/flechadb.gif\" alt=\"icono:flecha\" />Disposiciones legislativas</div>\r\n<div class=\"dbtxt\">\r\n<table cellspacing=\"4\">\r\n<tbody>\r\n<tr>\r\n<td class=\"tituloDocu\" width=\"484\">Disposiciones publicadas en el Bolet&iacute;n Oficial del Estado</td>\r\n<td class=\"estDesExp\">Descargar</td>\r\n<td align=\"center\" width=\"12\">/</td>\r\n<td class=\"estDesExp\">Explorar</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD3142006.pdf\">Real Decreto 314/2006 de 17 de marzo, por el que se aprueba el C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n. (BOE 28-marzo-2006).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD3142006.pdf\"><img title=\"Descargar Real Decreto 314/2006\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Real Decreto 314/2006\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD13712007-3.pdf\">Real Decreto 1371/2007 de 19 de octubre, por el que se aprueba el Documento B&aacute;sico \"DB-HR Protecci&oacute;n frente al ruido\" del C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n y se modifica el Real Decreto 314/2006, de 17 de marzo, por el que se aprueba el C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n. (BOE 23-octubre-2007).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD13712007-3.pdf\"><img title=\"Descargar Real Decreto 1371/2007\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Real Decreto 1371/2007\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/correccion1371.pdf\">Correcci&oacute;n de errores del Real Decreto 1371/2007 de 19 de octubre, por el que se aprueba el Documento B&aacute;sico \"DB-HR Protecci&oacute;n frente al ruido\" del C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n y se modifica el Real Decreto 314/2006, de 17 de marzo, por el que se aprueba el C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n. (BOE 20-diciembre-2007).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/correccion1371.pdf\"><img title=\"Descargar correcci&oacute;n de errores del RD 1371/2007\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar correcci&oacute;n de errores del RD 1371/2007\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/correccion314.pdf\">Correcci&oacute;n de errores y erratas del Real Decreto 314/2006 de 17 de marzo, por el que se aprueba el C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n. (BOE 25-enero-2008).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/correccion314.pdf\"><img title=\"Descargar correcci&oacute;n de errores del RD 314/2006\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar correcci&oacute;n de errores del RD 314/2006\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/orden17442008.pdf\">Orden VIV/1744/2008 de 9 de junio, por la que se regula el Registro General del C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n. (BOE 19-junio-2008).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/orden17442008.pdf\"><img title=\"Descargar Orden VIV/1744/2008\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Orden VIV/1744/2008\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD16752008.pdf\">Real Decreto 1675/2008 de 17 de octubre, por el que se modifica el Real Decreto 1371/2007, de 19 de octubre, por el que se aprueba el Documento B&aacute;sico \"DB-HR Protecci&oacute;n frente al ruido\" del C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n y se modifica el Real Decreto 314/2006, de 17 de marzo, por el que se aprueba el C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n. (BOE 18-octubre-2008).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD16752008.pdf\"><img title=\"Descargar Real Decreto 1675/2008\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Real Decreto 1675/2008\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/Orden9842009.pdf\">Orden VIV/984/2009 de 15 de abril, por la que se modifican determinados documentos b&aacute;sicos del C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n aprobados por el Real Decreto 314/2006, de 17 de marzo, y el Real Decreto 1371/2007, de 19 de octubre. (BOE 23-abril-2009).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/Orden9842009.pdf\"><img title=\"Descargar Orden VIV/984/2009\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Orden VIV/984/2009\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/correccion984.pdf\">Correcci&oacute;n de errores y erratas de la orden VIV/984/2009 de 15 de abril, por la que se modifican determinados documentos b&aacute;sicos del C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n, aprobados por el Real Decreto 314/2006, de 17 de marzo, y el Real Decreto 1371/2007, de 19 de octubre. (BOE 23-septiembre-2009).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/correccion984.pdf\"><img title=\"Descargar correcci&oacute;n de errores de la orden VIV/981/2009\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar correcci&oacute;n de errores de la orden VIV/981/2009\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD1732010.pdf\">Real Decreto 173/2010 de 19 de febrero, por el que se modifica el C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n, aprobado por el Real Decreto 314/2006, de 17 de marzo, en materia de accesibilidad y no discriminaci&oacute;n de las personas con discapacidad. (BOE 11-marzo-2010).</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD1732010.pdf\"><img title=\"Descargar Real Decreto 173/2010\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Real Decreto 173/2010\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD_410_2010.pdf\">Real Decreto 410/2010 de 31 de marzo, por el que se desarrollan los requisitos exigibles a las entidades de control de calidad de la edificaci&oacute;n y a los laboratorios de ensayos para el control de calidad de la edificaci&oacute;n, para el ejercicio de su actividad.</a></td>\r\n<td align=\"center\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/RD_410_2010.pdf\"><img title=\"Descargar Real Decreto 410/2010\" src=\"http://www.codigotecnico.org/cte/export/system/modules/com.tresw.cte.module.frontend/resources/images/btnDescargar.gif\" alt=\"Descargar Real Decreto 410/2010\" width=\"26\" height=\"25\" /></a></td>\r\n<td>&nbsp;</td>\r\n<td align=\"center\">&nbsp;</td>\r\n</tr>\r\n<tr>\r\n<td class=\"elemnntoDB\"><a href=\"http://www.codigotecnico.org/cte/export/sites/default/web/galerias/archivos/BOE-A-2010-12213-1.pdf\">Sentencia de 4 de mayo de 2010, de la Sala Tercera del Tribunal Supremo, por la que se declara la nulidad del art&iacute;culo 2.7 del Real Decreto 314/2006, de 17 de marzo, por el que se aprueba el C&oacute;digo T&eacute;cnico de la Edificaci&oacute;n, as&iacute; como la definici&oacute;n del p&aacute;rrafo segundo de uso administrativo y la definici&oacute;n completa de uso p&uacute;blica concurrencia, contenidas en el documento SI del mencionado C&oacute;digo. (BOE 30-julio-2010)</a></td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n</div>\r\n</div>"
+    imagen: e59ecc18d5f982d72aa4fbc9de0c0c5edade6d17.jpg
+    created_at: '2012-06-12 20:49:24'
+    updated_at: '2012-06-12 20:53:08'
+  Documento_3:
+    idUsuario: '3'
+    titulo: dasasd
+    texto: '<p>dasasdsd</p>'
+    imagen: null
+    created_at: '2012-06-12 21:04:57'
+    updated_at: '2012-06-12 21:04:57'
+SfGuardGroupPermission:
+  SfGuardGroupPermission_1_1:
+    SfGuardGroup: SfGuardGroup_1
+    SfGuardPermission: SfGuardPermission_1
+    created_at: '2012-06-06 18:55:56'
+    updated_at: '2012-06-06 18:55:56'
+SfGuardPermission:
+  SfGuardPermission_1:
+    name: admin
+    description: 'Administrator permission'
+    created_at: '2012-06-06 18:55:56'
+    updated_at: '2012-06-06 18:55:56'
+SfGuardGroup:
+  SfGuardGroup_1:
+    name: admin
+    description: 'Administrator group'
+    created_at: '2012-06-06 18:55:56'
+    updated_at: '2012-06-06 18:55:56'
+  SfGuardGroup_2:
+    name: asociado
+    description: 'Usuario registrado'
+    created_at: '2012-06-06 20:31:52'
+    updated_at: '2012-06-06 20:31:52'
+BandejaSalida:
+  BandejaSalida_2:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>sdaddsafdffadfddfd</p>'
+    created_at: '2012-06-12 13:25:12'
+    updated_at: '2012-06-12 13:25:12'
+  BandejaSalida_3:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>fadfddfddf</p>'
+    created_at: '2012-06-12 13:25:16'
+    updated_at: '2012-06-12 13:25:16'
+  BandejaSalida_4:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>adsfagasgf</p>'
+    created_at: '2012-06-12 13:25:20'
+    updated_at: '2012-06-12 13:25:20'
+  BandejaSalida_5:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>adfdfadfadfadfdf</p>'
+    created_at: '2012-06-12 13:25:34'
+    updated_at: '2012-06-12 13:25:34'
+  BandejaSalida_6:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>okjiyuthgrfeatghyjukiguytgrefdfgtyhju</p>'
+    created_at: '2012-06-12 13:25:40'
+    updated_at: '2012-06-12 13:25:40'
+  BandejaSalida_7:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>dasdassdadasasd</p>'
+    created_at: '2012-06-12 14:11:21'
+    updated_at: '2012-06-12 14:11:21'
+  BandejaSalida_8:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>daddasdasdasdassd</p>'
+    created_at: '2012-06-12 14:11:25'
+    updated_at: '2012-06-12 14:11:25'
+  BandejaSalida_9:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>addffdsddfd</p>'
+    created_at: '2012-06-12 14:11:28'
+    updated_at: '2012-06-12 14:11:28'
+  BandejaSalida_10:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>dadasdasdas</p>'
+    created_at: '2012-06-12 14:12:27'
+    updated_at: '2012-06-12 14:12:27'
+  BandejaSalida_11:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>dadsasdasdds</p>'
+    created_at: '2012-06-12 14:12:31'
+    updated_at: '2012-06-12 14:12:31'
+  BandejaSalida_12:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '2'
+    mensaje: '<p>dasaddsd</p>'
+    created_at: '2012-06-12 14:16:18'
+    updated_at: '2012-06-12 14:16:18'
+  BandejaSalida_13:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '2'
+    mensaje: '<p>dadddsdasdsds</p>'
+    created_at: '2012-06-12 14:16:23'
+    updated_at: '2012-06-12 14:16:23'
+  BandejaSalida_14:
+    idUsuarioRemitente: '3'
+    idUsuarioReceptor: '2'
+    mensaje: '<p>dasadsdsasd</p>'
+    created_at: '2012-06-12 14:17:27'
+    updated_at: '2012-06-12 14:17:27'
+  BandejaSalida_15:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>Xupalo el pico</p>'
+    created_at: '2012-06-12 14:18:01'
+    updated_at: '2012-06-12 14:18:01'
+  BandejaSalida_16:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>dsaddasds</p>'
+    created_at: '2012-06-14 12:58:40'
+    updated_at: '2012-06-14 12:58:40'
+  BandejaSalida_17:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>dasddassadsd</p>'
+    created_at: '2012-06-14 12:59:08'
+    updated_at: '2012-06-14 12:59:08'
+  BandejaSalida_18:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>mmmmmmmmmmmmmmmmmm</p>'
+    created_at: '2012-06-15 19:09:41'
+    updated_at: '2012-06-15 19:09:41'
+  BandejaSalida_19:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>eeeeeeeeeeeeeeeeeeeeeeee</p>'
+    created_at: '2012-06-15 19:09:49'
+    updated_at: '2012-06-15 19:09:49'
+  BandejaSalida_20:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>fffffffffffffffffffffffffff</p>'
+    created_at: '2012-06-15 19:09:56'
+    updated_at: '2012-06-15 19:09:56'
+  BandejaSalida_21:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>ffffffffffffff</p>'
+    created_at: '2012-06-15 19:23:34'
+    updated_at: '2012-06-15 19:23:34'
+  BandejaSalida_22:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>aaaaaaaaaa</p>'
+    created_at: '2012-06-15 19:23:39'
+    updated_at: '2012-06-15 19:23:39'
+BandejaEntrada:
+  BandejaEntrada_1:
+    idUsuarioRemitente: '3'
+    idUsuarioReceptor: '2'
+    mensaje: ''
+    created_at: '2012-06-12 13:07:12'
+    updated_at: '2012-06-12 13:07:12'
+  BandejaEntrada_12:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '2'
+    mensaje: '<p>dasaddsd</p>'
+    created_at: '2012-06-12 14:16:18'
+    updated_at: '2012-06-12 14:16:18'
+  BandejaEntrada_13:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '2'
+    mensaje: '<p>dadddsdasdsds</p>'
+    created_at: '2012-06-12 14:16:23'
+    updated_at: '2012-06-12 14:16:23'
+  BandejaEntrada_14:
+    idUsuarioRemitente: '3'
+    idUsuarioReceptor: '2'
+    mensaje: '<p>dasadsdsasd</p>'
+    created_at: '2012-06-12 14:17:27'
+    updated_at: '2012-06-12 14:17:27'
+  BandejaEntrada_15:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>Xupalo el pico</p>'
+    created_at: '2012-06-12 14:18:01'
+    updated_at: '2012-06-12 14:18:01'
+  BandejaEntrada_16:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>dsaddasds</p>'
+    created_at: '2012-06-14 12:58:40'
+    updated_at: '2012-06-14 12:58:40'
+  BandejaEntrada_17:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>dasddassadsd</p>'
+    created_at: '2012-06-14 12:59:08'
+    updated_at: '2012-06-14 12:59:08'
+  BandejaEntrada_18:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>mmmmmmmmmmmmmmmmmm</p>'
+    created_at: '2012-06-15 19:09:41'
+    updated_at: '2012-06-15 19:09:41'
+  BandejaEntrada_19:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>eeeeeeeeeeeeeeeeeeeeeeee</p>'
+    created_at: '2012-06-15 19:09:49'
+    updated_at: '2012-06-15 19:09:49'
+  BandejaEntrada_20:
+    idUsuarioRemitente: '2'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>fffffffffffffffffffffffffff</p>'
+    created_at: '2012-06-15 19:09:56'
+    updated_at: '2012-06-15 19:09:56'
+  BandejaEntrada_21:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>ffffffffffffff</p>'
+    created_at: '2012-06-15 19:23:34'
+    updated_at: '2012-06-15 19:23:34'
+  BandejaEntrada_22:
+    idUsuarioRemitente: '1'
+    idUsuarioReceptor: '3'
+    mensaje: '<p>aaaaaaaaaa</p>'
+    created_at: '2012-06-15 19:23:39'
+    updated_at: '2012-06-15 19:23:39'
+Test:
+  Test_1:
+    idUsuario: '1'
+    created_at: '2012-06-06 21:13:59'
+    updated_at: '2012-06-06 21:13:59'
+  Test_2:
+    idUsuario: '3'
+    created_at: '2012-06-13 19:53:36'
+    updated_at: '2012-06-13 19:53:36'
+  Test_3:
+    idUsuario: '3'
+    created_at: '2012-06-14 12:14:15'
+    updated_at: '2012-06-14 12:14:15'
+  Test_4:
+    idUsuario: '3'
+    created_at: '2012-06-14 12:17:24'
+    updated_at: '2012-06-14 12:17:24'
+  Test_5:
+    idUsuario: '3'
+    created_at: '2012-06-14 12:18:34'
+    updated_at: '2012-06-14 12:18:34'
+  Test_6:
+    idUsuario: '3'
+    created_at: '2012-06-15 16:09:13'
+    updated_at: '2012-06-15 16:09:13'
+  Test_7:
+    idUsuario: '3'
+    created_at: '2012-06-15 16:10:42'
+    updated_at: '2012-06-15 16:10:42'
+Album:
+  Album_1:
+    idUsuario: '1'
+    descripcion: frontend
+    created_at: '2012-06-06 20:20:23'
+    updated_at: '2012-06-06 20:20:23'
+  Album_2:
+    idUsuario: '3'
+    descripcion: fsdfsddfdfdfsdfs
+    created_at: '2012-06-12 12:55:02'
+    updated_at: '2012-06-13 14:12:59'
+  Album_3:
+    idUsuario: '3'
+    descripcion: ddsdsd
+    created_at: '2012-06-14 13:56:03'
+    updated_at: '2012-06-14 13:56:03'
+  Album_4:
+    idUsuario: '3'
+    descripcion: dsds
+    created_at: '2012-06-14 13:56:07'
+    updated_at: '2012-06-14 13:56:07'
+Categoria:
+  Categoria_1:
+    texto: Química
+    imagen: null
+    created_at: '2012-06-06 20:20:52'
+    updated_at: '2012-06-06 20:20:52'
+  Categoria_2:
+    texto: Física
+    imagen: null
+    created_at: '2012-06-06 20:20:57'
+    updated_at: '2012-06-06 20:20:57'
+  Categoria_3:
+    texto: Historia
+    imagen: null
+    created_at: '2012-06-06 20:21:07'
+    updated_at: '2012-06-06 20:21:07'
+  Categoria_4:
+    texto: Matemáticas
+    imagen: null
+    created_at: '2012-06-06 20:21:22'
+    updated_at: '2012-06-06 20:21:22'
+  Categoria_5:
+    texto: Castellano
+    imagen: null
+    created_at: '2012-06-06 20:22:44'
+    updated_at: '2012-06-06 20:22:44'
+  Categoria_10:
+    texto: Psicología
+    imagen: null
+    created_at: '2012-06-06 20:24:44'
+    updated_at: '2012-06-06 20:24:44'
+  Categoria_11:
+    texto: Filosofía
+    imagen: null
+    created_at: '2012-06-06 20:25:14'
+    updated_at: '2012-06-06 20:25:14'
+  Categoria_12:
+    texto: Astrología
+    imagen: null
+    created_at: '2012-06-06 20:25:30'
+    updated_at: '2012-06-06 20:25:30'
+  Categoria_13:
+    texto: Biología
+    imagen: null
+    created_at: '2012-06-06 20:26:31'
+    updated_at: '2012-06-06 20:26:31'
+  Categoria_14:
+    texto: Informática
+    imagen: null
+    created_at: '2012-06-06 20:27:20'
+    updated_at: '2012-06-06 20:27:20'
+  Categoria_15:
+    texto: Electrónica
+    imagen: null
+    created_at: '2012-06-06 20:27:38'
+    updated_at: '2012-06-06 20:27:38'
+  Categoria_16:
+    texto: Música
+    imagen: null
+    created_at: '2012-06-06 20:29:55'
+    updated_at: '2012-06-06 20:29:55'
+  Categoria_17:
+    texto: Mecánica
+    imagen: null
+    created_at: '2012-06-06 20:32:09'
+    updated_at: '2012-06-06 20:32:09'
+  Categoria_18:
+    texto: Deportes
+    imagen: null
+    created_at: '2012-06-06 20:32:18'
+    updated_at: '2012-06-06 20:32:18'
+  Categoria_19:
+    texto: ~Otra~
+    imagen: null
+    created_at: '2012-06-06 20:32:39'
+    updated_at: '2012-06-08 17:11:13'
+  Categoria_20:
+    texto: Medicina
+    imagen: null
+    created_at: '2012-06-06 20:59:48'
+    updated_at: '2012-06-06 20:59:48'
+Contenido:
+  Contenido_1:
+    idUsuario: '1'
+    idCategoriaContenido: '1'
+    titulo: 'Sobre nosotros'
+    contenido: '<p><strong>Sobre nosotros</strong></p>'
+    borrado: false
+    activo: true
+    created_at: '2012-06-06 20:13:39'
+    updated_at: '2012-06-06 20:13:39'
+  Contenido_2:
+    idUsuario: '1'
+    idCategoriaContenido: '1'
+    titulo: 'Como funciona'
+    contenido: '<p>Como funciona</p>'
+    borrado: false
+    activo: true
+    created_at: '2012-06-06 20:15:29'
+    updated_at: '2012-06-06 20:15:29'
+  Contenido_4:
+    idUsuario: '1'
+    idCategoriaContenido: '1'
+    titulo: Contacto
+    contenido: '<p>Contacto</p>'
+    borrado: false
+    activo: true
+    created_at: '2012-06-06 20:16:42'
+    updated_at: '2012-06-06 20:16:42'
+  Contenido_5:
+    idUsuario: '1'
+    idCategoriaContenido: '1'
+    titulo: Donaciones
+    contenido: "<p>Haz tu donaci&oacute;n aqu&iacute;.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"><input type=\"image\" name=\"submit\" src=\"https://www.paypalobjects.com/es_ES/ES/i/btn/btn_donateCC_LG.gif\" alt=\"PayPal. La forma r&aacute;pida y segura de pagar en Internet.\" /></form><form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"></form><form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"></form><form action=\"https://www.paypal.com/cgi-bin/webscr\" method=\"post\"><img class=\"aligncenter\" src=\"https://www.paypalobjects.com/es_ES/i/scr/pixel.gif\" alt=\"\" width=\"1\" height=\"1\" border=\"0\" /></form>"
+    borrado: false
+    activo: true
+    created_at: '2012-06-06 20:17:09'
+    updated_at: '2012-06-06 20:18:55'
+Imagen:
+  Imagen_1:
+    idAlbum: '1'
+    descripcion: 'Plataforma de estudio'
+    imagen: 4109abef2bfe29a3407fb9a3a1e1746c6d8f8e46.png
+    created_at: '2012-06-06 21:17:50'
+    updated_at: '2012-06-06 21:17:50'
+  Imagen_2:
+    idAlbum: '1'
+    descripcion: 'Vista de definición'
+    imagen: 62fded768752621caaac92216d9f349ec6ef2da8.png
+    created_at: '2012-06-06 21:18:15'
+    updated_at: '2012-06-06 21:18:15'
+  Imagen_3:
+    idAlbum: '1'
+    descripcion: 'Administración de palabras'
+    imagen: 8a32a2d685e5b1b64de72207685dc58ba5ffc608.png
+    created_at: '2012-06-06 21:18:33'
+    updated_at: '2012-06-06 21:18:33'
+  Imagen_4:
+    idAlbum: '1'
+    descripcion: Estudiar
+    imagen: 1a768c391f57c23cd4ce7cc14ba0f4a5a19ab76d.png
+    created_at: '2012-06-06 21:18:54'
+    updated_at: '2012-06-06 21:18:54'
+  Imagen_5:
+    idAlbum: '1'
+    descripcion: 'Configuración de exámen'
+    imagen: 0e80d46b0c24d1ffea8903da86efa15965fd8642.png
+    created_at: '2012-06-06 21:19:22'
+    updated_at: '2012-06-06 21:19:22'
+  Imagen_6:
+    idAlbum: '1'
+    descripcion: 'Estudiar escuchando o leyendo'
+    imagen: 723ec5558ab21e7258d3c7bae16993bd404fb1de.png
+    created_at: '2012-06-06 21:19:37'
+    updated_at: '2012-06-06 21:19:37'
+  Imagen_7:
+    idAlbum: '1'
+    descripcion: Exámen
+    imagen: 28fc202b1adcba13679b043e8456c53cba689c9a.png
+    created_at: '2012-06-06 21:20:19'
+    updated_at: '2012-06-06 21:20:19'
+  Imagen_8:
+    idAlbum: '1'
+    descripcion: 'Estadísticas exámen'
+    imagen: 8c65ce8236179023ff223f4ed6f5f954407f4326.png
+    created_at: '2012-06-06 21:20:32'
+    updated_at: '2012-06-06 21:20:32'
+  Imagen_9:
+    idAlbum: '1'
+    descripcion: Documentos
+    imagen: 5d5716959e941ec5262b1646a026c6fd6846ab17.png
+    created_at: '2012-06-06 21:20:47'
+    updated_at: '2012-06-06 21:20:47'
+  Imagen_10:
+    idAlbum: '1'
+    descripcion: 'Administración de documentos'
+    imagen: 139692d8401ddad8cab213d87839626ab9c3241a.png
+    created_at: '2012-06-06 21:21:05'
+    updated_at: '2012-06-06 21:21:05'
+  Imagen_11:
+    idAlbum: '1'
+    descripcion: 'Administración del usuario'
+    imagen: 50a1478de1fd0cab31814391aed59d9ea7cd0355.png
+    created_at: '2012-06-06 21:21:24'
+    updated_at: '2012-06-06 21:21:24'
+  Imagen_12:
+    idAlbum: '2'
+    descripcion: 'En la casa con nose kien'
+    imagen: 8478b5b48b80192c3bd52f4e1957df188c6fdf8a.jpg
+    created_at: '2012-06-12 23:55:25'
+    updated_at: '2012-06-15 23:02:10'
+SfGuardUser:
+  SfGuardUser_1:
+    first_name: John
+    last_name: Doe
+    email_address: john.doe@gmail.com
+    username: admin
+    algorithm: sha1
+    salt: de4dd99e9bba0de16e8471f0cdc37ac9
+    password: bbf568486a864f4e23e2c8a96932a8bde54e7cf0
+    is_active: '1'
+    is_super_admin: '1'
+    last_login: '2012-06-26 22:10:33'
+    created_at: '2012-06-06 18:55:57'
+    updated_at: '2012-06-26 22:10:33'
+  SfGuardUser_2:
+    first_name: Fabian
+    last_name: Allel
+    email_address: the_pianist2@hotmail.com
+    username: fabian
+    algorithm: sha1
+    salt: 0f8941cf507fca33bf6b73bcb2e13c21
+    password: ba28fd7f8bfd181d268dfaa50cc5e9bff47d14ff
+    is_active: '1'
+    is_super_admin: '0'
+    last_login: '2012-06-17 12:28:48'
+    created_at: '2012-06-06 18:57:10'
+    updated_at: '2012-06-17 12:28:48'
+  SfGuardUser_3:
+    first_name: fdadf
+    last_name: adffdfd
+    email_address: affadf@gmail.com
+    username: fabiandsfsfsdafdfad
+    algorithm: sha1
+    salt: af051e9cfe1f253f3d672bdadd9798ab
+    password: 7703cbd2be6f3ceb6c8728c92e5893b4c70687b3
+    is_active: '1'
+    is_super_admin: '0'
+    last_login: '2012-06-28 13:44:22'
+    created_at: '2012-06-08 15:38:28'
+    updated_at: '2012-06-28 16:03:28'
+  SfGuardUser_4:
+    first_name: sddsa
+    last_name: ddasasd
+    email_address: aca@gmail.com
+    username: dsada
+    algorithm: sha1
+    salt: 977fa143af7f49c59c82d09c5de393d8
+    password: 162ca3c4a1d60c796548a45bd0482d92e3f6bbdd
+    is_active: '1'
+    is_super_admin: '0'
+    last_login: null
+    created_at: '2012-06-14 12:52:08'
+    updated_at: '2012-06-14 12:52:08'
+  SfGuardUser_5:
+    first_name: prueba
+    last_name: prueba
+    email_address: fabian281087@gmail.com
+    username: prueba
+    algorithm: sha1
+    salt: 71accd0120ed73dd6e42351ff0f5577d
+    password: 7ede806b641d6a967c378b344caefc2fd7ead7da
+    is_active: '0'
+    is_super_admin: '0'
+    last_login: null
+    created_at: '2012-06-24 13:53:19'
+    updated_at: '2012-06-24 13:53:19'
+Respuesta:
+  Respuesta_1:
+    idTest: '1'
+    textoPalabra: mercurio
+    textoRespuesta: mercurio
+    respuestaCorrecta: true
+    created_at: '2012-06-06 21:14:13'
+    updated_at: '2012-06-06 21:14:13'
+  Respuesta_2:
+    idTest: '1'
+    textoPalabra: venus
+    textoRespuesta: dsasd
+    respuestaCorrecta: false
+    created_at: '2012-06-06 21:14:19'
+    updated_at: '2012-06-06 21:14:19'
+  Respuesta_3:
+    idTest: '1'
+    textoPalabra: tierra
+    textoRespuesta: dasdas
+    respuestaCorrecta: false
+    created_at: '2012-06-06 21:14:21'
+    updated_at: '2012-06-06 21:14:21'
+  Respuesta_4:
+    idTest: '1'
+    textoPalabra: marte
+    textoRespuesta: asdsad
+    respuestaCorrecta: false
+    created_at: '2012-06-06 21:14:22'
+    updated_at: '2012-06-06 21:14:22'
+  Respuesta_5:
+    idTest: '3'
+    textoPalabra: cobre
+    textoRespuesta: conbre
+    respuestaCorrecta: false
+    created_at: '2012-06-14 12:14:19'
+    updated_at: '2012-06-14 12:14:19'
+  Respuesta_6:
+    idTest: '3'
+    textoPalabra: estroncio
+    textoRespuesta: sirconio
+    respuestaCorrecta: false
+    created_at: '2012-06-14 12:14:29'
+    updated_at: '2012-06-14 12:14:29'
+  Respuesta_7:
+    idTest: '3'
+    textoPalabra: fútbol
+    textoRespuesta: futbol
+    respuestaCorrecta: false
+    created_at: '2012-06-14 12:14:41'
+    updated_at: '2012-06-14 12:14:41'
+  Respuesta_8:
+    idTest: '3'
+    textoPalabra: radio
+    textoRespuesta: radio
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:14:46'
+    updated_at: '2012-06-14 12:14:46'
+  Respuesta_9:
+    idTest: '3'
+    textoPalabra: rubidio
+    textoRespuesta: rubidio
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:16:07'
+    updated_at: '2012-06-14 12:16:07'
+  Respuesta_10:
+    idTest: '3'
+    textoPalabra: selenio
+    textoRespuesta: selenio
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:16:35'
+    updated_at: '2012-06-14 12:16:35'
+  Respuesta_11:
+    idTest: '3'
+    textoPalabra: tierra
+    textoRespuesta: tierra
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:16:39'
+    updated_at: '2012-06-14 12:16:39'
+  Respuesta_12:
+    idTest: '3'
+    textoPalabra: urano
+    textoRespuesta: venus
+    respuestaCorrecta: false
+    created_at: '2012-06-14 12:16:45'
+    updated_at: '2012-06-14 12:16:45'
+  Respuesta_13:
+    idTest: '3'
+    textoPalabra: venus
+    textoRespuesta: venus
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:16:49'
+    updated_at: '2012-06-14 12:16:49'
+  Respuesta_14:
+    idTest: '3'
+    textoPalabra: xenón
+    textoRespuesta: xenon
+    respuestaCorrecta: false
+    created_at: '2012-06-14 12:16:54'
+    updated_at: '2012-06-14 12:16:54'
+  Respuesta_15:
+    idTest: '5'
+    textoPalabra: cobre
+    textoRespuesta: cobre
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:18:40'
+    updated_at: '2012-06-14 12:18:40'
+  Respuesta_16:
+    idTest: '5'
+    textoPalabra: estroncio
+    textoRespuesta: seria
+    respuestaCorrecta: false
+    created_at: '2012-06-14 12:18:46'
+    updated_at: '2012-06-14 12:18:46'
+  Respuesta_17:
+    idTest: '5'
+    textoPalabra: fútbol
+    textoRespuesta: futbol
+    respuestaCorrecta: false
+    created_at: '2012-06-14 12:18:49'
+    updated_at: '2012-06-14 12:18:49'
+  Respuesta_18:
+    idTest: '5'
+    textoPalabra: radio
+    textoRespuesta: radio
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:18:53'
+    updated_at: '2012-06-14 12:18:53'
+  Respuesta_19:
+    idTest: '5'
+    textoPalabra: rubidio
+    textoRespuesta: rubidio
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:18:55'
+    updated_at: '2012-06-14 12:18:55'
+  Respuesta_20:
+    idTest: '5'
+    textoPalabra: selenio
+    textoRespuesta: selenio
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:18:57'
+    updated_at: '2012-06-14 12:18:57'
+  Respuesta_21:
+    idTest: '5'
+    textoPalabra: tierra
+    textoRespuesta: tierra
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:19:00'
+    updated_at: '2012-06-14 12:19:00'
+  Respuesta_22:
+    idTest: '5'
+    textoPalabra: urano
+    textoRespuesta: urano
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:19:08'
+    updated_at: '2012-06-14 12:19:08'
+  Respuesta_23:
+    idTest: '5'
+    textoPalabra: venus
+    textoRespuesta: venus
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:19:11'
+    updated_at: '2012-06-14 12:19:11'
+  Respuesta_24:
+    idTest: '5'
+    textoPalabra: xenón
+    textoRespuesta: xenón
+    respuestaCorrecta: true
+    created_at: '2012-06-14 12:19:15'
+    updated_at: '2012-06-14 12:19:15'
+  Respuesta_25:
+    idTest: '6'
+    textoPalabra: estroncio
+    textoRespuesta: sirconio
+    respuestaCorrecta: false
+    created_at: '2012-06-15 16:09:25'
+    updated_at: '2012-06-15 16:09:25'
+  Respuesta_26:
+    idTest: '6'
+    textoPalabra: fútbol
+    textoRespuesta: futbol
+    respuestaCorrecta: false
+    created_at: '2012-06-15 16:09:30'
+    updated_at: '2012-06-15 16:09:30'
+  Respuesta_27:
+    idTest: '6'
+    textoPalabra: xenón
+    textoRespuesta: futbol
+    respuestaCorrecta: false
+    created_at: '2012-06-15 16:10:33'
+    updated_at: '2012-06-15 16:10:33'
+  Respuesta_28:
+    idTest: '7'
+    textoPalabra: cobre
+    textoRespuesta: cobre
+    respuestaCorrecta: true
+    created_at: '2012-06-15 16:10:51'
+    updated_at: '2012-06-15 16:10:51'
+  Respuesta_29:
+    idTest: '7'
+    textoPalabra: venus
+    textoRespuesta: venus
+    respuestaCorrecta: true
+    created_at: '2012-06-15 16:10:57'
+    updated_at: '2012-06-15 16:10:57'
+  Respuesta_30:
+    idTest: '7'
+    textoPalabra: xenón
+    textoRespuesta: xenon
+    respuestaCorrecta: false
+    created_at: '2012-06-15 16:11:02'
+    updated_at: '2012-06-15 16:11:02'
+sfGuardUserGroup:
+  sfGuardUserGroup_1_1:
+    SfGuardUser: SfGuardUser_1
+    SfGuardGroup: SfGuardGroup_1
+    created_at: '2012-06-06 18:55:57'
+    updated_at: '2012-06-06 18:55:57'
+  sfGuardUserGroup_2_2:
+    SfGuardUser: SfGuardUser_2
+    SfGuardGroup: SfGuardGroup_2
+    created_at: '2012-06-06 20:31:52'
+    updated_at: '2012-06-06 20:31:52'
+SubCategoria:
+  SubCategoria_1:
+    idCategoria: '12'
+    texto: Planetas
+    imagen: null
+    created_at: '2012-06-06 20:32:53'
+    updated_at: '2012-06-06 20:32:53'
+  SubCategoria_2:
+    idCategoria: '12'
+    texto: Estrellas
+    imagen: null
+    created_at: '2012-06-06 20:33:01'
+    updated_at: '2012-06-06 20:33:01'
+  SubCategoria_3:
+    idCategoria: '12'
+    texto: Universo
+    imagen: null
+    created_at: '2012-06-06 20:33:19'
+    updated_at: '2012-06-06 20:33:19'
+  SubCategoria_4:
+    idCategoria: '13'
+    texto: 'Cuerpo humano'
+    imagen: null
+    created_at: '2012-06-06 20:33:45'
+    updated_at: '2012-06-06 20:33:45'
+  SubCategoria_5:
+    idCategoria: '13'
+    texto: Bacterias
+    imagen: null
+    created_at: '2012-06-06 20:34:08'
+    updated_at: '2012-06-06 20:34:08'
+  SubCategoria_6:
+    idCategoria: '13'
+    texto: 'Seres vivos'
+    imagen: null
+    created_at: '2012-06-06 20:34:26'
+    updated_at: '2012-06-06 20:34:26'
+  SubCategoria_7:
+    idCategoria: '12'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:34:32'
+    updated_at: '2012-06-06 20:34:32'
+  SubCategoria_8:
+    idCategoria: '13'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:34:37'
+    updated_at: '2012-06-06 20:34:37'
+  SubCategoria_9:
+    idCategoria: '5'
+    texto: Lengua
+    imagen: null
+    created_at: '2012-06-06 20:34:45'
+    updated_at: '2012-06-06 20:34:45'
+  SubCategoria_10:
+    idCategoria: '5'
+    texto: Escritura
+    imagen: null
+    created_at: '2012-06-06 20:34:52'
+    updated_at: '2012-06-06 20:34:52'
+  SubCategoria_11:
+    idCategoria: '5'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:35:00'
+    updated_at: '2012-06-06 20:35:00'
+  SubCategoria_12:
+    idCategoria: '18'
+    texto: Futbol
+    imagen: null
+    created_at: '2012-06-06 20:35:07'
+    updated_at: '2012-06-06 20:35:07'
+  SubCategoria_13:
+    idCategoria: '18'
+    texto: Tenis
+    imagen: null
+    created_at: '2012-06-06 20:35:17'
+    updated_at: '2012-06-06 20:35:17'
+  SubCategoria_14:
+    idCategoria: '18'
+    texto: 'Ping Pong'
+    imagen: null
+    created_at: '2012-06-06 20:35:40'
+    updated_at: '2012-06-06 20:35:40'
+  SubCategoria_15:
+    idCategoria: '18'
+    texto: Golf
+    imagen: null
+    created_at: '2012-06-06 20:35:48'
+    updated_at: '2012-06-06 20:35:48'
+  SubCategoria_16:
+    idCategoria: '18'
+    texto: 'Balón mano'
+    imagen: null
+    created_at: '2012-06-06 20:36:02'
+    updated_at: '2012-06-06 20:36:02'
+  SubCategoria_17:
+    idCategoria: '18'
+    texto: Basketball
+    imagen: null
+    created_at: '2012-06-06 20:36:26'
+    updated_at: '2012-06-06 20:36:26'
+  SubCategoria_18:
+    idCategoria: '18'
+    texto: Volleyball
+    imagen: null
+    created_at: '2012-06-06 20:36:45'
+    updated_at: '2012-06-06 20:36:45'
+  SubCategoria_19:
+    idCategoria: '18'
+    texto: Otro
+    imagen: null
+    created_at: '2012-06-06 20:36:56'
+    updated_at: '2012-06-06 20:36:56'
+  SubCategoria_20:
+    idCategoria: '15'
+    texto: Circuitos
+    imagen: null
+    created_at: '2012-06-06 20:37:27'
+    updated_at: '2012-06-06 20:37:27'
+  SubCategoria_21:
+    idCategoria: '15'
+    texto: Tensión
+    imagen: null
+    created_at: '2012-06-06 20:38:18'
+    updated_at: '2012-06-06 20:38:18'
+  SubCategoria_22:
+    idCategoria: '15'
+    texto: Otros
+    imagen: null
+    created_at: '2012-06-06 20:38:38'
+    updated_at: '2012-06-06 20:38:38'
+  SubCategoria_23:
+    idCategoria: '11'
+    texto: Lógica
+    imagen: null
+    created_at: '2012-06-06 20:38:58'
+    updated_at: '2012-06-06 20:40:37'
+  SubCategoria_24:
+    idCategoria: '11'
+    texto: Epistemología
+    imagen: null
+    created_at: '2012-06-06 20:40:47'
+    updated_at: '2012-06-06 20:40:47'
+  SubCategoria_25:
+    idCategoria: '11'
+    texto: Metafísica/Ontología
+    imagen: null
+    created_at: '2012-06-06 20:41:01'
+    updated_at: '2012-06-06 20:41:01'
+  SubCategoria_26:
+    idCategoria: '11'
+    texto: 'Teoría del conocimiento o Gnoseologìa'
+    imagen: null
+    created_at: '2012-06-06 20:41:18'
+    updated_at: '2012-06-06 20:41:18'
+  SubCategoria_27:
+    idCategoria: '11'
+    texto: 'Filosofía práctica'
+    imagen: null
+    created_at: '2012-06-06 20:41:32'
+    updated_at: '2012-06-06 20:41:32'
+  SubCategoria_28:
+    idCategoria: '11'
+    texto: Etica
+    imagen: null
+    created_at: '2012-06-06 20:41:43'
+    updated_at: '2012-06-06 20:41:43'
+  SubCategoria_29:
+    idCategoria: '11'
+    texto: Estética
+    imagen: null
+    created_at: '2012-06-06 20:41:55'
+    updated_at: '2012-06-06 20:41:55'
+  SubCategoria_30:
+    idCategoria: '11'
+    texto: Historia
+    imagen: null
+    created_at: '2012-06-06 20:42:11'
+    updated_at: '2012-06-06 20:42:11'
+  SubCategoria_31:
+    idCategoria: '11'
+    texto: Derecho
+    imagen: null
+    created_at: '2012-06-06 20:42:20'
+    updated_at: '2012-06-06 20:42:20'
+  SubCategoria_32:
+    idCategoria: '11'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:42:31'
+    updated_at: '2012-06-06 20:42:31'
+  SubCategoria_33:
+    idCategoria: '2'
+    texto: Mecánica
+    imagen: null
+    created_at: '2012-06-06 20:43:30'
+    updated_at: '2012-06-06 20:43:30'
+  SubCategoria_34:
+    idCategoria: '2'
+    texto: 'Termodinámica y mecánica estadística'
+    imagen: null
+    created_at: '2012-06-06 20:43:43'
+    updated_at: '2012-06-06 20:43:43'
+  SubCategoria_35:
+    idCategoria: '2'
+    texto: 'Mecánica ondulatoria'
+    imagen: null
+    created_at: '2012-06-06 20:43:56'
+    updated_at: '2012-06-06 20:43:56'
+  SubCategoria_36:
+    idCategoria: '2'
+    texto: Electromagnetismo
+    imagen: null
+    created_at: '2012-06-06 20:44:10'
+    updated_at: '2012-06-06 20:44:10'
+  SubCategoria_37:
+    idCategoria: '2'
+    texto: 'Relatividad (Electrodinámica)'
+    imagen: null
+    created_at: '2012-06-06 20:44:30'
+    updated_at: '2012-06-06 20:44:30'
+  SubCategoria_38:
+    idCategoria: '2'
+    texto: 'Mecánica cuántica'
+    imagen: null
+    created_at: '2012-06-06 20:44:45'
+    updated_at: '2012-06-06 20:44:45'
+  SubCategoria_39:
+    idCategoria: '2'
+    texto: 'Física mesoscópica'
+    imagen: null
+    created_at: '2012-06-06 20:45:25'
+    updated_at: '2012-06-06 20:45:25'
+  SubCategoria_40:
+    idCategoria: '2'
+    texto: Nano-Física
+    imagen: null
+    created_at: '2012-06-06 20:45:37'
+    updated_at: '2012-06-06 20:45:37'
+  SubCategoria_41:
+    idCategoria: '2'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:45:45'
+    updated_at: '2012-06-06 20:45:45'
+  SubCategoria_42:
+    idCategoria: '3'
+    texto: Arqueología
+    imagen: null
+    created_at: '2012-06-06 20:46:11'
+    updated_at: '2012-06-06 20:46:11'
+  SubCategoria_43:
+    idCategoria: '3'
+    texto: Geología
+    imagen: null
+    created_at: '2012-06-06 20:46:25'
+    updated_at: '2012-06-06 20:46:25'
+  SubCategoria_44:
+    idCategoria: '3'
+    texto: Paleontología
+    imagen: null
+    created_at: '2012-06-06 20:46:33'
+    updated_at: '2012-06-06 20:46:33'
+  SubCategoria_45:
+    idCategoria: '3'
+    texto: 'Historia natural'
+    imagen: null
+    created_at: '2012-06-06 20:46:46'
+    updated_at: '2012-06-06 20:46:46'
+  SubCategoria_46:
+    idCategoria: '3'
+    texto: Cartografía
+    imagen: null
+    created_at: '2012-06-06 20:46:56'
+    updated_at: '2012-06-06 20:46:56'
+  SubCategoria_47:
+    idCategoria: '3'
+    texto: Cronología
+    imagen: null
+    created_at: '2012-06-06 20:47:07'
+    updated_at: '2012-06-06 20:47:07'
+  SubCategoria_48:
+    idCategoria: '3'
+    texto: Epigrafía
+    imagen: null
+    created_at: '2012-06-06 20:47:15'
+    updated_at: '2012-06-06 20:47:15'
+  SubCategoria_49:
+    idCategoria: '3'
+    texto: 'Etimología, particularmente la toponimia'
+    imagen: null
+    created_at: '2012-06-06 20:47:26'
+    updated_at: '2012-06-06 20:47:26'
+  SubCategoria_50:
+    idCategoria: '3'
+    texto: Folklore
+    imagen: null
+    created_at: '2012-06-06 20:47:37'
+    updated_at: '2012-06-06 20:47:37'
+  SubCategoria_51:
+    idCategoria: '3'
+    texto: Genealogía
+    imagen: null
+    created_at: '2012-06-06 20:47:48'
+    updated_at: '2012-06-06 20:47:48'
+  SubCategoria_52:
+    idCategoria: '3'
+    texto: Heráldica
+    imagen: null
+    created_at: '2012-06-06 20:47:57'
+    updated_at: '2012-06-06 20:47:57'
+  SubCategoria_53:
+    idCategoria: '3'
+    texto: 'Historia del Derecho'
+    imagen: null
+    created_at: '2012-06-06 20:48:08'
+    updated_at: '2012-06-06 20:48:08'
+  SubCategoria_54:
+    idCategoria: '3'
+    texto: 'Lingüística histórica'
+    imagen: null
+    created_at: '2012-06-06 20:48:20'
+    updated_at: '2012-06-06 20:48:20'
+  SubCategoria_55:
+    idCategoria: '3'
+    texto: Numismática
+    imagen: null
+    created_at: '2012-06-06 20:48:30'
+    updated_at: '2012-06-06 20:48:30'
+  SubCategoria_56:
+    idCategoria: '3'
+    texto: Paleografía
+    imagen: null
+    created_at: '2012-06-06 20:48:38'
+    updated_at: '2012-06-06 20:48:38'
+  SubCategoria_57:
+    idCategoria: '3'
+    texto: Sigilografía
+    imagen: null
+    created_at: '2012-06-06 20:48:46'
+    updated_at: '2012-06-06 20:48:46'
+  SubCategoria_58:
+    idCategoria: '3'
+    texto: Sociologia
+    imagen: null
+    created_at: '2012-06-06 20:48:56'
+    updated_at: '2012-06-06 20:48:56'
+  SubCategoria_59:
+    idCategoria: '3'
+    texto: Vexilología
+    imagen: null
+    created_at: '2012-06-06 20:49:08'
+    updated_at: '2012-06-06 20:49:08'
+  SubCategoria_60:
+    idCategoria: '3'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:49:18'
+    updated_at: '2012-06-06 20:49:18'
+  SubCategoria_61:
+    idCategoria: '14'
+    texto: Cibernética
+    imagen: null
+    created_at: '2012-06-06 20:49:53'
+    updated_at: '2012-06-06 20:49:53'
+  SubCategoria_62:
+    idCategoria: '14'
+    texto: Robótica
+    imagen: null
+    created_at: '2012-06-06 20:50:03'
+    updated_at: '2012-06-06 20:50:03'
+  SubCategoria_63:
+    idCategoria: '14'
+    texto: Computación
+    imagen: null
+    created_at: '2012-06-06 20:50:19'
+    updated_at: '2012-06-06 20:50:19'
+  SubCategoria_64:
+    idCategoria: '14'
+    texto: Ofimática
+    imagen: null
+    created_at: '2012-06-06 20:50:30'
+    updated_at: '2012-06-06 20:50:30'
+  SubCategoria_65:
+    idCategoria: '14'
+    texto: Telemática
+    imagen: null
+    created_at: '2012-06-06 20:50:44'
+    updated_at: '2012-06-06 20:50:44'
+  SubCategoria_66:
+    idCategoria: '14'
+    texto: Mecatrónica
+    imagen: null
+    created_at: '2012-06-06 20:50:55'
+    updated_at: '2012-06-06 20:50:55'
+  SubCategoria_67:
+    idCategoria: '14'
+    texto: Programación
+    imagen: null
+    created_at: '2012-06-06 20:51:09'
+    updated_at: '2012-06-06 20:51:09'
+  SubCategoria_68:
+    idCategoria: '14'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:51:18'
+    updated_at: '2012-06-06 20:51:18'
+  SubCategoria_69:
+    idCategoria: '4'
+    texto: Aritmetica
+    imagen: null
+    created_at: '2012-06-06 20:51:49'
+    updated_at: '2012-06-06 20:51:49'
+  SubCategoria_70:
+    idCategoria: '4'
+    texto: Geometría
+    imagen: null
+    created_at: '2012-06-06 20:52:00'
+    updated_at: '2012-06-06 20:52:00'
+  SubCategoria_71:
+    idCategoria: '4'
+    texto: 'Calculo diferencial e integral '
+    imagen: null
+    created_at: '2012-06-06 20:52:19'
+    updated_at: '2012-06-06 20:52:19'
+  SubCategoria_72:
+    idCategoria: '4'
+    texto: 'Calculo vectorial  '
+    imagen: null
+    created_at: '2012-06-06 20:52:30'
+    updated_at: '2012-06-06 20:52:30'
+  SubCategoria_73:
+    idCategoria: '4'
+    texto: Algebra
+    imagen: null
+    created_at: '2012-06-06 20:52:43'
+    updated_at: '2012-06-06 20:52:43'
+  SubCategoria_74:
+    idCategoria: '4'
+    texto: Ecuaciones
+    imagen: null
+    created_at: '2012-06-06 20:52:52'
+    updated_at: '2012-06-06 20:52:52'
+  SubCategoria_75:
+    idCategoria: '4'
+    texto: Probabilidad
+    imagen: null
+    created_at: '2012-06-06 20:53:07'
+    updated_at: '2012-06-06 20:53:07'
+  SubCategoria_76:
+    idCategoria: '4'
+    texto: Estadistica
+    imagen: null
+    created_at: '2012-06-06 20:53:19'
+    updated_at: '2012-06-06 20:53:19'
+  SubCategoria_77:
+    idCategoria: '4'
+    texto: Lógica
+    imagen: null
+    created_at: '2012-06-06 20:53:30'
+    updated_at: '2012-06-06 20:53:30'
+  SubCategoria_78:
+    idCategoria: '4'
+    texto: 'Fundamentos/metodos numericos '
+    imagen: null
+    created_at: '2012-06-06 20:53:45'
+    updated_at: '2012-06-06 20:53:45'
+  SubCategoria_79:
+    idCategoria: '4'
+    texto: Investigación
+    imagen: null
+    created_at: '2012-06-06 20:54:07'
+    updated_at: '2012-06-06 20:54:07'
+  SubCategoria_80:
+    idCategoria: '4'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:54:15'
+    updated_at: '2012-06-06 20:54:15'
+  SubCategoria_81:
+    idCategoria: '17'
+    texto: Automovilistica
+    imagen: null
+    created_at: '2012-06-06 20:54:44'
+    updated_at: '2012-06-06 20:54:44'
+  SubCategoria_82:
+    idCategoria: '17'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:54:59'
+    updated_at: '2012-06-06 20:54:59'
+  SubCategoria_83:
+    idCategoria: '16'
+    texto: Clásica
+    imagen: null
+    created_at: '2012-06-06 20:55:27'
+    updated_at: '2012-06-06 20:55:27'
+  SubCategoria_84:
+    idCategoria: '16'
+    texto: Electronica
+    imagen: null
+    created_at: '2012-06-06 20:55:39'
+    updated_at: '2012-06-06 20:55:39'
+  SubCategoria_85:
+    idCategoria: '16'
+    texto: Metal
+    imagen: null
+    created_at: '2012-06-06 20:55:48'
+    updated_at: '2012-06-06 20:55:48'
+  SubCategoria_86:
+    idCategoria: '16'
+    texto: Instrumentos
+    imagen: null
+    created_at: '2012-06-06 20:55:57'
+    updated_at: '2012-06-06 20:55:57'
+  SubCategoria_87:
+    idCategoria: '16'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:56:04'
+    updated_at: '2012-06-06 20:56:04'
+  SubCategoria_88:
+    idCategoria: '19'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:56:14'
+    updated_at: '2012-06-06 20:56:14'
+  SubCategoria_89:
+    idCategoria: '10'
+    texto: Aplicada
+    imagen: null
+    created_at: '2012-06-06 20:56:40'
+    updated_at: '2012-06-06 20:56:40'
+  SubCategoria_90:
+    idCategoria: '10'
+    texto: Cognitiva
+    imagen: null
+    created_at: '2012-06-06 20:57:06'
+    updated_at: '2012-06-06 20:57:06'
+  SubCategoria_91:
+    idCategoria: '10'
+    texto: Conductista
+    imagen: null
+    created_at: '2012-06-06 20:57:36'
+    updated_at: '2012-06-06 20:57:36'
+  SubCategoria_92:
+    idCategoria: '10'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:57:46'
+    updated_at: '2012-06-06 20:57:46'
+  SubCategoria_93:
+    idCategoria: '1'
+    texto: General
+    imagen: null
+    created_at: '2012-06-06 20:58:16'
+    updated_at: '2012-06-06 20:58:16'
+  SubCategoria_94:
+    idCategoria: '1'
+    texto: Orgánica
+    imagen: null
+    created_at: '2012-06-06 20:58:30'
+    updated_at: '2012-06-06 20:58:30'
+  SubCategoria_95:
+    idCategoria: '1'
+    texto: Inorgánica
+    imagen: null
+    created_at: '2012-06-06 20:58:54'
+    updated_at: '2012-06-06 20:58:54'
+  SubCategoria_96:
+    idCategoria: '1'
+    texto: Analítica
+    imagen: null
+    created_at: '2012-06-06 20:59:04'
+    updated_at: '2012-06-06 20:59:04'
+  SubCategoria_97:
+    idCategoria: '1'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 20:59:11'
+    updated_at: '2012-06-06 20:59:11'
+  SubCategoria_98:
+    idCategoria: '20'
+    texto: Alergología
+    imagen: null
+    created_at: '2012-06-06 21:00:31'
+    updated_at: '2012-06-06 21:00:31'
+  SubCategoria_99:
+    idCategoria: '20'
+    texto: Anestesiología
+    imagen: null
+    created_at: '2012-06-06 21:00:49'
+    updated_at: '2012-06-06 21:00:49'
+  SubCategoria_100:
+    idCategoria: '20'
+    texto: Angiología
+    imagen: null
+    created_at: '2012-06-06 21:01:09'
+    updated_at: '2012-06-06 21:01:09'
+  SubCategoria_101:
+    idCategoria: '20'
+    texto: Bariatria
+    imagen: null
+    created_at: '2012-06-06 21:01:30'
+    updated_at: '2012-06-06 21:01:30'
+  SubCategoria_102:
+    idCategoria: '20'
+    texto: Cardiología
+    imagen: null
+    created_at: '2012-06-06 21:01:49'
+    updated_at: '2012-06-06 21:01:49'
+  SubCategoria_103:
+    idCategoria: '20'
+    texto: 'Cirugia general'
+    imagen: null
+    created_at: '2012-06-06 21:02:29'
+    updated_at: '2012-06-06 21:02:29'
+  SubCategoria_104:
+    idCategoria: '20'
+    texto: Dermatología
+    imagen: null
+    created_at: '2012-06-06 21:02:50'
+    updated_at: '2012-06-06 21:02:50'
+  SubCategoria_105:
+    idCategoria: '20'
+    texto: Otra
+    imagen: null
+    created_at: '2012-06-06 21:02:57'
+    updated_at: '2012-06-06 21:02:57'

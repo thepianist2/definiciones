@@ -14,7 +14,8 @@ class bandejaSalidaActions extends sfActions
   {
     $q = Doctrine_Core::getTable('BandejaSalida')
       ->createQuery('a')
-      ->Where('a.idUsuarioRemitente =?',$this->getUser()->getGuardUser()->getId());         
+      ->Where('a.idUsuarioRemitente =?',$this->getUser()->getGuardUser()->getId())
+      ->orderBy('a.updated_At DESC');
 
     
     

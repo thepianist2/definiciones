@@ -15,7 +15,7 @@ default:
 
   stylesheets:    [jquery-ui-1.8.17.custom.css, main.css, frontend.css,/resources/css/jquery.toastmessage.css, accordionImageMenu.css, nivo-slider.css, bloqueMenu.css]
 
-  javascripts:    [jquery-1.7.1.min.js, jquery-ui-1.8.17.custom.min.js, accordionImageMenu-0.4.min.js, tiny_mce/tiny_mce, jquery.nivo.slider.js, jquery.infinitecarousel.js]
+  javascripts:    [jquery-1.7.1.min.js, jquery-ui-1.8.17.custom.min.js, accordionImageMenu-0.4.min.js, tiny_mce/tiny_mce, jquery.nivo.slider.js, jquery.infinitecarousel.js, frontend.js, simplegallery.js]
 
   has_layout:     true
   layout:         layout
