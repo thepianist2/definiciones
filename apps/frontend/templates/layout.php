@@ -3,12 +3,21 @@
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
+    <link rel="image_src" href="http://seria.allel.es/images/logo.png" />   
     <title>Estudia con seria</title>
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/images/favicon.ico" />
+        <?php include_http_metas() ?>
+        <?php include_title() ?>
+        <?php include_metas() ?>    
     <?php include_javascripts() ?>
     <?php include_stylesheets() ?>
   </head>
-  <body>
+    <!-- condicional IE por si acaso se necesita -->
+    <!--[if lt IE 7 ]> <body class="ie6"> <![endif]-->
+    <!--[if IE 7 ]>    <body class="ie7"> <![endif]-->
+    <!--[if IE 8 ]>    <body class="ie8"> <![endif]-->
+    <!--[if IE 9 ]>    <body class="ie9"> <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!--> <body> <!--<![endif]-->
     <div id="container">
       <div id="header" >
 
