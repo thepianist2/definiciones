@@ -16,4 +16,16 @@ class SfGuardUserTable extends Doctrine_Table
     {
         return Doctrine_Core::getTable('SfGuardUser');
     }
+    
+          public function retrieveByUsername($username, $isActive = true)
+  {
+    $query = Doctrine_Core::getTable('sfGuardUser')->createQuery('u')
+      ->where('u.username = ?', $username)
+      ->addWhere('u.is_active = ?', $isActive)
+    ;
+
+    return $query->fetchOne();
+  }
+    
+    
 }
